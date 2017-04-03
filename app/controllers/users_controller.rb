@@ -10,7 +10,7 @@ class UsersController < ApplicationController
 			flash[:success] = "Welcome cadet."
 			redirect_to root_path
 		else
-			flash.now[:danger] = "Errors detected.  Activating Orbital Railguns."
+			# flash.now[:danger] = "Errors detected.  Activating Orbital Railguns."
 			render 'new'
 		end
 	end
