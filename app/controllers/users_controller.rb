@@ -7,8 +7,9 @@ class UsersController < ApplicationController
 	def create
 		@user = User.create(user_params)
 		if @user.save
-			flash[:success] = "Welcome cadet."
-			redirect_to root_path
+			# flash[:success] = "Welcome cadet."
+			log_in(@user)
+			redirect_to user_path(@user)
 		else
 			# flash.now[:danger] = "Errors detected.  Activating Orbital Railguns."
 			render 'new'

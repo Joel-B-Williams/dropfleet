@@ -4,6 +4,9 @@ class UserSignupTest < ActionDispatch::IntegrationTest
   # test "the truth" do
   #   assert true
   # end
+  def setup
+    @user = users(:user)
+  end
   
   test "user signup scenario" do 
   	# user signs up with invalid info
@@ -27,9 +30,9 @@ class UserSignupTest < ActionDispatch::IntegrationTest
   	post users_path, params: { user: { username: "User",
   												password: "password",
   												password_confirmation: "password" } }
-  	assert_redirected_to root_path
-  	follow_redirect!
-  	assert_template 'static_pages/home'
-  	assert_not flash.empty?
+  	# assert_redirected_to user_path(@user)
+    follow_redirect!
+  	assert_template 'users/show'
+  	# assert_not flash.empty?
   end
 end
