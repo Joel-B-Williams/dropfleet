@@ -221,3 +221,231 @@ Processing by StaticPagesController#home as HTML
 Completed 200 OK in 61ms (Views: 59.0ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/users/new" for 127.0.0.1 at 2017-04-02 19:07:25 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (3.9ms)
+  Rendered users/new.html.erb within layouts/application (6.1ms)
+Completed 500 Internal Server Error in 72ms (ActiveRecord: 7.0ms)
+
+
+  
+ActionView::Template::Error (Missing partial users/_flash, application/_flash with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/joelercoaster/Projects/rails/dropfleet/app/views"
+):
+    13:   	<%= link_to "Logout", logout_path, method: 'delete' %>
+    14:   	<%= link_to "Sign up", new_user_path %>
+    15:   </header>
+    16: 	<%= render 'flash' %>
+    17:   <body>
+    18:     <%= yield %>
+    19:   </body>
+  
+app/views/layouts/application.html.erb:16:in `_app_views_layouts_application_html_erb__3795762710533943149_69930535283680'
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (9.8ms)
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (38.7ms)
+Started GET "/" for 127.0.0.1 at 2017-04-02 19:10:32 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 56ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Missing partial static_pages/_flash, application/_flash with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/joelercoaster/Projects/rails/dropfleet/app/views"
+):
+    13:   	<%= link_to "Logout", logout_path, method: 'delete' %>
+    14:   	<%= link_to "Sign up", new_user_path %>
+    15:   </header>
+    16: 	<%= render 'flash' %>
+    17:   <body>
+    18:     <%= yield %>
+    19:   </body>
+  
+app/views/layouts/application.html.erb:16:in `_app_views_layouts_application_html_erb__3795762710533943149_69930456859180'
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.7ms)
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (36.3ms)
+Started GET "/" for 127.0.0.1 at 2017-04-02 19:10:57 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_flash.html.erb (1.2ms)
+Completed 500 Internal Server Error in 47ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/joelercoaster/Projects/rails/dropfleet/app/views/layouts/_flash.html.erb:4: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;  	 end 
+           	    ^
+/home/joelercoaster/Projects/rails/dropfleet/app/views/layouts/_flash.html.erb:6: syntax error, unexpected keyword_ensure, expecting ')'
+/home/joelercoaster/Projects/rails/dropfleet/app/views/layouts/_flash.html.erb:8: syntax error, unexpected keyword_end, expecting ')'):
+  
+app/views/layouts/_flash.html.erb:4: syntax error, unexpected keyword_end, expecting ')'
+app/views/layouts/_flash.html.erb:6: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/layouts/_flash.html.erb:8: syntax error, unexpected keyword_end, expecting ')'
+app/views/layouts/application.html.erb:16:in `_app_views_layouts_application_html_erb__3795762710533943149_69930557967760'
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (11.5ms)
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (46.6ms)
+Started GET "/" for 127.0.0.1 at 2017-04-02 19:11:37 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_flash.html.erb (1.0ms)
+Completed 200 OK in 55ms (Views: 52.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-04-02 19:11:39 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (4.1ms)
+  Rendered users/new.html.erb within layouts/application (6.9ms)
+  Rendered layouts/_flash.html.erb (1.0ms)
+Completed 200 OK in 67ms (Views: 62.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2017-04-02 19:11:42 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6AlJc9s46QArdM8zvFeiwP5mVB+2x6P8s9vl9sQnAmpd5ZxBXOp8sgqTR3W4B0aW7aZQxRV1TZZ5e3/lZLIeWQ==", "user"=>{"username"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (no implicit conversion of Symbol into String):
+  
+app/controllers/users_controller.rb:35:in `user_params'
+app/controllers/users_controller.rb:8:in `create'
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.8ms)
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (37.1ms)
+Started POST "/users" for 127.0.0.1 at 2017-04-02 19:13:26 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6AlJc9s46QArdM8zvFeiwP5mVB+2x6P8s9vl9sQnAmpd5ZxBXOp8sgqTR3W4B0aW7aZQxRV1TZZ5e3/lZLIeWQ==", "user"=>{"username"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (3.1ms)
+  Rendered users/new.html.erb within layouts/application (5.1ms)
+Completed 500 Internal Server Error in 118ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for @user do |f| %>
+    2: 	
+    3: 	<%= f.label :username, "Username" %>
+    4: 	<%= f.text_field :username %>
+  
+app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb__2488151879929318851_69930532012160'
+app/views/users/new.html.erb:2:in `_app_views_users_new_html_erb___2105594144920947519_69930625624580'
+app/controllers/users_controller.rb:14:in `create'
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (10.1ms)
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.9ms)
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (40.9ms)
+Started GET "/users/new" for 127.0.0.1 at 2017-04-02 19:16:07 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (2.5ms)
+  Rendered users/new.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_flash.html.erb (1.0ms)
+Completed 200 OK in 74ms (Views: 72.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2017-04-02 19:16:15 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"D2hd9W8HSuqZuqOOLZb9eBDSmap7RB16TKj0RERz3yzcsBQX7bnDDzMBMcM3v6DZFNKhNwov9dNANQ0uZD+/6g==", "user"=>{"username"=>"Ahrkimedes", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Ahrkimedes"], ["password_digest", "$2a$10$PYRsMCcfwfEo/b4fBJWp1O3sVrvhpSKpiJetOjmVHT5hQnOte.tK2"], ["created_at", 2017-04-03 00:16:15 UTC], ["updated_at", 2017-04-03 00:16:15 UTC]]
+  [1m[35m (16.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 145ms (ActiveRecord: 18.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-02 19:16:15 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_flash.html.erb (1.1ms)
+Completed 200 OK in 58ms (Views: 55.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-02 19:16:27 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_flash.html.erb (0.8ms)
+Completed 200 OK in 65ms (Views: 63.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-04-02 19:17:03 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (3.4ms)
+  Rendered users/new.html.erb within layouts/application (5.7ms)
+  Rendered layouts/_flash.html.erb (1.0ms)
+Completed 200 OK in 68ms (Views: 66.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2017-04-02 19:17:05 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tMJJj93uMHWLm6HFsYdLz5AKgx7zqQsvqGh7Q/Xc3koBLpy9Wjylx6p8KYO116+Zg8qHxFAb5UViyOFQVUnCeQ==", "user"=>{"username"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (2.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.5ms)[0m  [1m[31mROLLBACK[0m
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (3.2ms)
+  Rendered users/new.html.erb within layouts/application (5.1ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 6.7ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for @user do |f| %>
+    2: 	
+    3: 	<%= f.label :username, "Username" %>
+    4: 	<%= f.text_field :username %>
+  
+app/views/users/_form.html.erb:1:in `_app_views_users__form_html_erb__2488151879929318851_69930725147640'
+app/views/users/new.html.erb:2:in `_app_views_users_new_html_erb___2105594144920947519_69930725170280'
+app/controllers/users_controller.rb:14:in `create'
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (11.6ms)
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.8ms)
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (45.4ms)
