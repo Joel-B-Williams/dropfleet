@@ -4,15 +4,23 @@ class SiteLayoutTest < ActionDispatch::IntegrationTest
   # test "the truth" do
   #   assert true
   # end
+  def setup
+    @user = users(:user)
+  end
 
-  test "layout page" do 
+  test "layout page with variable links" do 
   	get root_path
   	assert_template 'static_pages/home'
+    assert_select "a[href=?]", root_path
+    assert_select "a[href=?]", login_path
+    assert_select "a[href=?]", new_user_path
+    assert_select "section.flash-section"
+    log_in(@user)
+    assert_redirected_to root_path
+    follow_redirect!
+    assert_select "a[href=?]", login_path, count: 0
   	assert_select "a[href=?]", root_path
-  	assert_select "a[href=?]", login_path
-  	assert_select "a[href=?]", logout_path
-  	assert_select "a[href=?]", new_user_path
-  	assert_select "section.flash-section"
+    assert_select "a[href=?]", logout_path
   end
 
 end

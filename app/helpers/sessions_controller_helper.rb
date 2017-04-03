@@ -5,7 +5,10 @@ module SessionsControllerHelper
 	end
 
 	def logged_in?
-		!!session[:user_id]
+		session[:user_id]
 	end
 
+	def log_out
+		session.delete(:user_id)
+	end
 end

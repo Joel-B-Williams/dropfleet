@@ -5,9 +5,11 @@ class UsersLoginTest < ActionDispatch::IntegrationTest
   #   assert true
   # end
 
+  def setup
+  	@user = users(:user)
+  end
+
   test "user logs in" do
-  # grab fixture 
-  	user = users(:user)
   	get root_path
   	get login_path
   end

@@ -6,5 +6,19 @@ class ActiveSupport::TestCase
   # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
   fixtures :all
 
+
+
   # Add more helper methods to be used by all tests here...
+
+  def log_in(user)
+  	session[:user_id] = user.id
+  end
+end
+
+class ActionDispatch::IntegrationTest
+
+	def log_in(user, password: 'password')
+		post login_path, params: { sessions: { username: user.username, password: password } }
+	end
+
 end
