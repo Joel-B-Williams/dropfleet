@@ -968,3 +968,63 @@ Processing by StaticPagesController#home as HTML
 Completed 200 OK in 80ms (Views: 77.8ms | ActiveRecord: 0.0ms)
 
 
+Started DELETE "/logout" for 127.0.0.1 at 2017-04-03 16:13:38 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"c8Jb7D8d0STKYpLXid5BiMKOciSokjf7MxJ0vraVyx2gGhIOvaNYwWDZAJqT9xwpxo5Kudn531I/j43Ultmr2w=="}
+No template found for SessionsController#destroy, rendering head :no_content
+Completed 204 No Content in 40ms (ActiveRecord: 0.0ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2017-04-03 16:13:41 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"c8Jb7D8d0STKYpLXid5BiMKOciSokjf7MxJ0vraVyx2gGhIOvaNYwWDZAJqT9xwpxo5Kudn531I/j43Ultmr2w=="}
+No template found for SessionsController#destroy, rendering head :no_content
+Completed 204 No Content in 33ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-03 16:16:19 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_flash.html.erb (1.6ms)
+Completed 200 OK in 67ms (Views: 64.5ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2017-04-03 16:16:22 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"dmdx/zFQoHQYT4P6a4dRFk2oUBujNWr/k2tk5BI77valvzgds+4pkbL0Ebdxrgy3SahohtJeglaf9p2OMneOMA=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-03 16:16:22 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_flash.html.erb (1.9ms)
+Completed 200 OK in 79ms (Views: 77.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-03 16:16:24 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_flash.html.erb (1.3ms)
+Completed 200 OK in 105ms (Views: 102.4ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2017-04-03 16:16:26 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"vpjNB0WH+UFSTxOK0MI6qk1OrdfWGvilKfg79SAVL/FtQITlxzlwpPj0gcfK62cLSU6VSqdxEAwlZcKfAFlPNw=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-03 16:16:26 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_flash.html.erb (1.0ms)
+Completed 200 OK in 82ms (Views: 80.7ms | ActiveRecord: 0.0ms)
+
+

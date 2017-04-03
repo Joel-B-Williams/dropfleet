@@ -14,6 +14,9 @@ class SessionsController < ApplicationController
   end
 
   def destroy
+  	session.delete(:user_id) if logged_in?
+  	flash[:success] = "Goodbye"
+  	redirect_to root_path
   end
 
   private
