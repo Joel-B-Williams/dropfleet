@@ -1,2 +1,12 @@
-<h1>SessionsController#new</h1>
-<p>Find me in app/views/sessions_controller/new.html.erb</p>
+<section class='form'>
+	<%= form_for :sessions do |f| %>
+		
+		<%= f.label :username, 'Username' %>
+		<%= f.text_field :username %>
+
+		<%= f.label :password, 'Password' %>
+		<%= f.password_field :password %>
+
+		<%= f.submit 'Login' %>
+	<% end %>
+</section>
