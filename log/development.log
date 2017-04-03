@@ -758,3 +758,28 @@ Processing by StaticPagesController#home as HTML
 Completed 200 OK in 906ms (Views: 888.5ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/users/new" for 127.0.0.1 at 2017-04-03 14:30:47 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (1.0ms)
+  Rendered users/_form.html.erb (90.2ms)
+  Rendered users/new.html.erb within layouts/application (109.2ms)
+  Rendered layouts/_flash.html.erb (2.6ms)
+Completed 200 OK in 539ms (Views: 236.7ms | ActiveRecord: 182.1ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2017-04-03 14:32:59 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qTvxeGgRILzCibeqBSrF3koCaj9TE5o1Pc2ri5CLwfB647ia6q+pWWgyJecfA5h/TgJSoiJ4cpwxUFLhsMehNg==", "user"=>{"username"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.8ms)[0m  [1m[31mROLLBACK[0m
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (7.9ms)
+  Rendered users/_form.html.erb (6.1ms)
+  Rendered users/new.html.erb within layouts/application (19.5ms)
+  Rendered layouts/_flash.html.erb (1.3ms)
+Completed 200 OK in 390ms (Views: 125.9ms | ActiveRecord: 1.6ms)
+
+
