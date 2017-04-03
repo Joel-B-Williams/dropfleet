@@ -5,8 +5,8 @@ class UsersController < ApplicationController
 	end
 
 	def create
-		user = User.create(user_params)
-		if user.save
+		@user = User.create(user_params)
+		if @user.save
 			flash[:success] = "Welcome cadet."
 			redirect_to root_path
 		else
