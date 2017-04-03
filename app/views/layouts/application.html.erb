@@ -13,6 +13,7 @@
   	<%= link_to "Logout", logout_path, method: 'delete' %>
   	<%= link_to "Sign up", new_user_path %>
   </header>
+	<%= render 'flash' %>
   <body>
     <%= yield %>
   </body>

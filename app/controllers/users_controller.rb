@@ -5,6 +5,14 @@ class UsersController < ApplicationController
 	end
 
 	def create
+		user = User.create(user_params)
+		if user.save
+			flash[:success] = "Welcome cadet."
+			redirect_to root_path
+		else
+			flash.now[:danger] = "Errors detected.  Activating Orbital Railguns."
+			render 'new'
+		end
 	end
 
 	def show
@@ -22,5 +30,9 @@ class UsersController < ApplicationController
 	def index
 	end
 
+	private
+		def user_params
+			require(:user).permit(:username, :password, :password_confirmation)
+		end
 
 end
