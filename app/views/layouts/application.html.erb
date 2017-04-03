@@ -9,9 +9,12 @@
   </head>
   <header>
   	<%= link_to "Home", root_path %>
-  	<%= link_to "Login", login_path %>
-  	<%= link_to "Logout", logout_path, method: 'delete' %>
-  	<%= link_to "Sign up", new_user_path %>
+    <% if logged_in? %>
+      <%= link_to "Logout", logout_path, method: 'delete' %>
+    <% else %> 
+      <%= link_to "Login", login_path %>
+      <%= link_to "Sign up", new_user_path %>
+    <% end %>
   </header>
 	<%= render 'layouts/flash' %>
   <body>
