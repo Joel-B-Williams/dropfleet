@@ -749,3 +749,12 @@ Completed 200 OK in 199ms (Views: 59.9ms | ActiveRecord: 0.8ms)
 
 DEPRECATION WARNING: cleanup! is deprecated and will be removed from Rails 5.1 (use Rails.application.reloader.reload! instead of cleanup + prepare) (called from serve at /usr/lib/ruby/vendor_ruby/spring/application.rb:152)
 DEPRECATION WARNING: prepare! is deprecated and will be removed from Rails 5.1 (use Rails.application.reloader.prepare! instead) (called from serve at /usr/lib/ruby/vendor_ruby/spring/application.rb:153)
+Started GET "/" for 127.0.0.1 at 2017-04-03 14:23:13 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (205.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_flash.html.erb (1.4ms)
+Completed 200 OK in 906ms (Views: 888.5ms | ActiveRecord: 0.0ms)
+
+

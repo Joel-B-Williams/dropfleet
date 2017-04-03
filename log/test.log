@@ -37,3 +37,51 @@ Processing by StaticPagesController#home as HTML
   Rendered layouts/_flash.html.erb (1.1ms)
 Completed 200 OK in 266ms (Views: 249.9ms | ActiveRecord: 0.0ms)
   [1m[35m (5.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+--------------------------------
+SiteLayoutTest: test_layout_page
+--------------------------------
+Started GET "/" for 127.0.0.1 at 2017-04-03 14:25:18 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_flash.html.erb (1.2ms)
+Completed 200 OK in 521ms (Views: 504.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+--------------------------------
+SiteLayoutTest: test_layout_page
+--------------------------------
+Started GET "/" for 127.0.0.1 at 2017-04-03 14:25:55 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_flash.html.erb (1.0ms)
+Completed 200 OK in 350ms (Views: 333.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (3.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+--------------------------------
+SiteLayoutTest: test_layout_page
+--------------------------------
+Started GET "/" for 127.0.0.1 at 2017-04-03 14:26:08 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_flash.html.erb (1.3ms)
+Completed 200 OK in 378ms (Views: 362.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+--------------------------------
+SiteLayoutTest: test_layout_page
+--------------------------------
+Started GET "/" for 127.0.0.1 at 2017-04-03 14:27:06 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_flash.html.erb (1.3ms)
+Completed 200 OK in 351ms (Views: 335.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
