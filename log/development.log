@@ -860,3 +860,111 @@ DEPRECATION WARNING: prepare! is deprecated and will be removed from Rails 5.1 (
 DEPRECATION WARNING: cleanup! is deprecated and will be removed from Rails 5.1 (use Rails.application.reloader.reload! instead of cleanup + prepare) (called from serve at /usr/lib/ruby/vendor_ruby/spring/application.rb:152)
 DEPRECATION WARNING: prepare! is deprecated and will be removed from Rails 5.1 (use Rails.application.reloader.prepare! instead) (called from serve at /usr/lib/ruby/vendor_ruby/spring/application.rb:153)
   [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/login" for 127.0.0.1 at 2017-04-03 16:01:11 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_flash.html.erb (0.9ms)
+Completed 200 OK in 127ms (Views: 125.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-04-03 16:01:18 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"R7t/1yvkrBFRDmXCaO52BZKMWM9AfyI2jF9Wz5am8xyUYzY1qVol9Pu1949yxyukloxgUjEUyp+Awq+ltuqT2g==", "sessions"=>{"username"=>"Ahrkimedes", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/sessions_controller.rb:6:in `create'
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.7ms)
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (44.8ms)
+Started GET "/" for 127.0.0.1 at 2017-04-03 16:02:57 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_flash.html.erb (1.1ms)
+Completed 200 OK in 67ms (Views: 65.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-04-03 16:02:59 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (7.4ms)
+  Rendered layouts/_flash.html.erb (1.0ms)
+Completed 200 OK in 106ms (Views: 101.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-04-03 16:03:04 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NUM0JVZKUcwgu2WZPg4WAef5XkdEk4LuqtbM5V709cXmm33H1PTYKYoA99QkJ0ug4/lm2jX4akemSzWPfriVAw==", "sessions"=>{"username"=>"pants", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mUser Load (10.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "pants"], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_flash.html.erb (1.0ms)
+Completed 200 OK in 310ms (Views: 59.6ms | ActiveRecord: 13.9ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-04-03 16:03:10 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dAzZcofyQ8+XVPCMgNRIXiKuyBuSKVsbO5VVqnNijl2n1JCQBUzKKj3vYsGa/RX/Jq7whuNCs7I3CKzAUy7umw==", "sessions"=>{"username"=>"Ahrkimedes", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Ahrkimedes"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 193ms (ActiveRecord: 4.6ms)
+
+
+  
+NoMethodError (undefined method `log_in' for #<SessionsController:0x007efd7d5970a0>
+Did you mean?  login_url):
+  
+app/controllers/sessions_controller.rb:8:in `create'
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.7ms)
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (105.1ms)
+Started POST "/login" for 127.0.0.1 at 2017-04-03 16:04:39 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dAzZcofyQ8+XVPCMgNRIXiKuyBuSKVsbO5VVqnNijl2n1JCQBUzKKj3vYsGa/RX/Jq7whuNCs7I3CKzAUy7umw==", "sessions"=>{"username"=>"Ahrkimedes", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Ahrkimedes"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 254ms (ActiveRecord: 12.2ms)
+
+
+  
+NoMethodError (undefined method `log_in' for #<SessionsController:0x007efd7821f3c8>
+Did you mean?  login_url):
+  
+app/controllers/sessions_controller.rb:8:in `create'
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.2ms)
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.7ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (141.2ms)
+Started POST "/login" for 127.0.0.1 at 2017-04-03 16:12:54 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dAzZcofyQ8+XVPCMgNRIXiKuyBuSKVsbO5VVqnNijl2n1JCQBUzKKj3vYsGa/RX/Jq7whuNCs7I3CKzAUy7umw==", "sessions"=>{"username"=>"Ahrkimedes", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Ahrkimedes"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 146ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-03 16:12:54 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_flash.html.erb (1.3ms)
+Completed 200 OK in 80ms (Views: 77.8ms | ActiveRecord: 0.0ms)
+
+

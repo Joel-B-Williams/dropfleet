@@ -3,8 +3,8 @@ class SessionsController < ApplicationController
   end
 
   def create
-  	user = User.find_by(username: params[:session][:username])
-  	if user && user.authenticated?(params[:session][:password])
+  	user = User.find_by(username: params[:sessions][:username])
+  	if user && user.authenticated?(params[:sessions][:password])
   		log_in(user)
   		redirect_to root_path
   	else
@@ -18,6 +18,6 @@ class SessionsController < ApplicationController
 
   private
   	def session_params
-  		params.require(:session).permit(:username, :password)
+  		params.require(:sessions).permit(:username, :password)
   	end
 end
