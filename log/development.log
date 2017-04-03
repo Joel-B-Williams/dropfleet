@@ -783,3 +783,20 @@ Processing by UsersController#create as HTML
 Completed 200 OK in 390ms (Views: 125.9ms | ActiveRecord: 1.6ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-04-03 15:29:18 -0500
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_flash.html.erb (1.7ms)
+Completed 200 OK in 311ms (Views: 308.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-04-03 15:30:56 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_flash.html.erb (1.0ms)
+Completed 200 OK in 132ms (Views: 90.5ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mUser Load (33.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
