@@ -1867,3 +1867,794 @@ FOREIGN KEY ("user_id")
   [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
   [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(4139278463259040815)[0m
   [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (191.7ms)[0m  [1m[32mINSERT INTO "factions" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "UCM"], ["created_at", 2017-04-04 19:15:53 UTC], ["updated_at", 2017-04-04 19:15:53 UTC]]
+  [1m[35m (84.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "factions" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Scourge"], ["created_at", 2017-04-04 19:15:53 UTC], ["updated_at", 2017-04-04 19:15:53 UTC]]
+  [1m[35m (6.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "factions" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "PHR"], ["created_at", 2017-04-04 19:15:53 UTC], ["updated_at", 2017-04-04 19:15:53 UTC]]
+  [1m[35m (4.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "factions" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Shaltari"], ["created_at", 2017-04-04 19:15:53 UTC], ["updated_at", 2017-04-04 19:15:53 UTC]]
+  [1m[35m (7.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "factions" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "UCM"], ["created_at", 2017-04-04 19:17:24 UTC], ["updated_at", 2017-04-04 19:17:24 UTC]]
+  [1m[35m (24.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "factions" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Scourge"], ["created_at", 2017-04-04 19:17:24 UTC], ["updated_at", 2017-04-04 19:17:24 UTC]]
+  [1m[35m (6.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "factions" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "PHR"], ["created_at", 2017-04-04 19:17:24 UTC], ["updated_at", 2017-04-04 19:17:24 UTC]]
+  [1m[35m (7.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "factions" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Shaltari"], ["created_at", 2017-04-04 19:17:24 UTC], ["updated_at", 2017-04-04 19:17:24 UTC]]
+  [1m[35m (7.3ms)[0m  [1m[35mCOMMIT[0m
+DEPRECATION WARNING: cleanup! is deprecated and will be removed from Rails 5.1 (use Rails.application.reloader.reload! instead of cleanup + prepare) (called from serve at /usr/lib/ruby/vendor_ruby/spring/application.rb:152)
+DEPRECATION WARNING: prepare! is deprecated and will be removed from Rails 5.1 (use Rails.application.reloader.prepare! instead) (called from serve at /usr/lib/ruby/vendor_ruby/spring/application.rb:153)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.7ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (40.7ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "joelercoaster"], ["password_digest", "$2a$10$JPzQ4R6rVKBqiawRKLYlq.ijS.E0FtVHSFpuaJzws5BaIxggHDfMO"], ["created_at", 2017-04-04 19:19:44 UTC], ["updated_at", 2017-04-04 19:19:44 UTC]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mShip Load (52.1ms)[0m  [1m[34mSELECT "ships".* FROM "ships"[0m
+  [1m[35m (0.7ms)[0m  [1m[31mROLLBACK[0m
+DEPRECATION WARNING: cleanup! is deprecated and will be removed from Rails 5.1 (use Rails.application.reloader.reload! instead of cleanup + prepare) (called from serve at /usr/lib/ruby/vendor_ruby/spring/application.rb:152)
+DEPRECATION WARNING: prepare! is deprecated and will be removed from Rails 5.1 (use Rails.application.reloader.prepare! instead) (called from serve at /usr/lib/ruby/vendor_ruby/spring/application.rb:153)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "joel"], ["password_digest", "$2a$10$xxoA0Re1Q28J.HFpeeoXyeLxUPCioJyEwO1MfVlh3URBjNibPk9dq"], ["created_at", 2017-04-04 19:43:31 UTC], ["updated_at", 2017-04-04 19:43:31 UTC]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[35m (1067.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "dropfleet_development"[0m
+  [1m[35m (400.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "dropfleet_test"[0m
+  [1m[35m (2066.5ms)[0m  [1m[35mCREATE DATABASE "dropfleet_development" ENCODING = 'unicode'[0m
+  [1m[35m (1125.1ms)[0m  [1m[35mCREATE DATABASE "dropfleet_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (17.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (737.1ms)[0m  [1m[35mCREATE TABLE "battlegroup_types" ("id" serial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "group_limit" integer)[0m
+  [1m[35m (230.6ms)[0m  [1m[35mCREATE TABLE "battlegroups" ("id" serial primary key, "battlegroup_type_id" integer, "cost" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "fleet_id" integer)[0m
+  [1m[35m (408.6ms)[0m  [1m[35mCREATE TABLE "factions" ("id" serial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (174.7ms)[0m  [1m[35mCREATE TABLE "fleets" ("id" serial primary key, "name" character varying, "faction" character varying, "points_level" integer, "cost" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "user_id" integer)[0m
+  [1m[35m (141.3ms)[0m  [1m[35mCREATE TABLE "groups" ("id" serial primary key, "ship_id" integer, "cost" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "group_size" integer, "battlegroup_id" integer)[0m
+  [1m[35m (241.5ms)[0m  [1m[35mCREATE TABLE "ships" ("id" serial primary key, "name" character varying, "scan" character varying, "signature" character varying, "thrust" character varying, "hull" character varying, "armor" character varying, "point_defense" character varying, "min_group_size" integer, "max_group_size" integer, "tonnage_id" integer, "faction_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "cost" integer)[0m
+  [1m[35m (229.9ms)[0m  [1m[35mCREATE TABLE "special_rules" ("id" serial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (186.2ms)[0m  [1m[35mCREATE TABLE "tonnages" ("id" serial primary key, "tonnage" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (230.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" serial primary key, "username" character varying, "password_digest" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (198.7ms)[0m  [1m[35mALTER TABLE "battlegroups" ADD CONSTRAINT "fleet_id"
+FOREIGN KEY ("fleet_id")
+  REFERENCES "fleets" ("id")
+[0m
+  [1m[35m (87.4ms)[0m  [1m[35mALTER TABLE "fleets" ADD CONSTRAINT "user_id"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (65.7ms)[0m  [1m[35mALTER TABLE "groups" ADD CONSTRAINT "battlegroup_id"
+FOREIGN KEY ("battlegroup_id")
+  REFERENCES "battlegroups" ("id")
+[0m
+  [1m[35m (230.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (28.8ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (47.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20170404185813)[0m
+  [1m[35m (10.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20170404002840),
+(20170404004752),
+(20170404003221),
+(20170404003052),
+(20170404003529),
+(20170404185416),
+(20170404185631),
+(20170404184040),
+(20170402231505),
+(20170404001355),
+(20170404185611),
+(20170404004530),
+(20170404185336),
+(20170404004324),
+(20170404184432),
+(20170404002735),
+(20170404185806);
+
+[0m
+  [1m[35m (140.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (25.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", 2017-04-04 19:43:59 UTC], ["updated_at", 2017-04-04 19:43:59 UTC]]
+  [1m[35m (42.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (6.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (1070.3ms)[0m  [1m[35mCREATE TABLE "battlegroup_types" ("id" serial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "group_limit" integer)[0m
+  [1m[35m (196.7ms)[0m  [1m[35mCREATE TABLE "battlegroups" ("id" serial primary key, "battlegroup_type_id" integer, "cost" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "fleet_id" integer)[0m
+  [1m[35m (241.8ms)[0m  [1m[35mCREATE TABLE "factions" ("id" serial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (196.4ms)[0m  [1m[35mCREATE TABLE "fleets" ("id" serial primary key, "name" character varying, "faction" character varying, "points_level" integer, "cost" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "user_id" integer)[0m
+  [1m[35m (96.7ms)[0m  [1m[35mCREATE TABLE "groups" ("id" serial primary key, "ship_id" integer, "cost" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "group_size" integer, "battlegroup_id" integer)[0m
+  [1m[35m (174.6ms)[0m  [1m[35mCREATE TABLE "ships" ("id" serial primary key, "name" character varying, "scan" character varying, "signature" character varying, "thrust" character varying, "hull" character varying, "armor" character varying, "point_defense" character varying, "min_group_size" integer, "max_group_size" integer, "tonnage_id" integer, "faction_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "cost" integer)[0m
+  [1m[35m (208.5ms)[0m  [1m[35mCREATE TABLE "special_rules" ("id" serial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (364.2ms)[0m  [1m[35mCREATE TABLE "tonnages" ("id" serial primary key, "tonnage" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (263.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" serial primary key, "username" character varying, "password_digest" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (99.0ms)[0m  [1m[35mALTER TABLE "battlegroups" ADD CONSTRAINT "fleet_id"
+FOREIGN KEY ("fleet_id")
+  REFERENCES "fleets" ("id")
+[0m
+  [1m[35m (10.7ms)[0m  [1m[35mALTER TABLE "fleets" ADD CONSTRAINT "user_id"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (8.9ms)[0m  [1m[35mALTER TABLE "groups" ADD CONSTRAINT "battlegroup_id"
+FOREIGN KEY ("battlegroup_id")
+  REFERENCES "battlegroups" ("id")
+[0m
+  [1m[35m (164.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (8.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20170404185813)[0m
+  [1m[35m (55.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20170404002840),
+(20170404004752),
+(20170404003221),
+(20170404003052),
+(20170404003529),
+(20170404185416),
+(20170404185631),
+(20170404184040),
+(20170402231505),
+(20170404001355),
+(20170404185611),
+(20170404004530),
+(20170404185336),
+(20170404004324),
+(20170404184432),
+(20170404002735),
+(20170404185806);
+
+[0m
+  [1m[35m (273.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", 2017-04-04 19:44:04 UTC], ["updated_at", 2017-04-04 19:44:04 UTC]]
+  [1m[35m (13.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "factions" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "UCM"], ["created_at", 2017-04-04 19:44:04 UTC], ["updated_at", 2017-04-04 19:44:04 UTC]]
+  [1m[35m (27.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "factions" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Scourge"], ["created_at", 2017-04-04 19:44:04 UTC], ["updated_at", 2017-04-04 19:44:04 UTC]]
+  [1m[35m (7.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "factions" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "PHR"], ["created_at", 2017-04-04 19:44:04 UTC], ["updated_at", 2017-04-04 19:44:04 UTC]]
+  [1m[35m (7.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "factions" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Shaltari"], ["created_at", 2017-04-04 19:44:04 UTC], ["updated_at", 2017-04-04 19:44:04 UTC]]
+  [1m[35m (7.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[35m (1465.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "dropfleet_development"[0m
+  [1m[35m (378.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "dropfleet_test"[0m
+  [1m[35m (1099.9ms)[0m  [1m[35mCREATE DATABASE "dropfleet_development" ENCODING = 'unicode'[0m
+  [1m[35m (877.4ms)[0m  [1m[35mCREATE DATABASE "dropfleet_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (402.8ms)[0m  [1m[35mCREATE TABLE "battlegroup_types" ("id" serial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "group_limit" integer)[0m
+  [1m[35m (119.3ms)[0m  [1m[35mCREATE TABLE "battlegroups" ("id" serial primary key, "battlegroup_type_id" integer, "cost" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "fleet_id" integer)[0m
+  [1m[35m (119.0ms)[0m  [1m[35mCREATE TABLE "factions" ("id" serial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (186.1ms)[0m  [1m[35mCREATE TABLE "fleets" ("id" serial primary key, "name" character varying, "faction" character varying, "points_level" integer, "cost" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "user_id" integer)[0m
+  [1m[35m (77.3ms)[0m  [1m[35mCREATE TABLE "groups" ("id" serial primary key, "ship_id" integer, "cost" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "group_size" integer, "battlegroup_id" integer)[0m
+  [1m[35m (196.7ms)[0m  [1m[35mCREATE TABLE "ships" ("id" serial primary key, "name" character varying, "scan" character varying, "signature" character varying, "thrust" character varying, "hull" character varying, "armor" character varying, "point_defense" character varying, "min_group_size" integer, "max_group_size" integer, "tonnage_id" integer, "faction_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "cost" integer)[0m
+  [1m[35m (141.0ms)[0m  [1m[35mCREATE TABLE "special_rules" ("id" serial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (175.7ms)[0m  [1m[35mCREATE TABLE "tonnages" ("id" serial primary key, "tonnage" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (186.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" serial primary key, "username" character varying, "password_digest" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (54.2ms)[0m  [1m[35mALTER TABLE "battlegroups" ADD CONSTRAINT "fleet_id"
+FOREIGN KEY ("fleet_id")
+  REFERENCES "fleets" ("id")
+[0m
+  [1m[35m (10.1ms)[0m  [1m[35mALTER TABLE "fleets" ADD CONSTRAINT "user_id"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (9.5ms)[0m  [1m[35mALTER TABLE "groups" ADD CONSTRAINT "battlegroup_id"
+FOREIGN KEY ("battlegroup_id")
+  REFERENCES "battlegroups" ("id")
+[0m
+  [1m[35m (186.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (8.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20170404185813)[0m
+  [1m[35m (10.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20170404002840),
+(20170404004752),
+(20170404003221),
+(20170404003052),
+(20170404003529),
+(20170404185416),
+(20170404185631),
+(20170404184040),
+(20170402231505),
+(20170404001355),
+(20170404185611),
+(20170404004530),
+(20170404185336),
+(20170404004324),
+(20170404184432),
+(20170404002735),
+(20170404185806);
+
+[0m
+  [1m[35m (196.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", 2017-04-04 19:47:26 UTC], ["updated_at", 2017-04-04 19:47:26 UTC]]
+  [1m[35m (11.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (383.6ms)[0m  [1m[35mCREATE TABLE "battlegroup_types" ("id" serial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "group_limit" integer)[0m
+  [1m[35m (85.4ms)[0m  [1m[35mCREATE TABLE "battlegroups" ("id" serial primary key, "battlegroup_type_id" integer, "cost" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "fleet_id" integer)[0m
+  [1m[35m (164.3ms)[0m  [1m[35mCREATE TABLE "factions" ("id" serial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (174.5ms)[0m  [1m[35mCREATE TABLE "fleets" ("id" serial primary key, "name" character varying, "faction" character varying, "points_level" integer, "cost" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "user_id" integer)[0m
+  [1m[35m (174.4ms)[0m  [1m[35mCREATE TABLE "groups" ("id" serial primary key, "ship_id" integer, "cost" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "group_size" integer, "battlegroup_id" integer)[0m
+  [1m[35m (285.5ms)[0m  [1m[35mCREATE TABLE "ships" ("id" serial primary key, "name" character varying, "scan" character varying, "signature" character varying, "thrust" character varying, "hull" character varying, "armor" character varying, "point_defense" character varying, "min_group_size" integer, "max_group_size" integer, "tonnage_id" integer, "faction_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "cost" integer)[0m
+  [1m[35m (297.3ms)[0m  [1m[35mCREATE TABLE "special_rules" ("id" serial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (196.6ms)[0m  [1m[35mCREATE TABLE "tonnages" ("id" serial primary key, "tonnage" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (219.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" serial primary key, "username" character varying, "password_digest" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (65.1ms)[0m  [1m[35mALTER TABLE "battlegroups" ADD CONSTRAINT "fleet_id"
+FOREIGN KEY ("fleet_id")
+  REFERENCES "fleets" ("id")
+[0m
+  [1m[35m (10.1ms)[0m  [1m[35mALTER TABLE "fleets" ADD CONSTRAINT "user_id"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (10.3ms)[0m  [1m[35mALTER TABLE "groups" ADD CONSTRAINT "battlegroup_id"
+FOREIGN KEY ("battlegroup_id")
+  REFERENCES "battlegroups" ("id")
+[0m
+  [1m[35m (216.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (8.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20170404185813)[0m
+  [1m[35m (10.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20170404002840),
+(20170404004752),
+(20170404003221),
+(20170404003052),
+(20170404003529),
+(20170404185416),
+(20170404185631),
+(20170404184040),
+(20170402231505),
+(20170404001355),
+(20170404185611),
+(20170404004530),
+(20170404185336),
+(20170404004324),
+(20170404184432),
+(20170404002735),
+(20170404185806);
+
+[0m
+  [1m[35m (252.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", 2017-04-04 19:47:29 UTC], ["updated_at", 2017-04-04 19:47:29 UTC]]
+  [1m[35m (12.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "factions" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "UCM"], ["created_at", 2017-04-04 19:47:29 UTC], ["updated_at", 2017-04-04 19:47:29 UTC]]
+  [1m[35m (7.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "factions" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Scourge"], ["created_at", 2017-04-04 19:47:29 UTC], ["updated_at", 2017-04-04 19:47:29 UTC]]
+  [1m[35m (7.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "factions" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "PHR"], ["created_at", 2017-04-04 19:47:29 UTC], ["updated_at", 2017-04-04 19:47:29 UTC]]
+  [1m[35m (7.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "factions" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Shaltari"], ["created_at", 2017-04-04 19:47:29 UTC], ["updated_at", 2017-04-04 19:47:29 UTC]]
+  [1m[35m (6.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "battlegroup_types" ("name", "created_at", "updated_at", "group_limit") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Flag"], ["created_at", 2017-04-04 19:47:29 UTC], ["updated_at", 2017-04-04 19:47:29 UTC], ["group_limit", 2]]
+  [1m[35m (12.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "battlegroup_types" ("name", "created_at", "updated_at", "group_limit") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Vanguard"], ["created_at", 2017-04-04 19:47:29 UTC], ["updated_at", 2017-04-04 19:47:29 UTC], ["group_limit", 3]]
+  [1m[35m (7.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "battlegroup_types" ("name", "created_at", "updated_at", "group_limit") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Line"], ["created_at", 2017-04-04 19:47:29 UTC], ["updated_at", 2017-04-04 19:47:29 UTC], ["group_limit", 3]]
+  [1m[35m (6.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "battlegroup_types" ("name", "created_at", "updated_at", "group_limit") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Pathfinder"], ["created_at", 2017-04-04 19:47:29 UTC], ["updated_at", 2017-04-04 19:47:29 UTC], ["group_limit", 3]]
+  [1m[35m (6.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (28.9ms)[0m  [1m[32mINSERT INTO "tonnages" ("tonnage", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tonnage", "L"], ["created_at", 2017-04-04 19:47:29 UTC], ["updated_at", 2017-04-04 19:47:29 UTC]]
+  [1m[35m (45.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "tonnages" ("tonnage", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tonnage", "M"], ["created_at", 2017-04-04 19:47:29 UTC], ["updated_at", 2017-04-04 19:47:29 UTC]]
+  [1m[35m (6.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "tonnages" ("tonnage", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tonnage", "H"], ["created_at", 2017-04-04 19:47:29 UTC], ["updated_at", 2017-04-04 19:47:29 UTC]]
+  [1m[35m (7.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "tonnages" ("tonnage", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tonnage", "S"], ["created_at", 2017-04-04 19:47:29 UTC], ["updated_at", 2017-04-04 19:47:29 UTC]]
+  [1m[35m (7.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "joel"], ["password_digest", "$2a$10$Lvw0iDYTBtU0HAnK9Mg66.jgrySFtlLG9XXUc32xWdsUHckpAjV1y"], ["created_at", 2017-04-04 19:49:54 UTC], ["updated_at", 2017-04-04 19:49:54 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "joel"], ["password_digest", "$2a$10$MWtKuznnNoWrQi3fJ3v57O9fYr0VDwnZZ7jgfbCs5L/v8PAa.B8W2"], ["created_at", 2017-04-04 19:59:55 UTC], ["updated_at", 2017-04-04 19:59:55 UTC]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[35m (475.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "dropfleet_development"[0m
+  [1m[35m (376.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "dropfleet_test"[0m
+  [1m[35m (1131.3ms)[0m  [1m[35mCREATE DATABASE "dropfleet_development" ENCODING = 'unicode'[0m
+  [1m[35m (1010.8ms)[0m  [1m[35mCREATE DATABASE "dropfleet_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (341.7ms)[0m  [1m[35mCREATE TABLE "battlegroup_types" ("id" serial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "group_limit" integer)[0m
+  [1m[35m (109.1ms)[0m  [1m[35mCREATE TABLE "battlegroups" ("id" serial primary key, "battlegroup_type_id" integer, "cost" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "fleet_id" integer)[0m
+  [1m[35m (153.3ms)[0m  [1m[35mCREATE TABLE "factions" ("id" serial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (375.0ms)[0m  [1m[35mCREATE TABLE "fleets" ("id" serial primary key, "name" character varying, "faction_id" integer, "points_level" integer, "cost" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "user_id" integer)[0m
+  [1m[35m (108.4ms)[0m  [1m[35mCREATE TABLE "groups" ("id" serial primary key, "ship_id" integer, "cost" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "group_size" integer, "battlegroup_id" integer)[0m
+  [1m[35m (163.3ms)[0m  [1m[35mCREATE TABLE "ships" ("id" serial primary key, "name" character varying, "scan" character varying, "signature" character varying, "thrust" character varying, "hull" character varying, "armor" character varying, "point_defense" character varying, "min_group_size" integer, "max_group_size" integer, "tonnage_id" integer, "faction_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "cost" integer)[0m
+  [1m[35m (141.5ms)[0m  [1m[35mCREATE TABLE "special_rules" ("id" serial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (198.0ms)[0m  [1m[35mCREATE TABLE "tonnages" ("id" serial primary key, "tonnage" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (230.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" serial primary key, "username" character varying, "password_digest" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (10.4ms)[0m  [1m[35mALTER TABLE "battlegroups" ADD CONSTRAINT "fleet_id"
+FOREIGN KEY ("fleet_id")
+  REFERENCES "fleets" ("id")
+[0m
+  [1m[35m (66.1ms)[0m  [1m[35mALTER TABLE "fleets" ADD CONSTRAINT "user_id"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (76.7ms)[0m  [1m[35mALTER TABLE "groups" ADD CONSTRAINT "battlegroup_id"
+FOREIGN KEY ("battlegroup_id")
+  REFERENCES "battlegroups" ("id")
+[0m
+  [1m[35m (598.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (86.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20170404185813)[0m
+  [1m[35m (32.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20170404002840),
+(20170404004752),
+(20170404003221),
+(20170404003052),
+(20170404003529),
+(20170404185416),
+(20170404185631),
+(20170404184040),
+(20170402231505),
+(20170404001355),
+(20170404185611),
+(20170404004530),
+(20170404185336),
+(20170404004324),
+(20170404184432),
+(20170404002735),
+(20170404185806);
+
+[0m
+  [1m[35m (696.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (2.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (4.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", 2017-04-04 20:00:13 UTC], ["updated_at", 2017-04-04 20:00:13 UTC]]
+  [1m[35m (63.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (541.7ms)[0m  [1m[35mCREATE TABLE "battlegroup_types" ("id" serial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "group_limit" integer)[0m
+  [1m[35m (208.2ms)[0m  [1m[35mCREATE TABLE "battlegroups" ("id" serial primary key, "battlegroup_type_id" integer, "cost" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "fleet_id" integer)[0m
+  [1m[35m (309.1ms)[0m  [1m[35mCREATE TABLE "factions" ("id" serial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (240.7ms)[0m  [1m[35mCREATE TABLE "fleets" ("id" serial primary key, "name" character varying, "faction_id" integer, "points_level" integer, "cost" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "user_id" integer)[0m
+  [1m[35m (241.6ms)[0m  [1m[35mCREATE TABLE "groups" ("id" serial primary key, "ship_id" integer, "cost" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "group_size" integer, "battlegroup_id" integer)[0m
+  [1m[35m (285.7ms)[0m  [1m[35mCREATE TABLE "ships" ("id" serial primary key, "name" character varying, "scan" character varying, "signature" character varying, "thrust" character varying, "hull" character varying, "armor" character varying, "point_defense" character varying, "min_group_size" integer, "max_group_size" integer, "tonnage_id" integer, "faction_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "cost" integer)[0m
+  [1m[35m (186.3ms)[0m  [1m[35mCREATE TABLE "special_rules" ("id" serial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (175.0ms)[0m  [1m[35mCREATE TABLE "tonnages" ("id" serial primary key, "tonnage" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (152.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" serial primary key, "username" character varying, "password_digest" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (10.2ms)[0m  [1m[35mALTER TABLE "battlegroups" ADD CONSTRAINT "fleet_id"
+FOREIGN KEY ("fleet_id")
+  REFERENCES "fleets" ("id")
+[0m
+  [1m[35m (9.8ms)[0m  [1m[35mALTER TABLE "fleets" ADD CONSTRAINT "user_id"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (10.1ms)[0m  [1m[35mALTER TABLE "groups" ADD CONSTRAINT "battlegroup_id"
+FOREIGN KEY ("battlegroup_id")
+  REFERENCES "battlegroups" ("id")
+[0m
+  [1m[35m (197.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (8.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20170404185813)[0m
+  [1m[35m (10.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20170404002840),
+(20170404004752),
+(20170404003221),
+(20170404003052),
+(20170404003529),
+(20170404185416),
+(20170404185631),
+(20170404184040),
+(20170402231505),
+(20170404001355),
+(20170404185611),
+(20170404004530),
+(20170404185336),
+(20170404004324),
+(20170404184432),
+(20170404002735),
+(20170404185806);
+
+[0m
+  [1m[35m (140.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", 2017-04-04 20:00:16 UTC], ["updated_at", 2017-04-04 20:00:16 UTC]]
+  [1m[35m (13.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "factions" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "UCM"], ["created_at", 2017-04-04 20:00:16 UTC], ["updated_at", 2017-04-04 20:00:16 UTC]]
+  [1m[35m (23.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "factions" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Scourge"], ["created_at", 2017-04-04 20:00:16 UTC], ["updated_at", 2017-04-04 20:00:16 UTC]]
+  [1m[35m (6.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "factions" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "PHR"], ["created_at", 2017-04-04 20:00:16 UTC], ["updated_at", 2017-04-04 20:00:16 UTC]]
+  [1m[35m (6.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "factions" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Shaltari"], ["created_at", 2017-04-04 20:00:16 UTC], ["updated_at", 2017-04-04 20:00:16 UTC]]
+  [1m[35m (6.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "battlegroup_types" ("name", "created_at", "updated_at", "group_limit") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Flag"], ["created_at", 2017-04-04 20:00:16 UTC], ["updated_at", 2017-04-04 20:00:16 UTC], ["group_limit", 2]]
+  [1m[35m (13.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "battlegroup_types" ("name", "created_at", "updated_at", "group_limit") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Vanguard"], ["created_at", 2017-04-04 20:00:16 UTC], ["updated_at", 2017-04-04 20:00:16 UTC], ["group_limit", 3]]
+  [1m[35m (7.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "battlegroup_types" ("name", "created_at", "updated_at", "group_limit") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Line"], ["created_at", 2017-04-04 20:00:16 UTC], ["updated_at", 2017-04-04 20:00:16 UTC], ["group_limit", 3]]
+  [1m[35m (7.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "battlegroup_types" ("name", "created_at", "updated_at", "group_limit") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Pathfinder"], ["created_at", 2017-04-04 20:00:16 UTC], ["updated_at", 2017-04-04 20:00:16 UTC], ["group_limit", 3]]
+  [1m[35m (7.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "tonnages" ("tonnage", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tonnage", "L"], ["created_at", 2017-04-04 20:00:16 UTC], ["updated_at", 2017-04-04 20:00:16 UTC]]
+  [1m[35m (3.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "tonnages" ("tonnage", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tonnage", "M"], ["created_at", 2017-04-04 20:00:16 UTC], ["updated_at", 2017-04-04 20:00:16 UTC]]
+  [1m[35m (8.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "tonnages" ("tonnage", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tonnage", "H"], ["created_at", 2017-04-04 20:00:16 UTC], ["updated_at", 2017-04-04 20:00:16 UTC]]
+  [1m[35m (7.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "tonnages" ("tonnage", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tonnage", "S"], ["created_at", 2017-04-04 20:00:16 UTC], ["updated_at", 2017-04-04 20:00:16 UTC]]
+  [1m[35m (7.5ms)[0m  [1m[35mCOMMIT[0m
+DEPRECATION WARNING: cleanup! is deprecated and will be removed from Rails 5.1 (use Rails.application.reloader.reload! instead of cleanup + prepare) (called from serve at /usr/lib/ruby/vendor_ruby/spring/application.rb:152)
+DEPRECATION WARNING: prepare! is deprecated and will be removed from Rails 5.1 (use Rails.application.reloader.prepare! instead) (called from serve at /usr/lib/ruby/vendor_ruby/spring/application.rb:153)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFleet Load (0.9ms)[0m  [1m[34mSELECT "fleets".* FROM "fleets"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (27.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "joel"], ["password_digest", "$2a$10$gDdfqnOfdb1bgDrG.Tn7Te/w6gXi3tkCQKwddSccZbkjquAS1.gsG"], ["created_at", 2017-04-04 20:21:21 UTC], ["updated_at", 2017-04-04 20:21:21 UTC]]
+  [1m[35m (0.5ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mFleet Load (0.5ms)[0m  [1m[34mSELECT "fleets".* FROM "fleets"[0m
+  [1m[36mFleet Load (0.3ms)[0m  [1m[34mSELECT "fleets".* FROM "fleets" WHERE "fleets"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+DEPRECATION WARNING: cleanup! is deprecated and will be removed from Rails 5.1 (use Rails.application.reloader.reload! instead of cleanup + prepare) (called from serve at /usr/lib/ruby/vendor_ruby/spring/application.rb:152)
+DEPRECATION WARNING: prepare! is deprecated and will be removed from Rails 5.1 (use Rails.application.reloader.prepare! instead) (called from serve at /usr/lib/ruby/vendor_ruby/spring/application.rb:153)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "joel"], ["password_digest", "$2a$10$qKn5jopmlflJh.mkk05kfOA2hmLnVU07e3c8d7xbuQWKDAIjZCM/q"], ["created_at", 2017-04-04 20:24:45 UTC], ["updated_at", 2017-04-04 20:24:45 UTC]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mFleet Load (0.6ms)[0m  [1m[34mSELECT "fleets".* FROM "fleets" WHERE "fleets"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[36mBattlegroup Load (0.6ms)[0m  [1m[34mSELECT "battlegroups".* FROM "battlegroups" INNER JOIN "fleets" ON "battlegroups"."fleet_id" = "fleets"."id" WHERE "fleets"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[36mGroup Load (1.0ms)[0m  [1m[34mSELECT "groups".* FROM "groups" INNER JOIN "battlegroups" ON "groups"."battlegroup_id" = "battlegroups"."id" INNER JOIN "fleets" ON "battlegroups"."fleet_id" = "fleets"."id" WHERE "fleets"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[36mShip Load (60.1ms)[0m  [1m[34mSELECT "ships".* FROM "ships"[0m
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[35m (586.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "dropfleet_development"[0m
+  [1m[35m (422.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "dropfleet_test"[0m
+  [1m[35m (2221.9ms)[0m  [1m[35mCREATE DATABASE "dropfleet_development" ENCODING = 'unicode'[0m
+  [1m[35m (1044.9ms)[0m  [1m[35mCREATE DATABASE "dropfleet_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (273.6ms)[0m  [1m[35mCREATE TABLE "battlegroup_types" ("id" serial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "group_limit" integer)[0m
+  [1m[35m (141.7ms)[0m  [1m[35mCREATE TABLE "battlegroups" ("id" serial primary key, "battlegroup_type_id" integer, "cost" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "fleet_id" integer)[0m
+  [1m[35m (175.4ms)[0m  [1m[35mCREATE TABLE "factions" ("id" serial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (196.9ms)[0m  [1m[35mCREATE TABLE "fleets" ("id" serial primary key, "name" character varying, "faction_id" integer, "points_level" integer, "cost" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "user_id" integer)[0m
+  [1m[35m (141.7ms)[0m  [1m[35mCREATE TABLE "groups" ("id" serial primary key, "ship_id" integer, "cost" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "group_size" integer, "battlegroup_id" integer)[0m
+  [1m[35m (163.8ms)[0m  [1m[35mCREATE TABLE "ships" ("id" serial primary key, "name" character varying, "scan" character varying, "signature" character varying, "thrust" character varying, "hull" character varying, "armor" character varying, "point_defense" character varying, "min_group_size" integer, "max_group_size" integer, "tonnage_id" integer, "faction_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "cost" integer)[0m
+  [1m[35m (186.4ms)[0m  [1m[35mCREATE TABLE "special_rules" ("id" serial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (375.6ms)[0m  [1m[35mCREATE TABLE "tonnages" ("id" serial primary key, "tonnage" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (275.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" serial primary key, "username" character varying, "password_digest" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (87.8ms)[0m  [1m[35mALTER TABLE "battlegroups" ADD CONSTRAINT "fleet_id"
+FOREIGN KEY ("fleet_id")
+  REFERENCES "fleets" ("id")
+[0m
+  [1m[35m (10.1ms)[0m  [1m[35mALTER TABLE "fleets" ADD CONSTRAINT "user_id"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (9.8ms)[0m  [1m[35mALTER TABLE "groups" ADD CONSTRAINT "battlegroup_id"
+FOREIGN KEY ("battlegroup_id")
+  REFERENCES "battlegroups" ("id")
+[0m
+  [1m[35m (131.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (9.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20170404185813)[0m
+  [1m[35m (9.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20170404002840),
+(20170404004752),
+(20170404003221),
+(20170404003052),
+(20170404003529),
+(20170404185416),
+(20170404185631),
+(20170404184040),
+(20170402231505),
+(20170404001355),
+(20170404185611),
+(20170404004530),
+(20170404185336),
+(20170404004324),
+(20170404184432),
+(20170404002735),
+(20170404185806);
+
+[0m
+  [1m[35m (163.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", 2017-04-04 20:26:10 UTC], ["updated_at", 2017-04-04 20:26:10 UTC]]
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (161.7ms)[0m  [1m[35mCREATE TABLE "battlegroup_types" ("id" serial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "group_limit" integer)[0m
+  [1m[35m (96.9ms)[0m  [1m[35mCREATE TABLE "battlegroups" ("id" serial primary key, "battlegroup_type_id" integer, "cost" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "fleet_id" integer)[0m
+  [1m[35m (219.7ms)[0m  [1m[35mCREATE TABLE "factions" ("id" serial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (197.1ms)[0m  [1m[35mCREATE TABLE "fleets" ("id" serial primary key, "name" character varying, "faction_id" integer, "points_level" integer, "cost" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "user_id" integer)[0m
+  [1m[35m (85.9ms)[0m  [1m[35mCREATE TABLE "groups" ("id" serial primary key, "ship_id" integer, "cost" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "group_size" integer, "battlegroup_id" integer)[0m
+  [1m[35m (153.6ms)[0m  [1m[35mCREATE TABLE "ships" ("id" serial primary key, "name" character varying, "scan" character varying, "signature" character varying, "thrust" character varying, "hull" character varying, "armor" character varying, "point_defense" character varying, "min_group_size" integer, "max_group_size" integer, "tonnage_id" integer, "faction_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "cost" integer)[0m
+  [1m[35m (142.2ms)[0m  [1m[35mCREATE TABLE "special_rules" ("id" serial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (141.8ms)[0m  [1m[35mCREATE TABLE "tonnages" ("id" serial primary key, "tonnage" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (130.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" serial primary key, "username" character varying, "password_digest" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (9.9ms)[0m  [1m[35mALTER TABLE "battlegroups" ADD CONSTRAINT "fleet_id"
+FOREIGN KEY ("fleet_id")
+  REFERENCES "fleets" ("id")
+[0m
+  [1m[35m (10.2ms)[0m  [1m[35mALTER TABLE "fleets" ADD CONSTRAINT "user_id"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (10.1ms)[0m  [1m[35mALTER TABLE "groups" ADD CONSTRAINT "battlegroup_id"
+FOREIGN KEY ("battlegroup_id")
+  REFERENCES "battlegroups" ("id")
+[0m
+  [1m[35m (120.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (8.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20170404185813)[0m
+  [1m[35m (10.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20170404002840),
+(20170404004752),
+(20170404003221),
+(20170404003052),
+(20170404003529),
+(20170404185416),
+(20170404185631),
+(20170404184040),
+(20170402231505),
+(20170404001355),
+(20170404185611),
+(20170404004530),
+(20170404185336),
+(20170404004324),
+(20170404184432),
+(20170404002735),
+(20170404185806);
+
+[0m
+  [1m[35m (138.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", 2017-04-04 20:26:12 UTC], ["updated_at", 2017-04-04 20:26:12 UTC]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "factions" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "UCM"], ["created_at", 2017-04-04 20:26:12 UTC], ["updated_at", 2017-04-04 20:26:12 UTC]]
+  [1m[35m (32.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "factions" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Scourge"], ["created_at", 2017-04-04 20:26:12 UTC], ["updated_at", 2017-04-04 20:26:12 UTC]]
+  [1m[35m (6.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "factions" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "PHR"], ["created_at", 2017-04-04 20:26:12 UTC], ["updated_at", 2017-04-04 20:26:12 UTC]]
+  [1m[35m (9.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "factions" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Shaltari"], ["created_at", 2017-04-04 20:26:12 UTC], ["updated_at", 2017-04-04 20:26:12 UTC]]
+  [1m[35m (3.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "battlegroup_types" ("name", "created_at", "updated_at", "group_limit") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Flag"], ["created_at", 2017-04-04 20:26:12 UTC], ["updated_at", 2017-04-04 20:26:12 UTC], ["group_limit", 2]]
+  [1m[35m (17.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "battlegroup_types" ("name", "created_at", "updated_at", "group_limit") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Vanguard"], ["created_at", 2017-04-04 20:26:12 UTC], ["updated_at", 2017-04-04 20:26:12 UTC], ["group_limit", 3]]
+  [1m[35m (6.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "battlegroup_types" ("name", "created_at", "updated_at", "group_limit") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Line"], ["created_at", 2017-04-04 20:26:12 UTC], ["updated_at", 2017-04-04 20:26:12 UTC], ["group_limit", 3]]
+  [1m[35m (7.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "battlegroup_types" ("name", "created_at", "updated_at", "group_limit") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Pathfinder"], ["created_at", 2017-04-04 20:26:12 UTC], ["updated_at", 2017-04-04 20:26:12 UTC], ["group_limit", 3]]
+  [1m[35m (7.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "tonnages" ("tonnage", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tonnage", "L"], ["created_at", 2017-04-04 20:26:12 UTC], ["updated_at", 2017-04-04 20:26:12 UTC]]
+  [1m[35m (3.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "tonnages" ("tonnage", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tonnage", "M"], ["created_at", 2017-04-04 20:26:12 UTC], ["updated_at", 2017-04-04 20:26:12 UTC]]
+  [1m[35m (7.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "tonnages" ("tonnage", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tonnage", "H"], ["created_at", 2017-04-04 20:26:12 UTC], ["updated_at", 2017-04-04 20:26:12 UTC]]
+  [1m[35m (7.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "tonnages" ("tonnage", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tonnage", "S"], ["created_at", 2017-04-04 20:26:12 UTC], ["updated_at", 2017-04-04 20:26:12 UTC]]
+  [1m[35m (7.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "ships" ("name", "scan", "signature", "thrust", "hull", "armor", "point_defense", "min_group_size", "max_group_size", "tonnage_id", "faction_id", "created_at", "updated_at", "cost") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) RETURNING "id"[0m  [["name", "Beijing"], ["scan", "8\""], ["signature", "12\""], ["thrust", "6\""], ["hull", "18"], ["armor", "3+"], ["point_defense", "10"], ["min_group_size", 1], ["max_group_size", 1], ["tonnage_id", 4], ["faction_id", 1], ["created_at", 2017-04-04 20:26:12 UTC], ["updated_at", 2017-04-04 20:26:12 UTC], ["cost", 155]]
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ships" ("name", "scan", "signature", "thrust", "hull", "armor", "point_defense", "min_group_size", "max_group_size", "tonnage_id", "faction_id", "created_at", "updated_at", "cost") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) RETURNING "id"[0m  [["name", "New York"], ["scan", "8\""], ["signature", "12\""], ["thrust", "6\""], ["hull", "18"], ["armor", "3+"], ["point_defense", "10"], ["min_group_size", 1], ["max_group_size", 1], ["tonnage_id", 4], ["faction_id", 1], ["created_at", 2017-04-04 20:26:12 UTC], ["updated_at", 2017-04-04 20:26:12 UTC], ["cost", 260]]
+  [1m[35m (6.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "ships" ("name", "scan", "signature", "thrust", "hull", "armor", "point_defense", "min_group_size", "max_group_size", "tonnage_id", "faction_id", "created_at", "updated_at", "cost") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) RETURNING "id"[0m  [["name", "Tokyo"], ["scan", "8\""], ["signature", "12\""], ["thrust", "6\""], ["hull", "18"], ["armor", "3+"], ["point_defense", "10"], ["min_group_size", 1], ["max_group_size", 1], ["tonnage_id", 4], ["faction_id", 1], ["created_at", 2017-04-04 20:26:12 UTC], ["updated_at", 2017-04-04 20:26:12 UTC], ["cost", 220]]
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "ships" ("name", "scan", "signature", "thrust", "hull", "armor", "point_defense", "min_group_size", "max_group_size", "tonnage_id", "faction_id", "created_at", "updated_at", "cost") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) RETURNING "id"[0m  [["name", "Atlantis"], ["scan", "6\""], ["signature", "6\""], ["thrust", "8\""], ["hull", "14"], ["armor", "3+"], ["point_defense", "7"], ["min_group_size", 1], ["max_group_size", 1], ["tonnage_id", 3], ["faction_id", 1], ["created_at", 2017-04-04 20:26:12 UTC], ["updated_at", 2017-04-04 20:26:12 UTC], ["cost", 205]]
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "ships" ("name", "scan", "signature", "thrust", "hull", "armor", "point_defense", "min_group_size", "max_group_size", "tonnage_id", "faction_id", "created_at", "updated_at", "cost") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) RETURNING "id"[0m  [["name", "Avalon"], ["scan", "6\""], ["signature", "6\""], ["thrust", "8\""], ["hull", "14"], ["armor", "3+"], ["point_defense", "7"], ["min_group_size", 1], ["max_group_size", 1], ["tonnage_id", 3], ["faction_id", 1], ["created_at", 2017-04-04 20:26:12 UTC], ["updated_at", 2017-04-04 20:26:12 UTC], ["cost", 195]]
+  [1m[35m (6.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "ships" ("name", "scan", "signature", "thrust", "hull", "armor", "point_defense", "min_group_size", "max_group_size", "tonnage_id", "faction_id", "created_at", "updated_at", "cost") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) RETURNING "id"[0m  [["name", "Moscow"], ["scan", "6\""], ["signature", "6\""], ["thrust", "7\""], ["hull", "12"], ["armor", "3+"], ["point_defense", "5"], ["min_group_size", 1], ["max_group_size", 1], ["tonnage_id", 3], ["faction_id", 1], ["created_at", 2017-04-04 20:26:12 UTC], ["updated_at", 2017-04-04 20:26:12 UTC], ["cost", 163]]
+  [1m[35m (6.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "ships" ("name", "scan", "signature", "thrust", "hull", "armor", "point_defense", "min_group_size", "max_group_size", "tonnage_id", "faction_id", "created_at", "updated_at", "cost") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) RETURNING "id"[0m  [["name", "St. Petersburg"], ["scan", "6\""], ["signature", "6\""], ["thrust", "7\""], ["hull", "12"], ["armor", "3+"], ["point_defense", "5"], ["min_group_size", 1], ["max_group_size", 1], ["tonnage_id", 3], ["faction_id", 1], ["created_at", 2017-04-04 20:26:12 UTC], ["updated_at", 2017-04-04 20:26:12 UTC], ["cost", 155]]
+  [1m[35m (6.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "ships" ("name", "scan", "signature", "thrust", "hull", "armor", "point_defense", "min_group_size", "max_group_size", "tonnage_id", "faction_id", "created_at", "updated_at", "cost") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) RETURNING "id"[0m  [["name", "Rio"], ["scan", "6\""], ["signature", "6\""], ["thrust", "8\""], ["hull", "10"], ["armor", "3+"], ["point_defense", "5"], ["min_group_size", 1], ["max_group_size", 2], ["tonnage_id", 2], ["faction_id", 1], ["created_at", 2017-04-04 20:26:12 UTC], ["updated_at", 2017-04-04 20:26:12 UTC], ["cost", 105]]
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "ships" ("name", "scan", "signature", "thrust", "hull", "armor", "point_defense", "min_group_size", "max_group_size", "tonnage_id", "faction_id", "created_at", "updated_at", "cost") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) RETURNING "id"[0m  [["name", "Berlin"], ["scan", "6\""], ["signature", "6\""], ["thrust", "8\""], ["hull", "10"], ["armor", "3+"], ["point_defense", "5"], ["min_group_size", 1], ["max_group_size", 2], ["tonnage_id", 2], ["faction_id", 1], ["created_at", 2017-04-04 20:26:12 UTC], ["updated_at", 2017-04-04 20:26:12 UTC], ["cost", 105]]
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ships" ("name", "scan", "signature", "thrust", "hull", "armor", "point_defense", "min_group_size", "max_group_size", "tonnage_id", "faction_id", "created_at", "updated_at", "cost") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) RETURNING "id"[0m  [["name", "Madrid"], ["scan", "6\""], ["signature", "6\""], ["thrust", "8\""], ["hull", "10"], ["armor", "3+"], ["point_defense", "5"], ["min_group_size", 1], ["max_group_size", 2], ["tonnage_id", 2], ["faction_id", 1], ["created_at", 2017-04-04 20:26:12 UTC], ["updated_at", 2017-04-04 20:26:12 UTC], ["cost", 79]]
+  [1m[35m (4.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "ships" ("name", "scan", "signature", "thrust", "hull", "armor", "point_defense", "min_group_size", "max_group_size", "tonnage_id", "faction_id", "created_at", "updated_at", "cost") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) RETURNING "id"[0m  [["name", "Seattle"], ["scan", "6\""], ["signature", "6\""], ["thrust", "8\""], ["hull", "10"], ["armor", "3+"], ["point_defense", "5"], ["min_group_size", 1], ["max_group_size", 1], ["tonnage_id", 2], ["faction_id", 1], ["created_at", 2017-04-04 20:26:12 UTC], ["updated_at", 2017-04-04 20:26:12 UTC], ["cost", 132]]
+  [1m[35m (6.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ships" ("name", "scan", "signature", "thrust", "hull", "armor", "point_defense", "min_group_size", "max_group_size", "tonnage_id", "faction_id", "created_at", "updated_at", "cost") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) RETURNING "id"[0m  [["name", "Osaka"], ["scan", "6\""], ["signature", "6\""], ["thrust", "10\""], ["hull", "8"], ["armor", "4+"], ["point_defense", "5"], ["min_group_size", 2], ["max_group_size", 3], ["tonnage_id", 2], ["faction_id", 1], ["created_at", 2017-04-04 20:26:12 UTC], ["updated_at", 2017-04-04 20:26:12 UTC], ["cost", 86]]
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "ships" ("name", "scan", "signature", "thrust", "hull", "armor", "point_defense", "min_group_size", "max_group_size", "tonnage_id", "faction_id", "created_at", "updated_at", "cost") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) RETURNING "id"[0m  [["name", "New Cairo"], ["scan", "6\""], ["signature", "6\""], ["thrust", "10\""], ["hull", "8"], ["armor", "4+"], ["point_defense", "5"], ["min_group_size", 2], ["max_group_size", 3], ["tonnage_id", 2], ["faction_id", 1], ["created_at", 2017-04-04 20:26:12 UTC], ["updated_at", 2017-04-04 20:26:12 UTC], ["cost", 88]]
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "ships" ("name", "scan", "signature", "thrust", "hull", "armor", "point_defense", "min_group_size", "max_group_size", "tonnage_id", "faction_id", "created_at", "updated_at", "cost") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) RETURNING "id"[0m  [["name", "San Francisco"], ["scan", "6\""], ["signature", "6\""], ["thrust", "8\""], ["hull", "10"], ["armor", "3+"], ["point_defense", "5"], ["min_group_size", 1], ["max_group_size", 1], ["tonnage_id", 2], ["faction_id", 1], ["created_at", 2017-04-04 20:26:12 UTC], ["updated_at", 2017-04-04 20:26:12 UTC], ["cost", 111]]
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "ships" ("name", "scan", "signature", "thrust", "hull", "armor", "point_defense", "min_group_size", "max_group_size", "tonnage_id", "faction_id", "created_at", "updated_at", "cost") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) RETURNING "id"[0m  [["name", "Toulon"], ["scan", "6\""], ["signature", "3\""], ["thrust", "10\""], ["hull", "4"], ["armor", "4+"], ["point_defense", "3"], ["min_group_size", 2], ["max_group_size", 4], ["tonnage_id", 1], ["faction_id", 1], ["created_at", 2017-04-04 20:26:12 UTC], ["updated_at", 2017-04-04 20:26:12 UTC], ["cost", 35]]
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "ships" ("name", "scan", "signature", "thrust", "hull", "armor", "point_defense", "min_group_size", "max_group_size", "tonnage_id", "faction_id", "created_at", "updated_at", "cost") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) RETURNING "id"[0m  [["name", "Taipei"], ["scan", "6\""], ["signature", "3\""], ["thrust", "10\""], ["hull", "4"], ["armor", "4+"], ["point_defense", "3"], ["min_group_size", 2], ["max_group_size", 6], ["tonnage_id", 1], ["faction_id", 1], ["created_at", 2017-04-04 20:26:12 UTC], ["updated_at", 2017-04-04 20:26:12 UTC], ["cost", 39]]
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "ships" ("name", "scan", "signature", "thrust", "hull", "armor", "point_defense", "min_group_size", "max_group_size", "tonnage_id", "faction_id", "created_at", "updated_at", "cost") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) RETURNING "id"[0m  [["name", "Jakarta"], ["scan", "6\""], ["signature", "3\""], ["thrust", "10\""], ["hull", "4"], ["armor", "4+"], ["point_defense", "3"], ["min_group_size", 1], ["max_group_size", 4], ["tonnage_id", 1], ["faction_id", 1], ["created_at", 2017-04-04 20:26:12 UTC], ["updated_at", 2017-04-04 20:26:12 UTC], ["cost", 32]]
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "ships" ("name", "scan", "signature", "thrust", "hull", "armor", "point_defense", "min_group_size", "max_group_size", "tonnage_id", "faction_id", "created_at", "updated_at", "cost") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) RETURNING "id"[0m  [["name", "Lima"], ["scan", "6\""], ["signature", "3\""], ["thrust", "10\""], ["hull", "4"], ["armor", "4+"], ["point_defense", "3"], ["min_group_size", 1], ["max_group_size", 2], ["tonnage_id", 1], ["faction_id", 1], ["created_at", 2017-04-04 20:26:12 UTC], ["updated_at", 2017-04-04 20:26:12 UTC], ["cost", 37]]
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "ships" ("name", "scan", "signature", "thrust", "hull", "armor", "point_defense", "min_group_size", "max_group_size", "tonnage_id", "faction_id", "created_at", "updated_at", "cost") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) RETURNING "id"[0m  [["name", "New Orleans"], ["scan", "6\""], ["signature", "3\""], ["thrust", "10\""], ["hull", "4"], ["armor", "4+"], ["point_defense", "3"], ["min_group_size", 1], ["max_group_size", 2], ["tonnage_id", 1], ["faction_id", 1], ["created_at", 2017-04-04 20:26:12 UTC], ["updated_at", 2017-04-04 20:26:12 UTC], ["cost", 32]]
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "ships" ("name", "scan", "signature", "thrust", "hull", "armor", "point_defense", "min_group_size", "max_group_size", "tonnage_id", "faction_id", "created_at", "updated_at", "cost") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) RETURNING "id"[0m  [["name", "Santiago"], ["scan", "6\""], ["signature", "2\""], ["thrust", "14\""], ["hull", "2"], ["armor", "5+"], ["point_defense", "2"], ["min_group_size", 1], ["max_group_size", 3], ["tonnage_id", 1], ["faction_id", 1], ["created_at", 2017-04-04 20:26:12 UTC], ["updated_at", 2017-04-04 20:26:12 UTC], ["cost", 22]]
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "joel"], ["password_digest", "$2a$10$x/Eiec0gG8TKhfG8px9YAuc34WKrkP5PJ1eHePRzBoxPI2GdYWB.i"], ["created_at", 2017-04-04 20:26:43 UTC], ["updated_at", 2017-04-04 20:26:43 UTC]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mFleet Load (0.6ms)[0m  [1m[34mSELECT "fleets".* FROM "fleets" WHERE "fleets"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[36mShip Load (0.9ms)[0m  [1m[34mSELECT "ships".* FROM "ships"[0m
+  [1m[36mShip Load (0.6ms)[0m  [1m[34mSELECT "ships".* FROM "ships"[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "ships"[0m
+  [1m[36mShip Load (0.9ms)[0m  [1m[34mSELECT "ships".* FROM "ships"[0m
+  [1m[35m (1.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFaction Load (0.5ms)[0m  [1m[34mSELECT  "factions".* FROM "factions" WHERE "factions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (3.7ms)[0m  [1m[32mINSERT INTO "fleets" ("name", "faction_id", "points_level", "cost", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "ucm 750"], ["faction_id", 1], ["points_level", 750], ["cost", 0], ["created_at", 2017-04-04 20:29:10 UTC], ["updated_at", 2017-04-04 20:29:10 UTC], ["user_id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mBattlegroup Load (0.5ms)[0m  [1m[34mSELECT "battlegroups".* FROM "battlegroups" WHERE "battlegroups"."fleet_id" = $1[0m  [["fleet_id", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mFleet Load (0.5ms)[0m  [1m[34mSELECT "fleets".* FROM "fleets" WHERE "fleets"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFleet Load (0.5ms)[0m  [1m[34mSELECT "fleets".* FROM "fleets" WHERE "fleets"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mFleet Load (0.5ms)[0m  [1m[34mSELECT "fleets".* FROM "fleets" WHERE "fleets"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFleet Load (0.5ms)[0m  [1m[34mSELECT "fleets".* FROM "fleets" WHERE "fleets"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mFleet Load (1.1ms)[0m  [1m[34mSELECT  "fleets".* FROM "fleets" WHERE "fleets"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "battlegroups" ("battlegroup_type_id", "cost", "created_at", "updated_at", "fleet_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["battlegroup_type_id", 3], ["cost", 105], ["created_at", 2017-04-04 20:35:25 UTC], ["updated_at", 2017-04-04 20:35:25 UTC], ["fleet_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBattlegroup Load (0.4ms)[0m  [1m[34mSELECT  "battlegroups".* FROM "battlegroups" WHERE "battlegroups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mShip Load (0.5ms)[0m  [1m[34mSELECT  "ships".* FROM "ships" WHERE "ships"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "groups" ("ship_id", "cost", "created_at", "updated_at", "group_size", "battlegroup_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["ship_id", 15], ["cost", 105], ["created_at", 2017-04-04 20:36:44 UTC], ["updated_at", 2017-04-04 20:36:44 UTC], ["group_size", 3], ["battlegroup_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mGroup Load (0.8ms)[0m  [1m[34mSELECT "groups".* FROM "groups" INNER JOIN "battlegroups" ON "groups"."battlegroup_id" = "battlegroups"."id" INNER JOIN "fleets" ON "battlegroups"."fleet_id" = "fleets"."id" WHERE "fleets"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[36mBattlegroup Load (0.4ms)[0m  [1m[34mSELECT "battlegroups".* FROM "battlegroups" INNER JOIN "fleets" ON "battlegroups"."fleet_id" = "fleets"."id" WHERE "fleets"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[35m (0.9ms)[0m  [1m[31mROLLBACK[0m
+DEPRECATION WARNING: cleanup! is deprecated and will be removed from Rails 5.1 (use Rails.application.reloader.reload! instead of cleanup + prepare) (called from serve at /usr/lib/ruby/vendor_ruby/spring/application.rb:152)
+DEPRECATION WARNING: prepare! is deprecated and will be removed from Rails 5.1 (use Rails.application.reloader.prepare! instead) (called from serve at /usr/lib/ruby/vendor_ruby/spring/application.rb:153)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "joel"], ["password_digest", "$2a$10$RmmSY5XN38uiOq9pAOCcV.cawV4P7TB7ixIn/bBhSsCu8s6H4bg.u"], ["created_at", 2017-04-04 20:45:44 UTC], ["updated_at", 2017-04-04 20:45:44 UTC]]
+  [1m[35m (0.6ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFaction Load (0.5ms)[0m  [1m[34mSELECT  "factions".* FROM "factions" WHERE "factions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mFleet Load (0.5ms)[0m  [1m[34mSELECT  "fleets".* FROM "fleets" WHERE "fleets"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBattlegroupType Load (0.5ms)[0m  [1m[34mSELECT  "battlegroup_types".* FROM "battlegroup_types" WHERE "battlegroup_types"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.9ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "fleets" ("name", "faction_id", "points_level", "cost", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "ucm 750"], ["faction_id", 1], ["points_level", 750], ["cost", 0], ["created_at", 2017-04-04 20:48:51 UTC], ["updated_at", 2017-04-04 20:48:51 UTC], ["user_id", 2]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mFleet Load (0.4ms)[0m  [1m[34mSELECT "fleets".* FROM "fleets" WHERE "fleets"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "battlegroups" ("battlegroup_type_id", "cost", "created_at", "updated_at", "fleet_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["battlegroup_type_id", 3], ["cost", 105], ["created_at", 2017-04-04 20:49:25 UTC], ["updated_at", 2017-04-04 20:49:25 UTC], ["fleet_id", 2]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mBattlegroup Load (0.5ms)[0m  [1m[34mSELECT "battlegroups".* FROM "battlegroups" INNER JOIN "fleets" ON "battlegroups"."fleet_id" = "fleets"."id" WHERE "fleets"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[36mGroup Load (0.8ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mBattlegroup Load (0.5ms)[0m  [1m[34mSELECT  "battlegroups".* FROM "battlegroups" WHERE "battlegroups"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mShip Load (0.6ms)[0m  [1m[34mSELECT  "ships".* FROM "ships" WHERE "ships"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "groups" ("ship_id", "cost", "created_at", "updated_at", "group_size", "battlegroup_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["ship_id", 15], ["cost", 105], ["created_at", 2017-04-04 20:51:51 UTC], ["updated_at", 2017-04-04 20:51:51 UTC], ["group_size", 3], ["battlegroup_id", 2]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups" INNER JOIN "battlegroups" ON "groups"."battlegroup_id" = "battlegroups"."id" INNER JOIN "fleets" ON "battlegroups"."fleet_id" = "fleets"."id" WHERE "fleets"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[36mBattlegroup Load (0.5ms)[0m  [1m[34mSELECT  "battlegroups".* FROM "battlegroups" WHERE "battlegroups"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "fleets" ON "users"."id" = "fleets"."user_id" INNER JOIN "battlegroups" ON "fleets"."id" = "battlegroups"."fleet_id" INNER JOIN "groups" ON "battlegroups"."id" = "groups"."battlegroup_id" WHERE "groups"."ship_id" = $1[0m  [["ship_id", 15]]
+  [1m[35m (0.7ms)[0m  [1m[31mROLLBACK[0m

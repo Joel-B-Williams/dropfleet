@@ -9,8 +9,8 @@ class CreateShips < ActiveRecord::Migration[5.0]
     	t.string :hull, 					presence: true
     	t.string :armor, 					presence: true
     	t.string :point_defense, 	presence: true
-    	t.string :min_group_size, presence: true
-    	t.string :max_group_size, presence: true
+    	t.integer :min_group_size, presence: true
+    	t.integer :max_group_size, presence: true
     	t.integer :tonnage_id, 		presence: true
     	t.integer :faction_id, 		presence: true
 

@@ -1,5 +1,10 @@
 class User < ApplicationRecord
 
+	has_many :fleets
+	has_many :battlegroups, through: :fleets
+	has_many :groups, through: :battlegroups
+	# has_many :ships, through: :groups
+
 	has_secure_password
 	
 	validates :username, presence: true, length: { maximum: 50 }

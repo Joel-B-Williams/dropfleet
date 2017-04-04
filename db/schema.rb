@@ -38,7 +38,7 @@ ActiveRecord::Schema.define(version: 20170404185813) do
 
   create_table "fleets", force: :cascade do |t|
     t.string   "name"
-    t.string   "faction"
+    t.integer  "faction_id"
     t.integer  "points_level"
     t.integer  "cost"
     t.datetime "created_at",   null: false
@@ -63,8 +63,8 @@ ActiveRecord::Schema.define(version: 20170404185813) do
     t.string   "hull"
     t.string   "armor"
     t.string   "point_defense"
-    t.string   "min_group_size"
-    t.string   "max_group_size"
+    t.integer  "min_group_size"
+    t.integer  "max_group_size"
     t.integer  "tonnage_id"
     t.integer  "faction_id"
     t.datetime "created_at",     null: false
