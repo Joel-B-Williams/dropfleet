@@ -10,10 +10,74 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170402231505) do
+ActiveRecord::Schema.define(version: 20170404004752) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "battlegroup_types", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "battlegroups", force: :cascade do |t|
+    t.integer  "battlegroup_type_id"
+    t.integer  "cost"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+  end
+
+  create_table "factions", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "fleets", force: :cascade do |t|
+    t.string   "name"
+    t.string   "faction"
+    t.integer  "points_level"
+    t.integer  "cost"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  create_table "groups", force: :cascade do |t|
+    t.integer  "ship_id"
+    t.integer  "cost"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "ships", force: :cascade do |t|
+    t.string   "name"
+    t.string   "scan"
+    t.string   "signature"
+    t.string   "thrust"
+    t.string   "hull"
+    t.string   "armor"
+    t.string   "point_defense"
+    t.string   "min_group_size"
+    t.string   "max_group_size"
+    t.integer  "tonnage_id"
+    t.integer  "faction_id"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.integer  "cost"
+  end
+
+  create_table "special_rules", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "tonnages", force: :cascade do |t|
+    t.string   "tonnage"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "username"

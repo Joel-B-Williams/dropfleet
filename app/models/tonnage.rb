@@ -1,0 +1,2 @@
+class Tonnage < ApplicationRecord
+end

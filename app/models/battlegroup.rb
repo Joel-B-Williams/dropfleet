@@ -1,0 +1,2 @@
+class Battlegroup < ApplicationRecord
+end
