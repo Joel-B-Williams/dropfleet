@@ -1,2 +1,4 @@
 class Fleet < ApplicationRecord
+
+	
 end
