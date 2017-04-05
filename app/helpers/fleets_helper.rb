@@ -12,4 +12,8 @@ module FleetsHelper
 		"#{fleet.cost} | #{fleet.points_level}"
 	end
 
+	# def show_battlegroups(fleet, bg_type)
+	# 	Battlegroups.where(fleet_id: fleet.id, battlegroup_type.name: bg_type)
+	# end
+
 end

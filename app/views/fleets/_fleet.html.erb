@@ -1,8 +1,8 @@
 <li>
 	<p><%= show_faction(fleet) %></p>
 	<p><%= show_points(fleet) %></p>
-	<%= link_to show_name(fleet), fleet %>
-	<%= link_to 'Edit', edit_fleet_path(fleet) %>
+	<%= link_to show_name(fleet), user_fleet_path(@user.id, fleet) %>
+	<%= link_to 'Edit', edit_user_fleet_path(@user, fleet) %>
 	<!-- add data: { confirm: "confirmation text" } if you want -->
-	<%= link_to 'Delete', fleet, method: :delete %>
+	<%= link_to 'Delete', user_fleet_path(@user, fleet), method: :delete %>
 </li>

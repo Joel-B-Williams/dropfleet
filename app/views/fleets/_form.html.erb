@@ -1,4 +1,4 @@
-<%= form_for @fleet do |f| %>
+<%= form_for [@user, @fleet] do |f| %>
 	
 	<%= f.label :name, "Fleet Name" %>
 	<%= f.text_field :name %>

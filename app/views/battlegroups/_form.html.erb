@@ -1,0 +1,5 @@
+<%= form_for [@user, @fleet, @battlegroup] do |f| %>
+	<%= f.collection_select(:battlegroup_type_id, BattlegroupType.all, :id, :name) %>
+
+	<%= f.submit "Select Battlegroup Type" %>
+<% end %>

@@ -1,24 +1,29 @@
 class FleetsController < ApplicationController
 	
 	def index
-		@fleets = current_user.fleets
+		@user = current_user
+		@fleets = Fleet.where(user_id: @user.id)
 	end
 
 	def show
+		@user = current_user
 		@fleet = Fleet.find_by(id: params[:id])
 	end
 
 	def new
-		@fleet = Fleet.new
+		@user = current_user
+		@fleet = Fleet.new( user_id: @user.id )
 	end
 
 	def create
 		#requires someone be logged in - add verification
-		@fleet = Fleet.new(fleet_params)
-		@fleet.update_attributes( cost: 0, user_id:current_user.id )
+		@user = current_user
+		@fleet = Fleet.new( user_id: @user.id )
+		@fleet.update_attributes(fleet_params)
+
 		if @fleet.save
 			flash[:success] = "New fleet created"
-			redirect_to fleets_path
+			redirect_to user_fleets_path
 		else
 			render 'new'
 		end
@@ -33,7 +38,7 @@ class FleetsController < ApplicationController
 	def destroy
 		Fleet.find_by(id: params[:id]).destroy
 		flash[:success] = 'Fleet eradicated'
-		redirect_to fleets_path
+		redirect_to user_fleets_path
 	end
 
 	private
