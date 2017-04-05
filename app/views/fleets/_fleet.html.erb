@@ -1,7 +1,8 @@
 <li>
-	<p><%= fleet.faction %></p>
-	<p><%= fleet.cost %> | <%= fleet.points_limit %></p>
+	<p><%= show_name(fleet) %></p>
+	<p><%= show_points(fleet) %></p>
 	<%= link_to fleet.name, fleet %>
-	<%= link_to 'Edit', edit_fleet_path %>
-	<%= link_to 'Delete', delete_fleet_path %>
+	<%= link_to 'Edit', edit_fleet_path(fleet) %>
+	<!-- add data: { confirm: "confirmation text" } if you want -->
+	<%= link_to 'Delete', fleet, method: :delete %>
 </li>

@@ -6,4 +6,7 @@ class Fleet < ApplicationRecord
 	has_many :groups, through: :battlegroups
 	has_many :ships, through: :groups
 
+	validates :name, presence: true
+	validates :points_level, presence: true
+	validates :faction, presence: true
 end

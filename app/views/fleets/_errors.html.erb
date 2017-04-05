@@ -1,0 +1,7 @@
+<% if @fleet.errors.any? %>
+<section class="error-section">
+	<% @fleet.errors.full_messages.each do |message| %>
+		<p><%= message %></p>
+	<% end %>
+</section>
+<% end %>

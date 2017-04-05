@@ -1,0 +1,13 @@
+<%= form_for @fleet do |f| %>
+	
+	<%= f.label :name, "Fleet Name" %>
+	<%= f.text_field :name %>
+
+	<%= f.label :points_level, "Points Level" %>
+	<%= f.text_field :points_level %>
+
+	<%= f.collection_select( :faction_id, Faction.all, :id, :name ) %>
+
+	<%= f.submit "Create Fleet" %>
+
+<% end %>
