@@ -1,0 +1,7 @@
+<li>
+	<p><%= fleet.faction %></p>
+	<p><%= fleet.cost %> | <%= fleet.points_limit %></p>
+	<%= link_to fleet.name, fleet %>
+	<%= link_to 'Edit', edit_fleet_path %>
+	<%= link_to 'Delete', delete_fleet_path %>
+</li>

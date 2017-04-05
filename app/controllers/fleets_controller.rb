@@ -1,6 +1,7 @@
 class FleetsController < ApplicationController
 	
 	def index
+		@fleets = current_user.fleets
 	end
 
 	def show
