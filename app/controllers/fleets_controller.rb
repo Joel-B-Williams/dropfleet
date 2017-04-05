@@ -5,6 +5,7 @@ class FleetsController < ApplicationController
 	end
 
 	def show
+		@fleet = Fleet.find_by(id: params[:id])
 	end
 
 	def new
