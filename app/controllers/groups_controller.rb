@@ -7,6 +7,10 @@ class GroupsController < ApplicationController
 	end
 
 	def new
+		@user = current_user
+		@fleet = Fleet.find_by(id: params[:fleet_id])
+		@battlegroup = Battlegroup.find_by(id: params[:battlegroup_id])
+		@group = Group.new
 	end
 
 	def create

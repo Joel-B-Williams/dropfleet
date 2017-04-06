@@ -4,6 +4,10 @@ class BattlegroupsController < ApplicationController
 	end
 
 	def show
+		@user = current_user
+		@fleet = Fleet.find_by(id: params[:fleet_id])
+		@battlegroup = Battlegroup.find_by(id: params[:id])
+		
 	end
 
 	def new

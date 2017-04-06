@@ -1,0 +1,9 @@
+<p>battlegroup show!!!</p>
+
+<p> <%= @battlegroup.battlegroup_type.name %> </p>
+
+<%= link_to "Add group", new_user_fleet_battlegroup_group_path(@user, @fleet, @battlegroup) %>
+
+<ul class='group-list'>
+	<%= render @battlegroup.groups %>
+</ul>

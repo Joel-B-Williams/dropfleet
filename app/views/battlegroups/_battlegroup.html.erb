@@ -1,5 +1,5 @@
 <li>	
-	<%= battlegroup.battlegroup_type.name %>	
+	<%= link_to battlegroup.battlegroup_type.name, user_fleet_battlegroup_path(@user, @fleet, battlegroup) %>	
 	<ul class='group-list'>
 		<%= render battlegroup.groups %>
 	</ul>

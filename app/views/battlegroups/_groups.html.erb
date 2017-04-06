@@ -1,0 +1,6 @@
+<li>
+	<%= group.ship %>
+	<p>group size here</p>
+	<%= group.cost %>
+	<%= link_to "Remove group", user_fleet_battlegroup_group(@user, @fleet, @battlegroup, group), method: :delete %>
+</li>
