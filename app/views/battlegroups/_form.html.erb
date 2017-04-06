@@ -1,5 +1,7 @@
 <%= form_for [@user, @fleet, @battlegroup] do |f| %>
-	<%= f.collection_select(:battlegroup_type_id, BattlegroupType.all, :id, :name) %>
+ 
+ 	<%= f.collection_select(:battlegroup_type_id, BattlegroupType.all, :id, :name) %>
 
-	<%= f.submit "Select Battlegroup Type" %>
+	<%= f.submit "Create Battlegroup" %>
 <% end %>
+<!-- trade out for individual links -->

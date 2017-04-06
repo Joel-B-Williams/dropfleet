@@ -8,7 +8,7 @@ class FleetsController < ApplicationController
 	def show
 		@user = current_user
 		@fleet = Fleet.find_by(id: params[:id])
-		@battlegroups = @fleet.battlegroups.joins(:battlegroup_type).merge(BattlegroupType.order(:name))
+		@battlegroups = @fleet.battlegroups.joins(:battlegroup_type).merge(BattlegroupType.order(:id))
 	end
 
 	def new

@@ -1,0 +1,7 @@
+<%= form_for [@user, @fleet, @battlegroup, @group] do |f| %>
+
+<!-- clean up DB call outside of view -->
+	<%= f.collection_select( :ship_id, Ship.where(tonnage_id: params[:tonnage], faction: @fleet.faction), :id, :name ) %>
+	<%= %>
+	<%= f.submit "Add group" %>
+<% end %>

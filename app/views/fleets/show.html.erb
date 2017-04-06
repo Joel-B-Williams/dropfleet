@@ -5,7 +5,10 @@
 	<p><%= show_points(@fleet) %></p>
 </section>
 
-<%= link_to "Add Battlegroup", new_user_fleet_battlegroup_path(@user.id, @fleet.id) %>
+<%= link_to "Add Flag", new_user_fleet_battlegroup_path(@user.id, @fleet.id) %>
+<%= link_to "Add Vanguard", new_user_fleet_battlegroup_path(@user.id, @fleet.id) %>
+<%= link_to "Add Line", new_user_fleet_battlegroup_path(@user.id, @fleet.id) %>
+<%= link_to "Add Pathfinder", new_user_fleet_battlegroup_path(@user.id, @fleet.id) %>
 
 <ul class='battlegroup-list'>
 	<%= render @battlegroups %>
