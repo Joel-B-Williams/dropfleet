@@ -7,11 +7,11 @@
 
 <%= link_to "Add Battlegroup", new_user_fleet_battlegroup_path(@user.id, @fleet.id) %>
 
-<section class='battlegroups'>
-	<%= render @fleet.battlegroups %>
-</section>
+<ul class='battlegroup-list'>
+	<%= render @battlegroups %>
+</ul>
 
-<section class="flag">
+<!-- <section class="flag">
 </section>
 
 <section class="vanguard">
@@ -21,4 +21,4 @@
 </section>
 
 <section class="pathfinder">
-</section>
+</section> -->

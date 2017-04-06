@@ -9,15 +9,22 @@ class BattlegroupsController < ApplicationController
 	def new
 		@user = current_user
 		@fleet = Fleet.find_by(id: params[:fleet_id])
-		p "*"*100
-		p @fleet
 		@battlegroup = Battlegroup.new(fleet_id: @fleet.id)
 	end
 
 	def create
 		#need to verify not at limit for X type
+		@user = current_user
+		@fleet = Fleet.find_by(id: params[:fleet_id])
 		@battlegroup = Battlegroup.new(battlegroup_params)
-		# @battlegroup.update_attributes(:)
+		@battlegroup.update_attribute(:fleet_id, @fleet.id)
+		if @battlegroup.save
+			flash[:success] = "Battlegroup added"
+			redirect_to user_fleet_path(@user, @fleet)
+		else
+			flash.now[:notice] = "An error occured, please make your selection"
+			render 'new'
+		end
 	end
 
 	def edit

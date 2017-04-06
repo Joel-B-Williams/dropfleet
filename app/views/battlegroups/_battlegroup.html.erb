@@ -1,1 +1,6 @@
-<p>	<%= battlegroup.battlegroup_type.name %></p>
+<li>	
+	<%= battlegroup.battlegroup_type.name %>	
+	<ul class='group-list'>
+		<%= render battlegroup.groups %>
+	</ul>
+</li>
