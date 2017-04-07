@@ -1,6 +1,6 @@
 class User < ApplicationRecord
 
-	has_many :fleets
+	has_many :fleets, dependent: :destroy
 	has_many :battlegroups, through: :fleets
 	has_many :groups, through: :battlegroups
 	# has_many :ships, through: :groups
