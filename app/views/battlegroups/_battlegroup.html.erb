@@ -1,9 +1,5 @@
 <li>	
 	<%= link_to battlegroup.battlegroup_type.name, user_fleet_battlegroup_path(@user, @fleet, battlegroup) %>	
 	
-	<%= link_to "Delete", user_fleet_battlegroup_path(@user, @fleet, battlegroup), method: :delete %>
 	
-	<ul class='group-list'>
-		<%= render battlegroup.groups %>
-	</ul>
 </li>

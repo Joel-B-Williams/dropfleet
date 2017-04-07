@@ -40,7 +40,9 @@ class BattlegroupsController < ApplicationController
 	def destroy
 		p "*"*80
 		p params
-		redirect_to user_fleets_path
+		user = current_user
+		fleet = Fleet.find_by(id: params[:fleet_id])
+		redirect_to user_fleet_path(user, fleet)
 	end
 
 	private

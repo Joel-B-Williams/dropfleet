@@ -2,6 +2,7 @@
 
 <%= link_to "Back to Fleet", user_fleet_path(@user, @fleet) %>
 
+
 <p> <%= @battlegroup.battlegroup_type.name %> Battlegroup </p>
 
 <!-- need methods for each type to check IF ALLOWED and IF MAX -->
@@ -16,3 +17,5 @@
 <ul class='group-list'>
 	<%= render @battlegroup.groups %>
 </ul>
+
+<%= link_to "Delete Battlegroup", user_fleet_battlegroup_path(@user, @fleet, @battlegroup), method: :delete %>
