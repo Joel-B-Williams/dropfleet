@@ -38,6 +38,9 @@ class BattlegroupsController < ApplicationController
 	end
 
 	def destroy
+		p "*"*80
+		p params
+		redirect_to user_fleets_path
 	end
 
 	private
