@@ -2,5 +2,33 @@
 
 <%= link_to "Back to Battlegroup", user_fleet_battlegroup_path(@user, @fleet, @battlegroup) %>
 
-<%= @group.ship.name %>
+<%= ship_name(@group) %>
 <%= %>
+<table>
+	<tr>
+		<th colspan=4><%= ship_name(@group)%></th>
+		<th colspan=2>Group Size: <%= size(@group)%></th>
+		<th colspan=2>Group Cost: <%= cost(@group)%></th
+	</tr>
+	<tr>
+		<td>Scan</td>
+		<td>Sig</td>
+		<td>Thrust</td>
+		<td>Hull</td>
+		<td>A</td>
+		<td>PD</td>
+		<td>T</td>
+		<td>Special</td>
+	</tr>
+	<tr>
+		<td><%= scan(@group) %></td>
+		<td><%= signature(@group) %></td>
+		<td><%= thrust(@group) %></td>
+		<td><%= hull(@group) %></td>
+		<td><%= armor(@group) %></td>
+		<td><%= point_defense(@group) %></td>
+		<td><%= tonnage(@group) %></td>
+		<td> placeholder for special rules </td>
+		
+	</tr>
+</table>
