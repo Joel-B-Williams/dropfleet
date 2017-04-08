@@ -9,6 +9,7 @@ class FleetsController < ApplicationController
 		@user = current_user
 		@fleet = Fleet.find_by(id: params[:id])
 		@battlegroups = @fleet.battlegroups.joins(:battlegroup_type).merge(BattlegroupType.order(:id))
+		# Add groups to show by default under BG type?
 	end
 
 	def new

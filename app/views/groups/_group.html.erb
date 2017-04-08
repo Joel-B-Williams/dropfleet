@@ -1,7 +1,6 @@
 
 <li>
-	<%= link_to ship_name(group), user_fleet_battlegroup_group_path(@user, @fleet, @battlegroup, group) %>
-	
+	<%= link_to ship_name(group), user_fleet_battlegroup_group_path(user, fleet, battlegroup, group) %>
 	<%= size(group) %>
 	<%= cost(group) %>
 </li>
