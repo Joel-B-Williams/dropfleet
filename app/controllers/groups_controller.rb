@@ -34,9 +34,23 @@ class GroupsController < ApplicationController
 	end
 
 	def edit
+		@user = current_user
+		@fleet = Fleet.find_by(id: params[:fleet_id])
+		@battlegroup = Battlegroup.find_by(id: params[:battlegroup_id])
+		@group = Group.find_by(id: params[:id])
 	end
 
 	def update
+		@user = current_user
+		@fleet = Fleet.find_by(id: params[:fleet_id])
+		@battlegroup = Battlegroup.find_by(id: params[:battlegroup_id])
+		@group = Group.find_by(id: params[:id])
+		@group.update_attribute(:group_size, params[:group][:group_size])
+		if @group.save
+			redirect_to user_fleet_path(@user, @fleet)
+		else
+			render 'edit'
+		end
 	end
 
 	def destroy

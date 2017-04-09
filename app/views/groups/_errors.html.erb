@@ -1,0 +1,7 @@
+<% if @group.errors.any? %>
+<section class="error-section">
+	<% @group.errors.full_messages.each do |message| %>
+		<p><%= message %></p>
+	<% end %>
+</section>
+<% end %>

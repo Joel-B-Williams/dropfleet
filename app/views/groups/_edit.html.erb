@@ -1,0 +1,6 @@
+<%= form_for [@user, @fleet, @battlegroup, @group] do |f| %>
+
+	<%= f.select :group_size, (1..6) %>
+	<%= f.submit "Edit group" %>
+	
+<% end %>
