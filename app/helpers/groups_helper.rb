@@ -1,7 +1,7 @@
 module GroupsHelper
 
-	def cost(group)
-		group.ship.cost * group.group_size
+	def display_cost(group)
+		group.cost
 	end
 
 # DESIGN QUERY - because ships are static assets and groups are user-created, should this be left as-is or should groups lead to a ship show?

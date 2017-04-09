@@ -38,16 +38,23 @@ class BattlegroupsController < ApplicationController
 	end
 
 	def destroy
-		Battlegroup.find_by(id: params[:id]).destroy
-		flash[:success] = "Battlegroup decomissioned"
 		user = current_user
 		fleet = Fleet.find_by(id: params[:fleet_id])
+		battlegroup = Battlegroup.find_by(id: params[:id])
+		battlegroup.destroy
+		flash[:success] = "Battlegroup decomissioned"
+		update_cost(fleet, battlegroup)
 		redirect_to user_fleet_path(user, fleet)
 	end
 
 	private
 		def battlegroup_params
 			params.require(:battlegroup).permit(:battlegroup_type_id)
+		end
+
+		def update_cost(fleet, battlegroup)
+			battlegroup.update_attribute(:cost, calc_battlegroup_cost(battlegroup))
+			fleet.update_attribute(:cost, calc_fleet_cost(fleet))
 		end
 	
 end

@@ -5,4 +5,6 @@ class ApplicationController < ActionController::Base
   include SessionsControllerHelper
   include UsersControllerHelper
   include GroupsControllerHelper
+  include BattlegroupsControllerHelper
+  include FleetsControllerHelper
 end
