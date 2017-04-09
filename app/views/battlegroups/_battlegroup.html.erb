@@ -3,7 +3,7 @@
 	<%= link_to type(battlegroup), user_fleet_battlegroup_path(@user, @fleet, battlegroup) %>
 		<!--  locals not getting passed... -->
 		<ul>
-	<%= battlegroup.groups.each do |group| %>
+	<% battlegroup.groups.each do |group| %>
 		 <%= render partial: 'groups/group', locals: { user: @user, fleet: @fleet, battlegroup: battlegroup, group: group }  %> 
 	<% end %>
 		</ul>	
