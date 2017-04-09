@@ -1,6 +1,6 @@
 
 <li>	
-	<%= link_to type(battlegroup), user_fleet_battlegroup_path(@user, @fleet, battlegroup) %>
+	<%= type(battlegroup) %>
 		<!--  locals not getting passed... -->
 		<ul>
 	<% battlegroup.groups.each do |group| %>

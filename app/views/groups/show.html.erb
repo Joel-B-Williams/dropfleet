@@ -1,9 +1,8 @@
 <p>Oh hallo GROUP SHOW</p>
 
-<%= link_to "Back to Battlegroup", user_fleet_battlegroup_path(@user, @fleet, @battlegroup) %>
+<%= link_to "Back to Fleet", user_fleet_path(@user, @fleet) %>
 
-<%= ship_name(@group) %>
-<%= %>
+
 <table>
 	<tr>
 		<th colspan=4><%= ship_name(@group)%></th>
