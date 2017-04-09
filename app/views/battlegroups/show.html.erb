@@ -15,8 +15,9 @@
 <%= link_to "Light", new_user_fleet_battlegroup_group_path(@user, @fleet, @battlegroup, tonnage: '1') %>
 
 <ul class='group-list'>
-<!-- NOW NEEDS LOCALS -->
-	<%= render @battlegroup.groups %>
-</ul>
+<% @battlegroup.groups.each do |group| %>
+	 <%= render partial: 'groups/group', locals: { user: @user, fleet: @fleet, battlegroup: @battlegroup, group: group }  %> 
+<% end %>
+</ul>	
 
 <%= link_to "Delete Battlegroup", user_fleet_battlegroup_path(@user, @fleet, @battlegroup), method: :delete %>

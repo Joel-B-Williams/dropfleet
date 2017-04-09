@@ -1,10 +1,10 @@
 
 <li>	
-	<%= type(battlegroup) %>
-		<!--  locals not getting passed... -->
-		<ul>
+	<%= link_to type(battlegroup), user_fleet_battlegroup_path(@user, @fleet, battlegroup) %>
+	<%= link_to "-X-", user_fleet_battlegroup_path(@user, @fleet, battlegroup), method: :delete %>
+	<ul class='group-list'>
 	<% battlegroup.groups.each do |group| %>
 		 <%= render partial: 'groups/group', locals: { user: @user, fleet: @fleet, battlegroup: battlegroup, group: group }  %> 
 	<% end %>
-		</ul>	
+	</ul>	
 </li>

@@ -40,6 +40,11 @@ class GroupsController < ApplicationController
 	end
 
 	def destroy
+		Group.find_by(id: params[:id]).destroy
+		flash[:success] = "Group decomissioned"
+		user = current_user
+		fleet = Fleet.find_by(id: params[:fleet_id])
+		redirect_to user_fleet_path(user, fleet)
 	end
 
 	private

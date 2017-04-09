@@ -3,4 +3,7 @@
 	<%= link_to ship_name(group), user_fleet_battlegroup_group_path(user, fleet, battlegroup, group) %>
 	<%= size(group) %>
 	<%= cost(group) %>
+	<%= link_to "-X-", user_fleet_battlegroup_group_path(user, fleet, battlegroup, group), method: :delete %>
 </li>
+
+<!-- NOTE:  Redirects to fleet show from both fleet & battlegroup show pages -->
