@@ -43,7 +43,7 @@ class BattlegroupsController < ApplicationController
 		battlegroup = Battlegroup.find_by(id: params[:id])
 		battlegroup.destroy
 		flash[:success] = "Battlegroup decomissioned"
-		update_cost(fleet, battlegroup)
+		update_cost(fleet)
 		redirect_to user_fleet_path(user, fleet)
 	end
 
@@ -52,8 +52,12 @@ class BattlegroupsController < ApplicationController
 			params.require(:battlegroup).permit(:battlegroup_type_id)
 		end
 
-		def update_cost(fleet, battlegroup)
-			battlegroup.update_attribute(:cost, calc_battlegroup_cost(battlegroup))
+		# def update_cost(fleet, battlegroup)
+		# 	battlegroup.update_attribute(:cost, calc_battlegroup_cost(battlegroup))
+		# 	fleet.update_attribute(:cost, calc_fleet_cost(fleet))
+		# end
+
+		def update_cost(fleet)
 			fleet.update_attribute(:cost, calc_fleet_cost(fleet))
 		end
 	

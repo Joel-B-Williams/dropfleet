@@ -22,10 +22,9 @@ class GroupsController < ApplicationController
 		@fleet = Fleet.find_by(id: params[:fleet_id])
 		@battlegroup = Battlegroup.find_by(id: params[:battlegroup_id])
 		@group = Group.new(group_params)
-		@group.update_attribute(:cost, calc_group_cost(@group))
 		@group.update_attribute(:battlegroup_id, params[:battlegroup_id])
 		if @group.save
-			update_cost(@fleet, @battlegroup)
+			update_all_costs(@fleet, @battlegroup, @group)
 			redirect_to user_fleet_battlegroup_path(@user.id, @fleet.id, @battlegroup.id)
 		else
 			p "*"*80
@@ -48,7 +47,7 @@ class GroupsController < ApplicationController
 		@group = Group.find_by(id: params[:id])
 		@group.update_attribute(:group_size, params[:group][:group_size])
 		if @group.save
-			update_cost(@fleet, @battlegroup)
+			update_all_costs(@fleet, @battlegroup, @group)
 			redirect_to user_fleet_path(@user, @fleet)
 		else
 			render 'edit'
@@ -61,7 +60,7 @@ class GroupsController < ApplicationController
 		user = current_user
 		fleet = Fleet.find_by(id: params[:fleet_id])
 		battlegroup = Battlegroup.find_by(id: params[:battlegroup_id])
-		update_cost(fleet, battlegroup)
+		update_fleet_and_battlegroup_cost(fleet, battlegroup)
 		redirect_to user_fleet_path(user, fleet)
 	end
 
@@ -71,7 +70,15 @@ class GroupsController < ApplicationController
 			params.require(:group).permit(:ship_id, :group_size)
 		end
 
-		def update_cost(fleet, battlegroup)
+		
+
+		def update_fleet_and_battlegroup_cost(fleet, battlegroup)
+			battlegroup.update_attribute(:cost, calc_battlegroup_cost(battlegroup))
+			fleet.update_attribute(:cost, calc_fleet_cost(fleet))
+		end
+
+		def update_all_costs(fleet, battlegroup, group)
+			group.update_attribute(:cost, calc_group_cost(@group))
 			battlegroup.update_attribute(:cost, calc_battlegroup_cost(battlegroup))
 			fleet.update_attribute(:cost, calc_fleet_cost(fleet))
 		end

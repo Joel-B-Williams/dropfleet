@@ -6,6 +6,8 @@ module BattlegroupsControllerHelper
 		battlegroup.groups.each do |group|
 			cost += group.cost
 		end
+				p "*"*50
+		p cost
 		cost
 	end
 
