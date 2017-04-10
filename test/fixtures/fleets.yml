@@ -4,8 +4,8 @@
 # model remove the '{}' from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
-one: {}
-# column: value
-#
-two: {}
-# column: value
+ucm_fleet:
+  name: 'Test Fleet UCM'
+  points_level: 750
+  faction_id: 1
+  cost: 0

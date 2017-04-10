@@ -6,8 +6,6 @@ module FleetsControllerHelper
 		fleet.battlegroups.each do |battlegroup|
 			cost += battlegroup.cost
 		end
-		p "*"*50
-		p cost
 		cost
 	end
 	

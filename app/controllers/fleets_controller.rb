@@ -25,7 +25,7 @@ class FleetsController < ApplicationController
 
 		if @fleet.save
 			flash[:success] = "New fleet created"
-			redirect_to user_fleets_path
+			redirect_to user_fleet_path(@user, @fleet)
 		else
 			render 'new'
 		end
