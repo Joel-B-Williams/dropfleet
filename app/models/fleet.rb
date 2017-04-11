@@ -11,9 +11,9 @@ class Fleet < ApplicationRecord
 	validates :faction, presence: true
 
 	def max_battlegroups
-		if cost < 1000
+		if points_level < 1000
 			4
-		elsif cost < 2000
+		elsif points_level < 2000
 			6
 		else 
 			7
@@ -21,7 +21,7 @@ class Fleet < ApplicationRecord
 	end
 
 	def min_pathfinder
-		if cost < 1000
+		if points_level < 1000
 			0
 		else
 			1
@@ -29,7 +29,7 @@ class Fleet < ApplicationRecord
 	end
 	
 	def max_pathfinder	
-		if cost	< 2000	
+		if points_level	< 2000	
 			2
 		else
 			3
@@ -41,9 +41,9 @@ class Fleet < ApplicationRecord
 	end
 	
 	def max_line
-		if cost < 1000
+		if points_level < 1000
 			2
-		elsif cost < 2000
+		elsif points_level < 2000
 			3
 		else
 			4
@@ -55,9 +55,9 @@ class Fleet < ApplicationRecord
 	end
 	
 	def max_vanguard
-		if cost < 1000
+		if points_level < 1000
 			1
-		elsif cost < 2000
+		elsif points_level < 2000
 			2
 		else
 			3
@@ -69,9 +69,9 @@ class Fleet < ApplicationRecord
 	end
 	
 	def max_flag
-		if cost < 1000
+		if points_level < 1000
 			0
-		elsif cost < 2000
+		elsif points_level < 2000
 			1
 		else
 			2
