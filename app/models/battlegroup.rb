@@ -9,7 +9,7 @@ class Battlegroup < ApplicationRecord
 	validate :can_be_added
 
 	def can_be_added
-		if fleet.battlegroups.length >= fleet.max_battlegroups
+		if fleet.battlegroups.length > fleet.max_battlegroups
 			errors.add(:battlegroups, "can not exceed #{fleet.max_battlegroups}")
 		end
 	end

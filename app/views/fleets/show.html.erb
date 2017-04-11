@@ -5,10 +5,37 @@
 	<p><%= show_points(@fleet) %></p>
 </section>
 
-<%= link_to "Add Flag", new_user_fleet_battlegroup_path(@user.id, @fleet.id) %>
-<%= link_to "Add Vanguard", new_user_fleet_battlegroup_path(@user.id, @fleet.id) %>
-<%= link_to "Add Line", new_user_fleet_battlegroup_path(@user.id, @fleet.id) %>
-<%= link_to "Add Pathfinder", new_user_fleet_battlegroup_path(@user.id, @fleet.id) %>
+
+<section class="battlegroup-info">
+	<p>
+	<% if can_add_battlegroups(@fleet) %>
+		<%= link_to "+", new_user_fleet_battlegroup_path(@user.id, @fleet.id) %>
+	<% end %>
+	Flag Battlegroup
+	<%= show_flag_count(@fleet) %>
+	</p>
+	<p>
+	<% if can_add_battlegroups(@fleet) %>
+		<%= link_to "+", new_user_fleet_battlegroup_path(@user.id, @fleet.id) %>
+	<% end %>
+	Vanguard Battlegroup
+	<%= show_vanguard_count(@fleet) %>
+	</p>
+	<p>
+	<% if can_add_battlegroups(@fleet) %>
+		<%= link_to "+", new_user_fleet_battlegroup_path(@user.id, @fleet.id) %>
+	<% end %>
+	Line Battlegroup
+	<%= show_line_count(@fleet) %>
+	</p>
+	<p>
+	<% if can_add_battlegroups(@fleet) %>
+		<%= link_to "+", new_user_fleet_battlegroup_path(@user.id, @fleet.id) %>
+	<% end %>
+	Pathfinder Battlegroup
+	<%= show_pathfinder_count(@fleet) %>
+	</p>
+</section>
 
 <ul class='battlegroup-list'>
 	<%= render @battlegroups %>
