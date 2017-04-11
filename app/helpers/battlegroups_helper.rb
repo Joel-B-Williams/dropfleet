@@ -12,5 +12,18 @@ module BattlegroupsHelper
 		battlegroup.groups.length < battlegroup.max_groups
 	end
 
+	def can_add_superheavy(battlegroup)
+		
+	end
+
+	def can_add_heavy(battlegroup)
+	end
+
+	def can_add_medium(battlegroup)
+	end
+
+	def can_add_light(battlegroup)
+	end
+
 end
 

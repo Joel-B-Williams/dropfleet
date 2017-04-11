@@ -29802,3 +29802,8 @@ Processing by FleetsController#show as HTML
 Completed 200 OK in 176ms (Views: 143.4ms | ActiveRecord: 22.3ms)
 
 
+DEPRECATION WARNING: cleanup! is deprecated and will be removed from Rails 5.1 (use Rails.application.reloader.reload! instead of cleanup + prepare) (called from serve at /usr/lib/ruby/vendor_ruby/spring/application.rb:152)
+DEPRECATION WARNING: prepare! is deprecated and will be removed from Rails 5.1 (use Rails.application.reloader.prepare! instead) (called from serve at /usr/lib/ruby/vendor_ruby/spring/application.rb:153)
+  [1m[36mGroup Load (0.6ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" ORDER BY "groups"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mShip Load (0.7ms)[0m  [1m[34mSELECT  "ships".* FROM "ships" WHERE "ships"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mTonnage Load (30.7ms)[0m  [1m[34mSELECT  "tonnages".* FROM "tonnages" WHERE "tonnages"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
