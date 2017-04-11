@@ -1,6 +1,6 @@
 
 <li>	
-	<%= link_to type(battlegroup), user_fleet_battlegroup_path(@user, @fleet, battlegroup) %>
+	<%= link_to display_battlegroup_name(battlegroup), user_fleet_battlegroup_path(@user, @fleet, battlegroup) %>
 	<%= display_battlegroup_cost(battlegroup) %>
 	<%= link_to "-X-", user_fleet_battlegroup_path(@user, @fleet, battlegroup), method: :delete %>
 	<ul class='group-list'>

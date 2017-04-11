@@ -13,4 +13,37 @@ class Battlegroup < ApplicationRecord
 			errors.add(:battlegroups, "can not exceed #{fleet.max_battlegroups}")
 		end
 	end
+
+	def max_groups
+		if battlegroup_type.name == "Flag"
+			2
+		else
+			3
+		end
+	end
+
+	def max_superheavy
+	end
+
+	def min_superheavy
+	end	
+
+	def max_heavy
+	end
+
+	def min_heavy
+	end
+
+	def max_medium
+	end
+
+	def min_medium
+	end
+
+	def max_light
+	end
+
+	def min_light
+	end
+
 end

@@ -3,16 +3,10 @@
 <%= link_to "Back to Fleet", user_fleet_path(@user, @fleet) %>
 
 <!-- CLEAN IN HELPER -->
-<p> <%= @battlegroup.battlegroup_type.name %> Battlegroup </p>
+<p> <%= display_battlegroup_name(@battlegroup) %> Battlegroup </p>
 
 <!-- need methods for each type to check IF ALLOWED and IF MAX -->
-<%= link_to "Superheavy", new_user_fleet_battlegroup_group_path(@user, @fleet, @battlegroup, tonnage: '4') %>
-
-<%= link_to "Heavy", new_user_fleet_battlegroup_group_path(@user, @fleet, @battlegroup, tonnage: '3') %>
-
-<%= link_to "Medium", new_user_fleet_battlegroup_group_path(@user, @fleet, @battlegroup, tonnage: '2') %>
-
-<%= link_to "Light", new_user_fleet_battlegroup_group_path(@user, @fleet, @battlegroup, tonnage: '1') %>
+<%= render 'groups/tonnages' %>
 
 <ul class='group-list'>
 <% @battlegroup.groups.each do |group| %>

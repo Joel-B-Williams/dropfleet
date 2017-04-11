@@ -1,6 +1,6 @@
 module BattlegroupsHelper
 
-	def type(battlegroup)
+	def display_battlegroup_name(battlegroup)
 		battlegroup.battlegroup_type.name
 	end
 
@@ -8,4 +8,9 @@ module BattlegroupsHelper
 		battlegroup.cost
 	end
 
+	def can_add_group(battlegroup)
+		battlegroup.groups.length < battlegroup.max_groups
+	end
+
 end
+
