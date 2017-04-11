@@ -24487,3 +24487,347 @@ Processing by FleetsController#index as HTML
 Completed 200 OK in 183ms (Views: 127.2ms | ActiveRecord: 26.0ms)
 
 
+DEPRECATION WARNING: cleanup! is deprecated and will be removed from Rails 5.1 (use Rails.application.reloader.reload! instead of cleanup + prepare) (called from serve at /usr/lib/ruby/vendor_ruby/spring/application.rb:152)
+DEPRECATION WARNING: prepare! is deprecated and will be removed from Rails 5.1 (use Rails.application.reloader.prepare! instead) (called from serve at /usr/lib/ruby/vendor_ruby/spring/application.rb:153)
+  [1m[36mFleet Load (0.6ms)[0m  [1m[34mSELECT  "fleets".* FROM "fleets" ORDER BY "fleets"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/users/1/fleets/6/edit" for 127.0.0.1 at 2017-04-11 14:33:16 -0500
+Processing by FleetsController#edit as HTML
+  Parameters: {"user_id"=>"1", "id"=>"6"}
+  Rendering fleets/edit.html.erb within layouts/application
+  Rendered fleets/edit.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 97ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"index", :controller=>"fleets", :user_id=>nil} missing required keys: [:user_id]):
+    10:   <header>
+    11:   	<%= link_to "Home", root_path %>
+    12:     <% if logged_in? %>
+    13:       <%= link_to "Fleets", user_fleets_path(@user) %>
+    14:       <%= link_to "Profile", current_user %>
+    15:       <%= link_to "Logout", logout_path, method: 'delete' %>
+    16:     <% else %> 
+  
+app/views/layouts/application.html.erb:13:in `_app_views_layouts_application_html_erb__900702293784962653_70166651774660'
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (9.5ms)
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (38.5ms)
+Started GET "/users/1/fleets" for 127.0.0.1 at 2017-04-11 14:33:21 -0500
+Processing by FleetsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering fleets/index.html.erb within layouts/application
+  [1m[36mFleet Load (0.6ms)[0m  [1m[34mSELECT "fleets".* FROM "fleets" WHERE "fleets"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[36mFaction Load (0.9ms)[0m  [1m[34mSELECT  "factions".* FROM "factions" WHERE "factions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mFaction Load (0.4ms)[0m  [1m[34mSELECT  "factions".* FROM "factions" WHERE "factions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of fleets/_fleet.html.erb [2 times] (33.5ms)
+  Rendered fleets/index.html.erb within layouts/application (52.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_flash.html.erb (1.0ms)
+Completed 200 OK in 196ms (Views: 124.1ms | ActiveRecord: 18.2ms)
+
+
+Started GET "/users/1/fleets/8/edit" for 127.0.0.1 at 2017-04-11 14:33:23 -0500
+Processing by FleetsController#edit as HTML
+  Parameters: {"user_id"=>"1", "id"=>"8"}
+  Rendering fleets/edit.html.erb within layouts/application
+  Rendered fleets/edit.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 88ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"index", :controller=>"fleets", :user_id=>nil} missing required keys: [:user_id]):
+    10:   <header>
+    11:   	<%= link_to "Home", root_path %>
+    12:     <% if logged_in? %>
+    13:       <%= link_to "Fleets", user_fleets_path(@user) %>
+    14:       <%= link_to "Profile", current_user %>
+    15:       <%= link_to "Logout", logout_path, method: 'delete' %>
+    16:     <% else %> 
+  
+app/views/layouts/application.html.erb:13:in `_app_views_layouts_application_html_erb__900702293784962653_70166614945360'
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.7ms)
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (36.9ms)
+Started GET "/users/1/fleets" for 127.0.0.1 at 2017-04-11 14:33:25 -0500
+Processing by FleetsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering fleets/index.html.erb within layouts/application
+  [1m[36mFleet Load (2.1ms)[0m  [1m[34mSELECT "fleets".* FROM "fleets" WHERE "fleets"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[36mFaction Load (0.4ms)[0m  [1m[34mSELECT  "factions".* FROM "factions" WHERE "factions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mFaction Load (0.5ms)[0m  [1m[34mSELECT  "factions".* FROM "factions" WHERE "factions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of fleets/_fleet.html.erb [2 times] (10.7ms)
+  Rendered fleets/index.html.erb within layouts/application (18.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_flash.html.erb (1.1ms)
+Completed 200 OK in 139ms (Views: 132.9ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/users/1/fleets/8/edit" for 127.0.0.1 at 2017-04-11 14:33:32 -0500
+Processing by FleetsController#edit as HTML
+  Parameters: {"user_id"=>"1", "id"=>"8"}
+  Rendering fleets/edit.html.erb within layouts/application
+  Rendered fleets/edit.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 114ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"index", :controller=>"fleets", :user_id=>nil} missing required keys: [:user_id]):
+    10:   <header>
+    11:   	<%= link_to "Home", root_path %>
+    12:     <% if logged_in? %>
+    13:       <%= link_to "Fleets", user_fleets_path(@user) %>
+    14:       <%= link_to "Profile", current_user %>
+    15:       <%= link_to "Logout", logout_path, method: 'delete' %>
+    16:     <% else %> 
+  
+app/views/layouts/application.html.erb:13:in `_app_views_layouts_application_html_erb__900702293784962653_70166715325100'
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.8ms)
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (36.5ms)
+Started GET "/users/1/fleets" for 127.0.0.1 at 2017-04-11 14:34:40 -0500
+Processing by FleetsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering fleets/index.html.erb within layouts/application
+  [1m[36mFleet Load (0.5ms)[0m  [1m[34mSELECT "fleets".* FROM "fleets" WHERE "fleets"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[36mFaction Load (0.4ms)[0m  [1m[34mSELECT  "factions".* FROM "factions" WHERE "factions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mFaction Load (3.3ms)[0m  [1m[34mSELECT  "factions".* FROM "factions" WHERE "factions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of fleets/_fleet.html.erb [2 times] (17.4ms)
+  Rendered fleets/index.html.erb within layouts/application (27.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_flash.html.erb (1.4ms)
+Completed 200 OK in 130ms (Views: 122.5ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/users/1/fleets" for 127.0.0.1 at 2017-04-11 14:34:43 -0500
+Processing by FleetsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering fleets/index.html.erb within layouts/application
+  [1m[36mFleet Load (2.3ms)[0m  [1m[34mSELECT "fleets".* FROM "fleets" WHERE "fleets"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[36mFaction Load (4.3ms)[0m  [1m[34mSELECT  "factions".* FROM "factions" WHERE "factions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mFaction Load (0.4ms)[0m  [1m[34mSELECT  "factions".* FROM "factions" WHERE "factions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of fleets/_fleet.html.erb [2 times] (18.4ms)
+  Rendered fleets/index.html.erb within layouts/application (25.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_flash.html.erb (1.5ms)
+Completed 200 OK in 147ms (Views: 133.4ms | ActiveRecord: 10.7ms)
+
+
+Started GET "/users/1/fleets/6" for 127.0.0.1 at 2017-04-11 14:34:45 -0500
+Processing by FleetsController#show as HTML
+  Parameters: {"user_id"=>"1", "id"=>"6"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFleet Load (0.7ms)[0m  [1m[34mSELECT  "fleets".* FROM "fleets" WHERE "fleets"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering fleets/show.html.erb within layouts/application
+  [1m[36mFaction Load (0.5ms)[0m  [1m[34mSELECT  "factions".* FROM "factions" WHERE "factions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mBattlegroup Load (0.8ms)[0m  [1m[34mSELECT "battlegroups".* FROM "battlegroups" INNER JOIN "battlegroup_types" ON "battlegroup_types"."id" = "battlegroups"."battlegroup_type_id" WHERE "battlegroups"."fleet_id" = $1 ORDER BY "battlegroup_types"."id" ASC[0m  [["fleet_id", 6]]
+  [1m[36mBattlegroupType Load (0.4ms)[0m  [1m[34mSELECT  "battlegroup_types".* FROM "battlegroup_types" WHERE "battlegroup_types"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mGroup Load (64.9ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."battlegroup_id" = $1[0m  [["battlegroup_id", 8]]
+  Rendered collection of battlegroups/_battlegroup.html.erb [1 times] (96.8ms)
+  Rendered fleets/show.html.erb within layouts/application (151.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_flash.html.erb (0.6ms)
+Completed 200 OK in 269ms (Views: 148.4ms | ActiveRecord: 83.7ms)
+
+
+Started GET "/users/1/fleets/6/battlegroups/8" for 127.0.0.1 at 2017-04-11 14:34:48 -0500
+Processing by BattlegroupsController#show as HTML
+  Parameters: {"user_id"=>"1", "fleet_id"=>"6", "id"=>"8"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFleet Load (0.4ms)[0m  [1m[34mSELECT  "fleets".* FROM "fleets" WHERE "fleets"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mBattlegroup Load (0.5ms)[0m  [1m[34mSELECT  "battlegroups".* FROM "battlegroups" WHERE "battlegroups"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering battlegroups/show.html.erb within layouts/application
+  [1m[36mBattlegroupType Load (0.4ms)[0m  [1m[34mSELECT  "battlegroup_types".* FROM "battlegroup_types" WHERE "battlegroup_types"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."battlegroup_id" = $1[0m  [["battlegroup_id", 8]]
+  Rendered battlegroups/show.html.erb within layouts/application (9.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_flash.html.erb (0.7ms)
+Completed 200 OK in 84ms (Views: 67.2ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/users/1/fleets/6/battlegroups/8/groups/new?tonnage=4" for 127.0.0.1 at 2017-04-11 14:34:50 -0500
+Processing by GroupsController#new as HTML
+  Parameters: {"tonnage"=>"4", "user_id"=>"1", "fleet_id"=>"6", "battlegroup_id"=>"8"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFleet Load (0.5ms)[0m  [1m[34mSELECT  "fleets".* FROM "fleets" WHERE "fleets"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mBattlegroup Load (0.9ms)[0m  [1m[34mSELECT  "battlegroups".* FROM "battlegroups" WHERE "battlegroups"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering groups/new.html.erb within layouts/application
+  [1m[36mFaction Load (0.4ms)[0m  [1m[34mSELECT  "factions".* FROM "factions" WHERE "factions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mShip Load (34.9ms)[0m  [1m[34mSELECT "ships".* FROM "ships" WHERE "ships"."tonnage_id" = $1 AND "ships"."faction_id" = 2[0m  [["tonnage_id", 4]]
+  Rendered groups/_form.html.erb (77.6ms)
+  Rendered groups/new.html.erb within layouts/application (86.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_flash.html.erb (0.9ms)
+Completed 200 OK in 177ms (Views: 104.6ms | ActiveRecord: 41.7ms)
+
+
+Started POST "/users/1/fleets/6/battlegroups/8/groups" for 127.0.0.1 at 2017-04-11 14:34:51 -0500
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KH0Fj4PrwNQK3oj4Wge2gTfX5gu7L2si9wIFpuUDjYAkNDYgiZ+EUMeO1zGSMshlkpTaz1UOmlSRa+nG9C6r3w==", "group"=>{"group_size"=>"1"}, "commit"=>"Add group", "user_id"=>"1", "fleet_id"=>"6", "battlegroup_id"=>"8"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFleet Load (0.4ms)[0m  [1m[34mSELECT  "fleets".* FROM "fleets" WHERE "fleets"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mBattlegroup Load (1.1ms)[0m  [1m[34mSELECT  "battlegroups".* FROM "battlegroups" WHERE "battlegroups"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (47.2ms)[0m  [1m[32mINSERT INTO "groups" ("created_at", "updated_at", "group_size", "battlegroup_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", 2017-04-11 19:34:51 UTC], ["updated_at", 2017-04-11 19:34:51 UTC], ["group_size", 1], ["battlegroup_id", 8]]
+  [1m[35m (35.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBattlegroup Load (0.6ms)[0m  [1m[34mSELECT  "battlegroups".* FROM "battlegroups" WHERE "battlegroups"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 149ms (ActiveRecord: 85.8ms)
+
+
+  
+NoMethodError (undefined method `min_group_size' for nil:NilClass):
+  
+app/models/group.rb:15:in `group_size_above_min'
+app/controllers/groups_controller.rb:26:in `create'
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (10.3ms)
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (39.7ms)
+Started GET "/users/1/fleets/6/battlegroups/8/groups/new?tonnage=4" for 127.0.0.1 at 2017-04-11 14:34:55 -0500
+Processing by GroupsController#new as HTML
+  Parameters: {"tonnage"=>"4", "user_id"=>"1", "fleet_id"=>"6", "battlegroup_id"=>"8"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFleet Load (0.9ms)[0m  [1m[34mSELECT  "fleets".* FROM "fleets" WHERE "fleets"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mBattlegroup Load (1.8ms)[0m  [1m[34mSELECT  "battlegroups".* FROM "battlegroups" WHERE "battlegroups"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering groups/new.html.erb within layouts/application
+  [1m[36mFaction Load (3.2ms)[0m  [1m[34mSELECT  "factions".* FROM "factions" WHERE "factions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mShip Load (0.8ms)[0m  [1m[34mSELECT "ships".* FROM "ships" WHERE "ships"."tonnage_id" = $1 AND "ships"."faction_id" = 2[0m  [["tonnage_id", 4]]
+  Rendered groups/_form.html.erb (14.1ms)
+  Rendered groups/new.html.erb within layouts/application (16.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_flash.html.erb (1.3ms)
+Completed 200 OK in 100ms (Views: 82.0ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/users/1/fleets/6/battlegroups/8" for 127.0.0.1 at 2017-04-11 14:34:56 -0500
+Processing by BattlegroupsController#show as HTML
+  Parameters: {"user_id"=>"1", "fleet_id"=>"6", "id"=>"8"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFleet Load (0.9ms)[0m  [1m[34mSELECT  "fleets".* FROM "fleets" WHERE "fleets"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mBattlegroup Load (0.4ms)[0m  [1m[34mSELECT  "battlegroups".* FROM "battlegroups" WHERE "battlegroups"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering battlegroups/show.html.erb within layouts/application
+  [1m[36mBattlegroupType Load (0.5ms)[0m  [1m[34mSELECT  "battlegroup_types".* FROM "battlegroup_types" WHERE "battlegroup_types"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mGroup Load (1.7ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."battlegroup_id" = $1[0m  [["battlegroup_id", 8]]
+  Rendered groups/_group.html.erb (4.8ms)
+  Rendered battlegroups/show.html.erb within layouts/application (58.6ms)
+Completed 500 Internal Server Error in 75ms (ActiveRecord: 4.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: 
+    2: <li>
+    3: 	<%= link_to ship_name(group), user_fleet_battlegroup_group_path(user, fleet, battlegroup, group) %>
+    4: 	<%= link_to size(group), edit_user_fleet_battlegroup_group_path(user, fleet, battlegroup, group) %>
+    5: 	<%= display_cost(group) %>
+    6: 	<%= link_to "-X-", user_fleet_battlegroup_group_path(user, fleet, battlegroup, group), method: :delete %>
+  
+app/helpers/groups_helper.rb:9:in `ship_name'
+app/views/groups/_group.html.erb:3:in `_app_views_groups__group_html_erb___3026306758043788391_70166646871120'
+app/views/battlegroups/show.html.erb:19:in `block in _app_views_battlegroups_show_html_erb__4426728593725156020_70166748686600'
+app/views/battlegroups/show.html.erb:18:in `_app_views_battlegroups_show_html_erb__4426728593725156020_70166748686600'
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (11.8ms)
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.9ms)
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (49.7ms)
+Started GET "/users/1/fleets/6/battlegroups/8/groups/new?tonnage=4" for 127.0.0.1 at 2017-04-11 14:34:59 -0500
+Processing by GroupsController#new as HTML
+  Parameters: {"tonnage"=>"4", "user_id"=>"1", "fleet_id"=>"6", "battlegroup_id"=>"8"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFleet Load (2.1ms)[0m  [1m[34mSELECT  "fleets".* FROM "fleets" WHERE "fleets"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mBattlegroup Load (0.5ms)[0m  [1m[34mSELECT  "battlegroups".* FROM "battlegroups" WHERE "battlegroups"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering groups/new.html.erb within layouts/application
+  [1m[36mFaction Load (0.3ms)[0m  [1m[34mSELECT  "factions".* FROM "factions" WHERE "factions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mShip Load (0.6ms)[0m  [1m[34mSELECT "ships".* FROM "ships" WHERE "ships"."tonnage_id" = $1 AND "ships"."faction_id" = 2[0m  [["tonnage_id", 4]]
+  Rendered groups/_form.html.erb (7.7ms)
+  Rendered groups/new.html.erb within layouts/application (9.9ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_flash.html.erb (1.0ms)
+Completed 200 OK in 108ms (Views: 99.4ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-11 14:35:01 -0500
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_flash.html.erb (0.9ms)
+Completed 200 OK in 101ms (Views: 95.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/1/fleets" for 127.0.0.1 at 2017-04-11 14:35:01 -0500
+Processing by FleetsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering fleets/index.html.erb within layouts/application
+  [1m[36mFleet Load (0.7ms)[0m  [1m[34mSELECT "fleets".* FROM "fleets" WHERE "fleets"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[36mFaction Load (0.4ms)[0m  [1m[34mSELECT  "factions".* FROM "factions" WHERE "factions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mFaction Load (0.6ms)[0m  [1m[34mSELECT  "factions".* FROM "factions" WHERE "factions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of fleets/_fleet.html.erb [2 times] (9.6ms)
+  Rendered fleets/index.html.erb within layouts/application (14.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_flash.html.erb (1.0ms)
+Completed 200 OK in 105ms (Views: 97.2ms | ActiveRecord: 2.2ms)
+
+
+Started DELETE "/users/1/fleets/6" for 127.0.0.1 at 2017-04-11 14:35:03 -0500
+Processing by FleetsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"eSByIscGZUykBmotRNSFsnWvDO9V7tOSiwtLeAiPSwN1aUGNzXIhyGlWNeSM4ftW0OwwK7vPIuTtYqcYGaJtXA==", "user_id"=>"1", "id"=>"6"}
+  [1m[36mFleet Load (2.7ms)[0m  [1m[34mSELECT  "fleets".* FROM "fleets" WHERE "fleets"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBattlegroup Load (0.3ms)[0m  [1m[34mSELECT "battlegroups".* FROM "battlegroups" WHERE "battlegroups"."fleet_id" = $1[0m  [["fleet_id", 6]]
+  [1m[36mGroup Load (0.8ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."battlegroup_id" = $1[0m  [["battlegroup_id", 8]]
+  [1m[35mSQL (1.8ms)[0m  [1m[31mDELETE FROM "groups" WHERE "groups"."id" = $1[0m  [["id", 39]]
+  [1m[35mSQL (1.2ms)[0m  [1m[31mDELETE FROM "battlegroups" WHERE "battlegroups"."id" = $1[0m  [["id", 8]]
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "fleets" WHERE "fleets"."id" = $1[0m  [["id", 6]]
+  [1m[35m (27.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/users/1/fleets
+Completed 302 Found in 58ms (ActiveRecord: 35.8ms)
+
+
+Started GET "/users/1/fleets" for 127.0.0.1 at 2017-04-11 14:35:03 -0500
+Processing by FleetsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering fleets/index.html.erb within layouts/application
+  [1m[36mFleet Load (1.0ms)[0m  [1m[34mSELECT "fleets".* FROM "fleets" WHERE "fleets"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[36mFaction Load (0.4ms)[0m  [1m[34mSELECT  "factions".* FROM "factions" WHERE "factions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of fleets/_fleet.html.erb [1 times] (4.0ms)
+  Rendered fleets/index.html.erb within layouts/application (10.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_flash.html.erb (1.0ms)
+Completed 200 OK in 76ms (Views: 71.1ms | ActiveRecord: 1.9ms)
+
+
+DEPRECATION WARNING: cleanup! is deprecated and will be removed from Rails 5.1 (use Rails.application.reloader.reload! instead of cleanup + prepare) (called from serve at /usr/lib/ruby/vendor_ruby/spring/application.rb:152)
+DEPRECATION WARNING: prepare! is deprecated and will be removed from Rails 5.1 (use Rails.application.reloader.prepare! instead) (called from serve at /usr/lib/ruby/vendor_ruby/spring/application.rb:153)
+  [1m[36mFleet Load (0.7ms)[0m  [1m[34mSELECT  "fleets".* FROM "fleets" ORDER BY "fleets"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
