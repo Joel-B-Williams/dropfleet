@@ -26,6 +26,8 @@ class BattlegroupsController < ApplicationController
 			flash[:success] = "Battlegroup added"
 			redirect_to user_fleet_path(@user, @fleet)
 		else
+			# instance is persisted even though invalid/unsaveable - why? Because of .new??  Cleaner way to instantiate???
+			@battlegroup.destroy
 			# flash.now[:notice] = "An error occured, please make your selection"
 			render 'new'
 		end
