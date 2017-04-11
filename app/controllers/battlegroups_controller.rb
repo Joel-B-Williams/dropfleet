@@ -26,7 +26,7 @@ class BattlegroupsController < ApplicationController
 			flash[:success] = "Battlegroup added"
 			redirect_to user_fleet_path(@user, @fleet)
 		else
-			flash.now[:notice] = "An error occured, please make your selection"
+			# flash.now[:notice] = "An error occured, please make your selection"
 			render 'new'
 		end
 	end

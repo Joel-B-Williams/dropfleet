@@ -1,0 +1,7 @@
+<% if @battlegroup.errors.any? %>
+<section class="error-section">
+	<% @battlegroup.errors.full_messages.each do |message| %>
+		<p><%= message %></p>
+	<% end %>
+</section>
+<% end %>
