@@ -8,6 +8,10 @@
 
 <section class="battlegroup-info">
 	<p>
+		Total Battlegroups:
+		<%= show_battlegroup_count(@fleet) %>
+	</p>
+	<p>
 	<% if can_add_battlegroups(@fleet) %>
 		<%= link_to "+", new_user_fleet_battlegroup_path(@user.id, @fleet.id) %>
 	<% end %>

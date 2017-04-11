@@ -12,6 +12,10 @@ module FleetsHelper
 		"#{fleet.cost} | #{fleet.points_level}"
 	end
 
+	def show_battlegroup_count(fleet)
+		"#{fleet.battlegroups.length}/#{fleet.max_battlegroups}"
+	end
+
 	def show_flag_count(fleet)
 		"#{fleet.battlegroups.where(battlegroup_type: 1).length}/#{fleet.max_flag}"
 	end
