@@ -22,7 +22,7 @@ class ActionDispatch::IntegrationTest
 	end
 
 	def create_fleet(user, fleet)
-		post user_fleets_path(user), params: { fleet: { name: fleet.name, points_level: fleet.points_level, faction_id: fleet.faction_id, cost: fleet.cost } }
+		post user_fleets_path(user), params: { fleet: { name: fleet.name, points_level: fleet.points_level, faction_id: fleet.faction_id, cost: fleet.cost, user_id: user.id } }
 	end
 
 end

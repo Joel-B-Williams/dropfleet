@@ -13635,3 +13635,539 @@ Unpermitted parameter: cost
   Rendered layouts/_flash.html.erb (1.0ms)
 Completed 200 OK in 46ms (Views: 16.8ms | ActiveRecord: 2.4ms)
   [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (348.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (541.2ms)[0m  [1m[35mALTER TABLE "battlegroup_types" DISABLE TRIGGER ALL;ALTER TABLE "factions" DISABLE TRIGGER ALL;ALTER TABLE "ships" DISABLE TRIGGER ALL;ALTER TABLE "special_rules" DISABLE TRIGGER ALL;ALTER TABLE "tonnages" DISABLE TRIGGER ALL;ALTER TABLE "groups" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "battlegroups" DISABLE TRIGGER ALL;ALTER TABLE "fleets" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL[0m
+  [1m[35m (230.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixture Delete (4.2ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (135.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at", "id") VALUES ('user', '$2a$04$Io4VFmmgvgSdoSTZRhs.DeR7/bjmIDMc.Z5Pl3zoHNgt8ALMGaSpi', '2017-04-11 18:44:36.461603', '2017-04-11 18:44:36.461603', 227792459)[0m
+  [1m[36mFixture Delete (3.9ms)[0m  [1m[31mDELETE FROM "factions"[0m
+  [1m[36mFixture Insert (99.1ms)[0m  [1m[32mINSERT INTO "factions" ("created_at", "updated_at", "id") VALUES ('2017-04-11 18:44:37.677531', '2017-04-11 18:44:37.677531', 980190962)[0m
+  [1m[36mFixture Insert (0.5ms)[0m  [1m[32mINSERT INTO "factions" ("created_at", "updated_at", "id") VALUES ('2017-04-11 18:44:37.677531', '2017-04-11 18:44:37.677531', 298486374)[0m
+  [1m[36mFixture Delete (94.2ms)[0m  [1m[31mDELETE FROM "battlegroup_types"[0m
+  [1m[36mFixture Insert (27.8ms)[0m  [1m[32mINSERT INTO "battlegroup_types" ("created_at", "updated_at", "id") VALUES ('2017-04-11 18:44:37.850892', '2017-04-11 18:44:37.850892', 980190962)[0m
+  [1m[36mFixture Insert (0.5ms)[0m  [1m[32mINSERT INTO "battlegroup_types" ("created_at", "updated_at", "id") VALUES ('2017-04-11 18:44:37.850892', '2017-04-11 18:44:37.850892', 298486374)[0m
+  [1m[36mFixture Delete (1.2ms)[0m  [1m[31mDELETE FROM "special_rules"[0m
+  [1m[36mFixture Insert (39.7ms)[0m  [1m[32mINSERT INTO "special_rules" ("created_at", "updated_at", "id") VALUES ('2017-04-11 18:44:37.988347', '2017-04-11 18:44:37.988347', 980190962)[0m
+  [1m[36mFixture Insert (0.4ms)[0m  [1m[32mINSERT INTO "special_rules" ("created_at", "updated_at", "id") VALUES ('2017-04-11 18:44:37.988347', '2017-04-11 18:44:37.988347', 298486374)[0m
+  [1m[36mFixture Delete (31.4ms)[0m  [1m[31mDELETE FROM "battlegroups"[0m
+  [1m[36mFixture Insert (138.6ms)[0m  [1m[32mINSERT INTO "battlegroups" ("created_at", "updated_at", "id") VALUES ('2017-04-11 18:44:38.095950', '2017-04-11 18:44:38.095950', 980190962)[0m
+  [1m[36mFixture Insert (0.4ms)[0m  [1m[32mINSERT INTO "battlegroups" ("created_at", "updated_at", "id") VALUES ('2017-04-11 18:44:38.095950', '2017-04-11 18:44:38.095950', 298486374)[0m
+  [1m[36mFixture Delete (11.6ms)[0m  [1m[31mDELETE FROM "groups"[0m
+  [1m[36mFixture Insert (132.9ms)[0m  [1m[32mINSERT INTO "groups" ("created_at", "updated_at", "id") VALUES ('2017-04-11 18:44:38.287150', '2017-04-11 18:44:38.287150', 980190962)[0m
+  [1m[36mFixture Insert (0.5ms)[0m  [1m[32mINSERT INTO "groups" ("created_at", "updated_at", "id") VALUES ('2017-04-11 18:44:38.287150', '2017-04-11 18:44:38.287150', 298486374)[0m
+  [1m[36mFixture Delete (21.1ms)[0m  [1m[31mDELETE FROM "ships"[0m
+  [1m[36mFixture Insert (1.5ms)[0m  [1m[32mINSERT INTO "ships" ("created_at", "updated_at", "id") VALUES ('2017-04-11 18:44:38.448073', '2017-04-11 18:44:38.448073', 980190962)[0m
+  [1m[36mFixture Insert (0.4ms)[0m  [1m[32mINSERT INTO "ships" ("created_at", "updated_at", "id") VALUES ('2017-04-11 18:44:38.448073', '2017-04-11 18:44:38.448073', 298486374)[0m
+  [1m[36mFixture Delete (0.6ms)[0m  [1m[31mDELETE FROM "fleets"[0m
+  [1m[36mFixture Insert (0.4ms)[0m  [1m[32mINSERT INTO "fleets" ("name", "points_level", "faction_id", "cost", "created_at", "updated_at", "id") VALUES ('Test Fleet UCM', 750, 1, 0, '2017-04-11 18:44:38.483683', '2017-04-11 18:44:38.483683', 865880882)[0m
+  [1m[36mFixture Delete (5.5ms)[0m  [1m[31mDELETE FROM "tonnages"[0m
+  [1m[36mFixture Insert (24.4ms)[0m  [1m[32mINSERT INTO "tonnages" ("created_at", "updated_at", "id") VALUES ('2017-04-11 18:44:38.520862', '2017-04-11 18:44:38.520862', 980190962)[0m
+  [1m[36mFixture Insert (0.7ms)[0m  [1m[32mINSERT INTO "tonnages" ("created_at", "updated_at", "id") VALUES ('2017-04-11 18:44:38.520862', '2017-04-11 18:44:38.520862', 298486374)[0m
+  [1m[35m (62.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.4ms)[0m  [1m[35mALTER TABLE "battlegroup_types" ENABLE TRIGGER ALL;ALTER TABLE "factions" ENABLE TRIGGER ALL;ALTER TABLE "ships" ENABLE TRIGGER ALL;ALTER TABLE "special_rules" ENABLE TRIGGER ALL;ALTER TABLE "tonnages" ENABLE TRIGGER ALL;ALTER TABLE "groups" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "battlegroups" ENABLE TRIGGER ALL;ALTER TABLE "fleets" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL[0m
+  [1m[35m (62.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+-----------------------------------------
+UserProfileTest: test_User_visits_profile
+-----------------------------------------
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 227792459], ["LIMIT", 1]]
+Started GET "/" for 127.0.0.1 at 2017-04-11 13:44:40 -0500
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (36.6ms)
+  Rendered layouts/_flash.html.erb (1.0ms)
+Completed 200 OK in 2015ms (Views: 1881.8ms | ActiveRecord: 0.6ms)
+Started POST "/login" for 127.0.0.1 at 2017-04-11 13:44:42 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"sessions"=>{"username"=>"user", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (18.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "user"], ["LIMIT", 1]]
+Redirected to http://www.example.com/users/227792459
+Completed 302 Found in 89ms (ActiveRecord: 18.0ms)
+Started GET "/users/227792459" for 127.0.0.1 at 2017-04-11 13:44:43 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"227792459"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 227792459], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.9ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 227792459], ["LIMIT", 1]]
+  Rendered layouts/_flash.html.erb (0.8ms)
+Completed 200 OK in 39ms (Views: 11.0ms | ActiveRecord: 0.5ms)
+Started GET "/" for 127.0.0.1 at 2017-04-11 13:44:43 -0500
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 227792459], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.5ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 227792459], ["LIMIT", 1]]
+  Rendered layouts/_flash.html.erb (0.8ms)
+Completed 200 OK in 11ms (Views: 7.9ms | ActiveRecord: 0.5ms)
+Started GET "/users/227792459" for 127.0.0.1 at 2017-04-11 13:44:43 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"227792459"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 227792459], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.7ms)
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 227792459], ["LIMIT", 1]]
+  Rendered layouts/_flash.html.erb (0.8ms)
+Completed 200 OK in 11ms (Views: 7.9ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+-----------------------------------------
+UserSignupTest: test_user_signup_scenario
+-----------------------------------------
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 227792459], ["LIMIT", 1]]
+Started GET "/" for 127.0.0.1 at 2017-04-11 13:44:43 -0500
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_flash.html.erb (0.8ms)
+Completed 200 OK in 11ms (Views: 8.2ms | ActiveRecord: 0.5ms)
+Started GET "/users/new" for 127.0.0.1 at 2017-04-11 13:44:43 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (1.4ms)
+  Rendered users/_form.html.erb (117.1ms)
+  Rendered users/new.html.erb within layouts/application (238.6ms)
+  Rendered layouts/_flash.html.erb (1.0ms)
+Completed 200 OK in 289ms (Views: 247.8ms | ActiveRecord: 0.0ms)
+Started POST "/users" for 127.0.0.1 at 2017-04-11 13:44:43 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (1.2ms)
+  Rendered users/_form.html.erb (2.2ms)
+  Rendered users/new.html.erb within layouts/application (5.9ms)
+  Rendered layouts/_flash.html.erb (0.9ms)
+Completed 200 OK in 191ms (Views: 12.9ms | ActiveRecord: 1.2ms)
+Started POST "/users" for 127.0.0.1 at 2017-04-11 13:44:43 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"User", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (1.2ms)
+  Rendered users/_form.html.erb (2.5ms)
+  Rendered users/new.html.erb within layouts/application (6.0ms)
+  Rendered layouts/_flash.html.erb (0.8ms)
+Completed 200 OK in 21ms (Views: 13.2ms | ActiveRecord: 0.8ms)
+Started POST "/users" for 127.0.0.1 at 2017-04-11 13:44:43 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"User", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (1.3ms)
+  Rendered users/_form.html.erb (2.4ms)
+  Rendered users/new.html.erb within layouts/application (6.2ms)
+  Rendered layouts/_flash.html.erb (0.9ms)
+Completed 200 OK in 22ms (Views: 13.6ms | ActiveRecord: 0.8ms)
+Started POST "/users" for 127.0.0.1 at 2017-04-11 13:44:43 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"User", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (60.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "User"], ["password_digest", "$2a$04$g.gNeMrBorrGAWOIfNZsMe/z43tPqXz79WIjVBLfyileBH63LbDc."], ["created_at", 2017-04-11 18:44:43 UTC], ["updated_at", 2017-04-11 18:44:43 UTC]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/users/227792460
+Completed 302 Found in 71ms (ActiveRecord: 61.3ms)
+Started GET "/users/227792460" for 127.0.0.1 at 2017-04-11 13:44:43 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"227792460"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 227792460], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 227792460], ["LIMIT", 1]]
+  Rendered layouts/_flash.html.erb (0.7ms)
+Completed 200 OK in 12ms (Views: 8.0ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------------
+FleetCreationTest: test_fleet_creation_&_editing
+------------------------------------------------
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 227792459], ["LIMIT", 1]]
+  [1m[36mFleet Load (49.6ms)[0m  [1m[34mSELECT  "fleets".* FROM "fleets" WHERE "fleets"."id" = $1 LIMIT $2[0m  [["id", 865880882], ["LIMIT", 1]]
+Started POST "/login" for 127.0.0.1 at 2017-04-11 13:44:43 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"sessions"=>{"username"=>"user", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "user"], ["LIMIT", 1]]
+Redirected to http://www.example.com/users/227792459
+Completed 302 Found in 5ms (ActiveRecord: 0.5ms)
+Started GET "/users/227792459/fleets" for 127.0.0.1 at 2017-04-11 13:44:43 -0500
+Processing by FleetsController#index as HTML
+  Parameters: {"user_id"=>"227792459"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 227792459], ["LIMIT", 1]]
+  Rendering fleets/index.html.erb within layouts/application
+  [1m[36mFleet Load (0.6ms)[0m  [1m[34mSELECT "fleets".* FROM "fleets" WHERE "fleets"."user_id" = $1[0m  [["user_id", 227792459]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered fleets/index.html.erb within layouts/application (4.2ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 227792459], ["LIMIT", 1]]
+  Rendered layouts/_flash.html.erb (1.1ms)
+Completed 200 OK in 69ms (Views: 15.6ms | ActiveRecord: 0.9ms)
+Started GET "/users/227792459/fleets/new" for 127.0.0.1 at 2017-04-11 13:44:44 -0500
+Processing by FleetsController#new as HTML
+  Parameters: {"user_id"=>"227792459"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 227792459], ["LIMIT", 1]]
+  Rendering fleets/new.html.erb within layouts/application
+  Rendered fleets/_errors.html.erb (1.4ms)
+  [1m[36mFaction Load (0.6ms)[0m  [1m[34mSELECT "factions".* FROM "factions"[0m
+  Rendered fleets/_form.html.erb (76.6ms)
+  Rendered fleets/new.html.erb within layouts/application (134.9ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 227792459], ["LIMIT", 1]]
+  Rendered layouts/_flash.html.erb (1.0ms)
+Completed 200 OK in 182ms (Views: 143.5ms | ActiveRecord: 0.9ms)
+Started POST "/users/227792459/fleets" for 127.0.0.1 at 2017-04-11 13:44:44 -0500
+Processing by FleetsController#create as HTML
+  Parameters: {"fleet"=>{"name"=>"Test Fleet UCM", "points_level"=>"750", "faction_id"=>"1", "cost"=>"0", "user_id"=>"227792459"}, "user_id"=>"227792459"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 227792459], ["LIMIT", 1]]
+Unpermitted parameters: cost, user_id
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 227792459], ["LIMIT", 1]]
+  [1m[36mFaction Load (0.5ms)[0m  [1m[34mSELECT  "factions".* FROM "factions" WHERE "factions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendering fleets/new.html.erb within layouts/application
+  Rendered fleets/_errors.html.erb (1.5ms)
+  [1m[36mFaction Load (0.5ms)[0m  [1m[34mSELECT "factions".* FROM "factions"[0m
+  Rendered fleets/_form.html.erb (4.0ms)
+  Rendered fleets/new.html.erb within layouts/application (8.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 227792459], ["LIMIT", 1]]
+  Rendered layouts/_flash.html.erb (0.9ms)
+Completed 200 OK in 149ms (Views: 16.8ms | ActiveRecord: 2.6ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+---------------------------------
+UsersLoginTest: test_user_logs_in
+---------------------------------
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 227792459], ["LIMIT", 1]]
+Started GET "/" for 127.0.0.1 at 2017-04-11 13:44:44 -0500
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_flash.html.erb (1.0ms)
+Completed 200 OK in 13ms (Views: 10.1ms | ActiveRecord: 0.5ms)
+Started GET "/login" for 127.0.0.1 at 2017-04-11 13:44:44 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_flash.html.erb (1.1ms)
+Completed 200 OK in 52ms (Views: 15.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------------------
+SiteLayoutTest: test_layout_page_with_variable_links
+----------------------------------------------------
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 227792459], ["LIMIT", 1]]
+Started GET "/" for 127.0.0.1 at 2017-04-11 13:44:44 -0500
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_flash.html.erb (1.0ms)
+Completed 200 OK in 12ms (Views: 9.2ms | ActiveRecord: 0.5ms)
+Started POST "/login" for 127.0.0.1 at 2017-04-11 13:44:44 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"sessions"=>{"username"=>"user", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "user"], ["LIMIT", 1]]
+Redirected to http://www.example.com/users/227792459
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms)
+Started GET "/users/227792459" for 127.0.0.1 at 2017-04-11 13:44:44 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"227792459"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 227792459], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 227792459], ["LIMIT", 1]]
+  Rendered layouts/_flash.html.erb (0.9ms)
+Completed 200 OK in 12ms (Views: 9.4ms | ActiveRecord: 0.3ms)
+Started GET "/" for 127.0.0.1 at 2017-04-11 13:44:44 -0500
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 227792459], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.6ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 227792459], ["LIMIT", 1]]
+  Rendered layouts/_flash.html.erb (0.9ms)
+Completed 200 OK in 12ms (Views: 9.4ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.1ms)[0m  [1m[35mALTER TABLE "battlegroup_types" DISABLE TRIGGER ALL;ALTER TABLE "factions" DISABLE TRIGGER ALL;ALTER TABLE "ships" DISABLE TRIGGER ALL;ALTER TABLE "special_rules" DISABLE TRIGGER ALL;ALTER TABLE "tonnages" DISABLE TRIGGER ALL;ALTER TABLE "groups" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "battlegroups" DISABLE TRIGGER ALL;ALTER TABLE "fleets" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL[0m
+  [1m[35m (29.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixture Delete (0.6ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (24.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at", "id") VALUES ('user', '$2a$04$wD8..hPYi6mo4g2r8HcQSuqt2rB1z4AI7URa5NehPT/Cm4zwL5SGC', '2017-04-11 18:46:49.713365', '2017-04-11 18:46:49.713365', 227792459)[0m
+  [1m[36mFixture Delete (0.6ms)[0m  [1m[31mDELETE FROM "factions"[0m
+  [1m[36mFixture Insert (0.6ms)[0m  [1m[32mINSERT INTO "factions" ("created_at", "updated_at", "id") VALUES ('2017-04-11 18:46:49.753881', '2017-04-11 18:46:49.753881', 980190962)[0m
+  [1m[36mFixture Insert (0.4ms)[0m  [1m[32mINSERT INTO "factions" ("created_at", "updated_at", "id") VALUES ('2017-04-11 18:46:49.753881', '2017-04-11 18:46:49.753881', 298486374)[0m
+  [1m[36mFixture Delete (0.5ms)[0m  [1m[31mDELETE FROM "battlegroup_types"[0m
+  [1m[36mFixture Insert (0.4ms)[0m  [1m[32mINSERT INTO "battlegroup_types" ("created_at", "updated_at", "id") VALUES ('2017-04-11 18:46:49.768640', '2017-04-11 18:46:49.768640', 980190962)[0m
+  [1m[36mFixture Insert (0.4ms)[0m  [1m[32mINSERT INTO "battlegroup_types" ("created_at", "updated_at", "id") VALUES ('2017-04-11 18:46:49.768640', '2017-04-11 18:46:49.768640', 298486374)[0m
+  [1m[36mFixture Delete (0.5ms)[0m  [1m[31mDELETE FROM "special_rules"[0m
+  [1m[36mFixture Insert (0.5ms)[0m  [1m[32mINSERT INTO "special_rules" ("created_at", "updated_at", "id") VALUES ('2017-04-11 18:46:49.781789', '2017-04-11 18:46:49.781789', 980190962)[0m
+  [1m[36mFixture Insert (0.5ms)[0m  [1m[32mINSERT INTO "special_rules" ("created_at", "updated_at", "id") VALUES ('2017-04-11 18:46:49.781789', '2017-04-11 18:46:49.781789', 298486374)[0m
+  [1m[36mFixture Delete (0.6ms)[0m  [1m[31mDELETE FROM "battlegroups"[0m
+  [1m[36mFixture Insert (0.4ms)[0m  [1m[32mINSERT INTO "battlegroups" ("created_at", "updated_at", "id") VALUES ('2017-04-11 18:46:49.804789', '2017-04-11 18:46:49.804789', 980190962)[0m
+  [1m[36mFixture Insert (0.5ms)[0m  [1m[32mINSERT INTO "battlegroups" ("created_at", "updated_at", "id") VALUES ('2017-04-11 18:46:49.804789', '2017-04-11 18:46:49.804789', 298486374)[0m
+  [1m[36mFixture Delete (0.6ms)[0m  [1m[31mDELETE FROM "groups"[0m
+  [1m[36mFixture Insert (0.5ms)[0m  [1m[32mINSERT INTO "groups" ("created_at", "updated_at", "id") VALUES ('2017-04-11 18:46:49.818227', '2017-04-11 18:46:49.818227', 980190962)[0m
+  [1m[36mFixture Insert (0.4ms)[0m  [1m[32mINSERT INTO "groups" ("created_at", "updated_at", "id") VALUES ('2017-04-11 18:46:49.818227', '2017-04-11 18:46:49.818227', 298486374)[0m
+  [1m[36mFixture Delete (0.6ms)[0m  [1m[31mDELETE FROM "ships"[0m
+  [1m[36mFixture Insert (0.4ms)[0m  [1m[32mINSERT INTO "ships" ("created_at", "updated_at", "id") VALUES ('2017-04-11 18:46:49.833554', '2017-04-11 18:46:49.833554', 980190962)[0m
+  [1m[36mFixture Insert (0.4ms)[0m  [1m[32mINSERT INTO "ships" ("created_at", "updated_at", "id") VALUES ('2017-04-11 18:46:49.833554', '2017-04-11 18:46:49.833554', 298486374)[0m
+  [1m[36mFixture Delete (0.5ms)[0m  [1m[31mDELETE FROM "fleets"[0m
+  [1m[36mFixture Insert (0.5ms)[0m  [1m[32mINSERT INTO "fleets" ("name", "points_level", "faction_id", "cost", "created_at", "updated_at", "id") VALUES ('Test Fleet UCM', 750, 1, 0, '2017-04-11 18:46:49.849156', '2017-04-11 18:46:49.849156', 865880882)[0m
+  [1m[36mFixture Delete (0.5ms)[0m  [1m[31mDELETE FROM "tonnages"[0m
+  [1m[36mFixture Insert (0.4ms)[0m  [1m[32mINSERT INTO "tonnages" ("created_at", "updated_at", "id") VALUES ('2017-04-11 18:46:49.862493', '2017-04-11 18:46:49.862493', 980190962)[0m
+  [1m[36mFixture Insert (0.4ms)[0m  [1m[32mINSERT INTO "tonnages" ("created_at", "updated_at", "id") VALUES ('2017-04-11 18:46:49.862493', '2017-04-11 18:46:49.862493', 298486374)[0m
+  [1m[35m (31.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.1ms)[0m  [1m[35mALTER TABLE "battlegroup_types" ENABLE TRIGGER ALL;ALTER TABLE "factions" ENABLE TRIGGER ALL;ALTER TABLE "ships" ENABLE TRIGGER ALL;ALTER TABLE "special_rules" ENABLE TRIGGER ALL;ALTER TABLE "tonnages" ENABLE TRIGGER ALL;ALTER TABLE "groups" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "battlegroups" ENABLE TRIGGER ALL;ALTER TABLE "fleets" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL[0m
+  [1m[35m (7.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+-----------------------------------------
+UserProfileTest: test_User_visits_profile
+-----------------------------------------
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 227792459], ["LIMIT", 1]]
+Started GET "/" for 127.0.0.1 at 2017-04-11 13:46:50 -0500
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_flash.html.erb (1.0ms)
+Completed 200 OK in 274ms (Views: 258.8ms | ActiveRecord: 0.5ms)
+Started POST "/login" for 127.0.0.1 at 2017-04-11 13:46:50 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"sessions"=>{"username"=>"user", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "user"], ["LIMIT", 1]]
+Redirected to http://www.example.com/users/227792459
+Completed 302 Found in 8ms (ActiveRecord: 0.4ms)
+Started GET "/users/227792459" for 127.0.0.1 at 2017-04-11 13:46:50 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"227792459"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 227792459], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 227792459], ["LIMIT", 1]]
+  Rendered layouts/_flash.html.erb (0.8ms)
+Completed 200 OK in 13ms (Views: 9.2ms | ActiveRecord: 0.5ms)
+Started GET "/" for 127.0.0.1 at 2017-04-11 13:46:50 -0500
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 227792459], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.5ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 227792459], ["LIMIT", 1]]
+  Rendered layouts/_flash.html.erb (0.9ms)
+Completed 200 OK in 11ms (Views: 8.0ms | ActiveRecord: 0.5ms)
+Started GET "/users/227792459" for 127.0.0.1 at 2017-04-11 13:46:50 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"227792459"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 227792459], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.6ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 227792459], ["LIMIT", 1]]
+  Rendered layouts/_flash.html.erb (0.7ms)
+Completed 200 OK in 11ms (Views: 7.5ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------------------
+SiteLayoutTest: test_layout_page_with_variable_links
+----------------------------------------------------
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 227792459], ["LIMIT", 1]]
+Started GET "/" for 127.0.0.1 at 2017-04-11 13:46:50 -0500
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_flash.html.erb (0.8ms)
+Completed 200 OK in 10ms (Views: 7.6ms | ActiveRecord: 0.5ms)
+Started POST "/login" for 127.0.0.1 at 2017-04-11 13:46:50 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"sessions"=>{"username"=>"user", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "user"], ["LIMIT", 1]]
+Redirected to http://www.example.com/users/227792459
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms)
+Started GET "/users/227792459" for 127.0.0.1 at 2017-04-11 13:46:50 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"227792459"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 227792459], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 227792459], ["LIMIT", 1]]
+  Rendered layouts/_flash.html.erb (0.8ms)
+Completed 200 OK in 12ms (Views: 8.4ms | ActiveRecord: 0.6ms)
+Started GET "/" for 127.0.0.1 at 2017-04-11 13:46:50 -0500
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 227792459], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.6ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 227792459], ["LIMIT", 1]]
+  Rendered layouts/_flash.html.erb (0.8ms)
+Completed 200 OK in 10ms (Views: 8.0ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+-----------------------------------------
+UserSignupTest: test_user_signup_scenario
+-----------------------------------------
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 227792459], ["LIMIT", 1]]
+Started GET "/" for 127.0.0.1 at 2017-04-11 13:46:50 -0500
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_flash.html.erb (0.9ms)
+Completed 200 OK in 10ms (Views: 7.7ms | ActiveRecord: 0.4ms)
+Started GET "/users/new" for 127.0.0.1 at 2017-04-11 13:46:50 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.8ms)
+  Rendered users/_form.html.erb (13.0ms)
+  Rendered users/new.html.erb within layouts/application (16.0ms)
+  Rendered layouts/_flash.html.erb (0.8ms)
+Completed 200 OK in 24ms (Views: 22.9ms | ActiveRecord: 0.0ms)
+Started POST "/users" for 127.0.0.1 at 2017-04-11 13:46:50 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (1.3ms)
+  Rendered users/_form.html.erb (2.2ms)
+  Rendered users/new.html.erb within layouts/application (5.8ms)
+  Rendered layouts/_flash.html.erb (0.9ms)
+Completed 200 OK in 28ms (Views: 13.2ms | ActiveRecord: 0.9ms)
+Started POST "/users" for 127.0.0.1 at 2017-04-11 13:46:50 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"User", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (1.2ms)
+  Rendered users/_form.html.erb (2.1ms)
+  Rendered users/new.html.erb within layouts/application (5.5ms)
+  Rendered layouts/_flash.html.erb (0.8ms)
+Completed 200 OK in 21ms (Views: 12.3ms | ActiveRecord: 0.8ms)
+Started POST "/users" for 127.0.0.1 at 2017-04-11 13:46:50 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"User", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (1.3ms)
+  Rendered users/_form.html.erb (2.3ms)
+  Rendered users/new.html.erb within layouts/application (6.2ms)
+  Rendered layouts/_flash.html.erb (0.9ms)
+Completed 200 OK in 62ms (Views: 13.9ms | ActiveRecord: 0.9ms)
+Started POST "/users" for 127.0.0.1 at 2017-04-11 13:46:51 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"User", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "User"], ["password_digest", "$2a$04$NQno6Hp2mBw8X7Suvr0BW.jzdqhvp.BPexM0PToYvM0Ckd2SJ7Rj6"], ["created_at", 2017-04-11 18:46:51 UTC], ["updated_at", 2017-04-11 18:46:51 UTC]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/users/227792460
+Completed 302 Found in 10ms (ActiveRecord: 1.4ms)
+Started GET "/users/227792460" for 127.0.0.1 at 2017-04-11 13:46:51 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"227792460"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 227792460], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 227792460], ["LIMIT", 1]]
+  Rendered layouts/_flash.html.erb (0.9ms)
+Completed 200 OK in 12ms (Views: 9.3ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------------
+FleetCreationTest: test_fleet_creation_&_editing
+------------------------------------------------
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 227792459], ["LIMIT", 1]]
+  [1m[36mFleet Load (0.4ms)[0m  [1m[34mSELECT  "fleets".* FROM "fleets" WHERE "fleets"."id" = $1 LIMIT $2[0m  [["id", 865880882], ["LIMIT", 1]]
+Started POST "/login" for 127.0.0.1 at 2017-04-11 13:46:51 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"sessions"=>{"username"=>"user", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "user"], ["LIMIT", 1]]
+Redirected to http://www.example.com/users/227792459
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms)
+Started GET "/users/227792459/fleets" for 127.0.0.1 at 2017-04-11 13:46:51 -0500
+Processing by FleetsController#index as HTML
+  Parameters: {"user_id"=>"227792459"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 227792459], ["LIMIT", 1]]
+  Rendering fleets/index.html.erb within layouts/application
+  [1m[36mFleet Load (0.6ms)[0m  [1m[34mSELECT "fleets".* FROM "fleets" WHERE "fleets"."user_id" = $1[0m  [["user_id", 227792459]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered fleets/index.html.erb within layouts/application (3.5ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 227792459], ["LIMIT", 1]]
+  Rendered layouts/_flash.html.erb (0.9ms)
+Completed 200 OK in 17ms (Views: 12.4ms | ActiveRecord: 1.0ms)
+Started GET "/users/227792459/fleets/new" for 127.0.0.1 at 2017-04-11 13:46:51 -0500
+Processing by FleetsController#new as HTML
+  Parameters: {"user_id"=>"227792459"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 227792459], ["LIMIT", 1]]
+  Rendering fleets/new.html.erb within layouts/application
+  Rendered fleets/_errors.html.erb (0.7ms)
+  [1m[36mFaction Load (0.5ms)[0m  [1m[34mSELECT "factions".* FROM "factions"[0m
+  Rendered fleets/_form.html.erb (11.4ms)
+  Rendered fleets/new.html.erb within layouts/application (14.6ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 227792459], ["LIMIT", 1]]
+  Rendered layouts/_flash.html.erb (0.9ms)
+Completed 200 OK in 26ms (Views: 22.5ms | ActiveRecord: 0.9ms)
+Started POST "/users/227792459/fleets" for 127.0.0.1 at 2017-04-11 13:46:51 -0500
+Processing by FleetsController#create as HTML
+  Parameters: {"fleet"=>{"name"=>"Test Fleet UCM", "points_level"=>"750", "faction_id"=>"1", "cost"=>"0", "user_id"=>"227792459"}, "user_id"=>"227792459"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 227792459], ["LIMIT", 1]]
+Unpermitted parameters: cost, user_id
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 227792459], ["LIMIT", 1]]
+  [1m[36mFaction Load (0.4ms)[0m  [1m[34mSELECT  "factions".* FROM "factions" WHERE "factions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendering fleets/new.html.erb within layouts/application
+  Rendered fleets/_errors.html.erb (1.7ms)
+  [1m[36mFaction Load (0.6ms)[0m  [1m[34mSELECT "factions".* FROM "factions"[0m
+  Rendered fleets/_form.html.erb (4.4ms)
+  Rendered fleets/new.html.erb within layouts/application (8.7ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 227792459], ["LIMIT", 1]]
+  Rendered layouts/_flash.html.erb (1.1ms)
+Completed 200 OK in 49ms (Views: 17.6ms | ActiveRecord: 2.7ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+---------------------------------
+UsersLoginTest: test_user_logs_in
+---------------------------------
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 227792459], ["LIMIT", 1]]
+Started GET "/" for 127.0.0.1 at 2017-04-11 13:46:51 -0500
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_flash.html.erb (1.0ms)
+Completed 200 OK in 11ms (Views: 8.0ms | ActiveRecord: 0.5ms)
+Started GET "/login" for 127.0.0.1 at 2017-04-11 13:46:51 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_flash.html.erb (1.1ms)
+Completed 200 OK in 16ms (Views: 14.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m

@@ -17,6 +17,8 @@ class FleetCreationTest < ActionDispatch::IntegrationTest
   	get new_user_fleet_path(@user)
   	assert_template 'fleets/new'
   	create_fleet(@user, @ucm)
+  	# assert_redirected_to user_fleet_path(@user, @ucm)
+  	assert_template 'fleets/new'
   	# fleet not saving, will not redirect.  Poop.
   end
 
