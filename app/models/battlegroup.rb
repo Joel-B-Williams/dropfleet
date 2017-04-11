@@ -22,28 +22,78 @@ class Battlegroup < ApplicationRecord
 		end
 	end
 
+
 	def max_superheavy
+		if bg_name == 'Flag'
+			2
+		else
+			0
+		end 
 	end
 
 	def min_superheavy
+		if bg_name == 'Flag'
+			1
+		else
+			0
+		end
 	end	
 
 	def max_heavy
+		if bg_name == 'Vanguard'
+			2
+		else
+			0
+		end
 	end
 
 	def min_heavy
+		elsif bg_name == 'Vanguard'
+			1
+		else
+			0
+		end
 	end
 
 	def max_medium
+		if bg_name == 'Flag'
+			0
+		elsif bg_name == 'Line'
+			3
+		else
+			1
+		end
 	end
 
 	def min_medium
+		if bg_naem == 'Line'
+			1
+		else
+			0
+		end
 	end
 
 	def max_light
+		if bg_name == 'Pathfinder'
+			3
+		elsif bg_naem == 'Line'
+			2
+		else
+			1
+		end
 	end
 
 	def min_light
+		if bg_name == 'Pathfinder'
+			1
+		else
+			0
+		end
 	end
 
+	private
+
+		def bg_name
+			battlegroup_type.name
+		end
 end
