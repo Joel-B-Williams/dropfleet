@@ -12,28 +12,28 @@
 		<%= show_battlegroup_count(@fleet) %>
 	</p>
 	<p>
-	<% if can_add_battlegroups(@fleet) %>
+	<% if can_add_battlegroups(@fleet) && can_add_flag(@fleet) %>
 		<%= link_to "+", new_user_fleet_battlegroup_path(@user.id, @fleet.id) %>
 	<% end %>
 	Flag Battlegroup
 	<%= show_flag_count(@fleet) %>
 	</p>
 	<p>
-	<% if can_add_battlegroups(@fleet) %>
+	<% if can_add_battlegroups(@fleet) && can_add_vanguard(@fleet) %>
 		<%= link_to "+", new_user_fleet_battlegroup_path(@user.id, @fleet.id) %>
 	<% end %>
 	Vanguard Battlegroup
 	<%= show_vanguard_count(@fleet) %>
 	</p>
 	<p>
-	<% if can_add_battlegroups(@fleet) %>
+	<% if can_add_battlegroups(@fleet) && can_add_line(@fleet) %>
 		<%= link_to "+", new_user_fleet_battlegroup_path(@user.id, @fleet.id) %>
 	<% end %>
 	Line Battlegroup
 	<%= show_line_count(@fleet) %>
 	</p>
 	<p>
-	<% if can_add_battlegroups(@fleet) %>
+	<% if can_add_battlegroups(@fleet) && can_add_pathfinder(@fleet) %>
 		<%= link_to "+", new_user_fleet_battlegroup_path(@user.id, @fleet.id) %>
 	<% end %>
 	Pathfinder Battlegroup
