@@ -76,7 +76,7 @@ class Battlegroup < ApplicationRecord
 	def max_light
 		if bg_name == 'Pathfinder'
 			3
-		elsif bg_naem == 'Line'
+		elsif bg_name == 'Line'
 			2
 		else
 			1
