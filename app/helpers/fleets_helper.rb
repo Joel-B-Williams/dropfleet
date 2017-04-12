@@ -37,23 +37,19 @@ module FleetsHelper
 	end
 
 	def can_add_flag(fleet)
-		flag_count = fleet.battlegroups.where(battlegroup_type: 1).length
-		flag_count < fleet.max_flag
+		fleet.battlegroups.where(battlegroup_type: 1).length < fleet.max_flag
 	end
 
 	def can_add_vanguard(fleet)
-		vanguard_count = fleet.battlegroups.where(battlegroup_type: 2).length
-		vanguard_count < fleet.max_vanguard
+		fleet.battlegroups.where(battlegroup_type: 2).length < fleet.max_vanguard
 	end
 
 	def can_add_line(fleet)
-		line_count = fleet.battlegroups.where(battlegroup_type: 3).length
-		line_count < fleet.max_line
+		fleet.battlegroups.where(battlegroup_type: 3).length < fleet.max_line
 	end
 	
 	def can_add_pathfinder(fleet)
-		pathfinder_count = fleet.battlegroups.where(battlegroup_type: 4).length
-		pathfinder_count < fleet.max_pathfinder
+		fleet.battlegroups.where(battlegroup_type: 4).length < fleet.max_pathfinder
 	end
 
 	# def can_add_battlegroup(fleet, battlegroup_type)

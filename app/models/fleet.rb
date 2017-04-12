@@ -8,7 +8,7 @@ class Fleet < ApplicationRecord
 
 	validates :name, presence: true
 	validates :points_level, presence: true
-	validates :faction, presence: true
+	validates :faction_id, presence: true
 
 	def max_battlegroups
 		if points_level < 1000
