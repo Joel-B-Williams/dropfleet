@@ -4,6 +4,10 @@ module GroupsHelper
 		group.cost
 	end
 
+	def size_range(group)
+		(@group.ship.min_group_size..@group.ship.max_group_size)
+	end
+
 # DESIGN QUERY - because ships are static assets and groups are user-created, should this be left as-is or should groups lead to a ship show?
 	def ship_name(group)
 		group.ship.name 
