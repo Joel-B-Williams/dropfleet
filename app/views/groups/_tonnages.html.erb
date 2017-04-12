@@ -1,26 +1,38 @@
 <section class='tonnages'>
-	<p> 
-	<% if can_add_group(@battlegroup) %>
-		<%= link_to "+", new_user_fleet_battlegroup_group_path(@user, @fleet, @battlegroup, tonnage: '4') %>
+	<% if can_have_superheavy(@battlegroup) %>	
+		<p> 
+		<% if can_add_group(@battlegroup) && can_add_superheavy(@battlegroup) %>
+			<%= link_to "+", new_user_fleet_battlegroup_group_path(@user, @fleet, @battlegroup, tonnage: '4') %>
+		<% end %>
+		Superheavy
+		</p>
 	<% end %>
-	Superheavy
-	</p>
-	<p>
-	<% if can_add_group(@battlegroup) %>
-		<%= link_to "+", new_user_fleet_battlegroup_group_path(@user, @fleet, @battlegroup, tonnage: '3') %>
+	
+	<% if can_have_heavy(@battlegroup) %>
+		<p>
+		<% if can_add_group(@battlegroup) && can_add_heavy(@battlegroup) %>
+			<%= link_to "+", new_user_fleet_battlegroup_group_path(@user, @fleet, @battlegroup, tonnage: '3') %>
+		<% end %>
+		Heavy
+		</p>
 	<% end %>
-	Heavy
-	</p>
-	<p>
-	<% if can_add_group(@battlegroup) %>
-		<%= link_to "+", new_user_fleet_battlegroup_group_path(@user, @fleet, @battlegroup, tonnage: '2') %>
+
+	<% if can_have_medium(@battlegroup) %>
+		<p>
+		<% if can_add_group(@battlegroup) && can_add_medium(@battlegroup) %>
+			<%= link_to "+", new_user_fleet_battlegroup_group_path(@user, @fleet, @battlegroup, tonnage: '2') %>
+		<% end %>
+		Medium
+		</p>
 	<% end %>
-	Medium
-	</p>
-	<p>
-	<% if can_add_group(@battlegroup) %>
-		<%= link_to "+", new_user_fleet_battlegroup_group_path(@user, @fleet, @battlegroup, tonnage: '1') %>
+
+	<% if can_have_light(@battlegroup) %>
+		<p>
+		<% if can_add_group(@battlegroup) && can_add_light(@battlegroup) %>
+			<%= link_to "+", new_user_fleet_battlegroup_group_path(@user, @fleet, @battlegroup, tonnage: '1') %>
+		<% end %>
+		Light
+		</p>
 	<% end %>
-	Light
-	</p>
+
 </section>

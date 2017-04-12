@@ -48,7 +48,7 @@ class Battlegroup < ApplicationRecord
 	end
 
 	def min_heavy
-		elsif bg_name == 'Vanguard'
+		if bg_name == 'Vanguard'
 			1
 		else
 			0
@@ -66,7 +66,7 @@ class Battlegroup < ApplicationRecord
 	end
 
 	def min_medium
-		if bg_naem == 'Line'
+		if bg_name == 'Line'
 			1
 		else
 			0

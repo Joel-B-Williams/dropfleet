@@ -56,6 +56,10 @@ module FleetsHelper
 		pathfinder_count < fleet.max_pathfinder
 	end
 
+	# def can_add_battlegroup(fleet, battlegroup_type)
+	# 	fleet.battlegroups.joins(:battlegroup_types).where(name: battlegroup_type).length < fleet.max_battlegroup_type
+	# end
+
 
 
 	# def show_battlegroups(fleet, bg_type)

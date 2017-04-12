@@ -29807,3 +29807,497 @@ DEPRECATION WARNING: prepare! is deprecated and will be removed from Rails 5.1 (
   [1m[36mGroup Load (0.6ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" ORDER BY "groups"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
   [1m[36mShip Load (0.7ms)[0m  [1m[34mSELECT  "ships".* FROM "ships" WHERE "ships"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
   [1m[36mTonnage Load (30.7ms)[0m  [1m[34mSELECT  "tonnages".* FROM "tonnages" WHERE "tonnages"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Started GET "/" for 127.0.0.1 at 2017-04-11 21:38:07 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (75.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (47.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (25.4ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_flash.html.erb (1.3ms)
+Completed 200 OK in 1952ms (Views: 1494.7ms | ActiveRecord: 216.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-11 21:46:57 -0500
+Started GET "/users/1/fleets" for 127.0.0.1 at 2017-04-11 21:47:07 -0500
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_flash.html.erb (1.2ms)
+Completed 200 OK in 127ms (Views: 90.0ms | ActiveRecord: 0.6ms)
+
+
+Processing by FleetsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering fleets/index.html.erb within layouts/application
+  [1m[36mFleet Load (41.9ms)[0m  [1m[34mSELECT "fleets".* FROM "fleets" WHERE "fleets"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[36mFaction Load (54.7ms)[0m  [1m[34mSELECT  "factions".* FROM "factions" WHERE "factions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "factions".* FROM "factions" WHERE "factions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of fleets/_fleet.html.erb [2 times] (145.1ms)
+  Rendered fleets/index.html.erb within layouts/application (204.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_flash.html.erb (0.1ms)
+Completed 200 OK in 357ms (Views: 153.2ms | ActiveRecord: 106.4ms)
+
+
+Started GET "/users/1/fleets" for 127.0.0.1 at 2017-04-11 21:47:11 -0500
+Processing by FleetsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering fleets/index.html.erb within layouts/application
+  [1m[36mFleet Load (0.8ms)[0m  [1m[34mSELECT "fleets".* FROM "fleets" WHERE "fleets"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[36mFaction Load (0.7ms)[0m  [1m[34mSELECT  "factions".* FROM "factions" WHERE "factions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "factions".* FROM "factions" WHERE "factions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of fleets/_fleet.html.erb [2 times] (17.3ms)
+  Rendered fleets/index.html.erb within layouts/application (23.8ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_flash.html.erb (1.0ms)
+Completed 200 OK in 85ms (Views: 74.5ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/users/1/fleets/8" for 127.0.0.1 at 2017-04-11 21:47:15 -0500
+Processing by FleetsController#show as HTML
+  Parameters: {"user_id"=>"1", "id"=>"8"}
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFleet Load (0.6ms)[0m  [1m[34mSELECT  "fleets".* FROM "fleets" WHERE "fleets"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 50ms (ActiveRecord: 3.9ms)
+
+
+  
+SyntaxError (/home/joelercoaster/Projects/rails/dropfleet/app/models/battlegroup.rb:51: syntax error, unexpected keyword_elsif
+		elsif bg_name == 'Vanguard'
+		     ^
+/home/joelercoaster/Projects/rails/dropfleet/app/models/battlegroup.rb:99: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/models/battlegroup.rb:51: syntax error, unexpected keyword_elsif
+app/models/battlegroup.rb:99: syntax error, unexpected keyword_end, expecting end-of-input
+app/controllers/fleets_controller.rb:11:in `show'
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (9.8ms)
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.4ms)
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (45.9ms)
+Started GET "/users/1/fleets/8" for 127.0.0.1 at 2017-04-11 21:47:37 -0500
+Processing by FleetsController#show as HTML
+  Parameters: {"user_id"=>"1", "id"=>"8"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFleet Load (0.5ms)[0m  [1m[34mSELECT  "fleets".* FROM "fleets" WHERE "fleets"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering fleets/show.html.erb within layouts/application
+  [1m[36mFaction Load (0.6ms)[0m  [1m[34mSELECT  "factions".* FROM "factions" WHERE "factions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBattlegroup Load (52.7ms)[0m  [1m[34mSELECT "battlegroups".* FROM "battlegroups" WHERE "battlegroups"."fleet_id" = $1[0m  [["fleet_id", 8]]
+  [1m[36mBattlegroup Load (0.6ms)[0m  [1m[34mSELECT "battlegroups".* FROM "battlegroups" WHERE "battlegroups"."fleet_id" = $1 AND "battlegroups"."battlegroup_type_id" = 1[0m  [["fleet_id", 8]]
+  [1m[36mBattlegroup Load (0.9ms)[0m  [1m[34mSELECT "battlegroups".* FROM "battlegroups" WHERE "battlegroups"."fleet_id" = $1 AND "battlegroups"."battlegroup_type_id" = 2[0m  [["fleet_id", 8]]
+  [1m[36mBattlegroup Load (0.7ms)[0m  [1m[34mSELECT "battlegroups".* FROM "battlegroups" WHERE "battlegroups"."fleet_id" = $1 AND "battlegroups"."battlegroup_type_id" = 3[0m  [["fleet_id", 8]]
+  [1m[36mBattlegroup Load (0.6ms)[0m  [1m[34mSELECT "battlegroups".* FROM "battlegroups" WHERE "battlegroups"."fleet_id" = $1 AND "battlegroups"."battlegroup_type_id" = 4[0m  [["fleet_id", 8]]
+  [1m[36mBattlegroup Load (32.3ms)[0m  [1m[34mSELECT "battlegroups".* FROM "battlegroups" INNER JOIN "battlegroup_types" ON "battlegroup_types"."id" = "battlegroups"."battlegroup_type_id" WHERE "battlegroups"."fleet_id" = $1 ORDER BY "battlegroup_types"."id" ASC[0m  [["fleet_id", 8]]
+  [1m[36mBattlegroupType Load (1.4ms)[0m  [1m[34mSELECT  "battlegroup_types".* FROM "battlegroup_types" WHERE "battlegroup_types"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mGroup Load (14.7ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."battlegroup_id" = $1[0m  [["battlegroup_id", 39]]
+  [1m[36mShip Load (49.8ms)[0m  [1m[34mSELECT  "ships".* FROM "ships" WHERE "ships"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered groups/_group.html.erb (115.3ms)
+  [1m[36mBattlegroupType Load (0.5ms)[0m  [1m[34mSELECT  "battlegroup_types".* FROM "battlegroup_types" WHERE "battlegroup_types"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."battlegroup_id" = $1[0m  [["battlegroup_id", 20]]
+  [1m[36mShip Load (0.5ms)[0m  [1m[34mSELECT  "ships".* FROM "ships" WHERE "ships"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  Rendered groups/_group.html.erb (3.5ms)
+  [1m[36mShip Load (0.5ms)[0m  [1m[34mSELECT  "ships".* FROM "ships" WHERE "ships"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  Rendered groups/_group.html.erb (3.9ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "battlegroup_types".* FROM "battlegroup_types" WHERE "battlegroup_types"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."battlegroup_id" = $1[0m  [["battlegroup_id", 22]]
+  [1m[36mShip Load (3.4ms)[0m  [1m[34mSELECT  "ships".* FROM "ships" WHERE "ships"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  Rendered groups/_group.html.erb (6.3ms)
+  [1m[36mBattlegroupType Load (1.2ms)[0m  [1m[34mSELECT  "battlegroup_types".* FROM "battlegroup_types" WHERE "battlegroup_types"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."battlegroup_id" = $1[0m  [["battlegroup_id", 21]]
+  [1m[36mShip Load (0.7ms)[0m  [1m[34mSELECT  "ships".* FROM "ships" WHERE "ships"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  Rendered groups/_group.html.erb (4.5ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "ships".* FROM "ships" WHERE "ships"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  Rendered groups/_group.html.erb (3.1ms)
+  [1m[36mShip Load (0.5ms)[0m  [1m[34mSELECT  "ships".* FROM "ships" WHERE "ships"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  Rendered groups/_group.html.erb (2.8ms)
+  Rendered collection of battlegroups/_battlegroup.html.erb [4 times] (264.4ms)
+  Rendered fleets/show.html.erb within layouts/application (469.8ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_flash.html.erb (0.8ms)
+Completed 200 OK in 661ms (Views: 354.5ms | ActiveRecord: 183.2ms)
+
+
+  [1m[36mBattlegroup Load (0.6ms)[0m  [1m[34mSELECT  "battlegroups".* FROM "battlegroups" ORDER BY "battlegroups"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mGroup Load (0.6ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."battlegroup_id" = $1[0m  [["battlegroup_id", 20]]
+  [1m[36mShip Load (0.6ms)[0m  [1m[34mSELECT  "ships".* FROM "ships" WHERE "ships"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mTonnage Load (38.8ms)[0m  [1m[34mSELECT  "tonnages".* FROM "tonnages" WHERE "tonnages"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mShip Load (0.9ms)[0m  [1m[34mSELECT "ships".* FROM "ships" WHERE "ships"."tonnage_id" = 0[0m
+DEPRECATION WARNING: cleanup! is deprecated and will be removed from Rails 5.1 (use Rails.application.reloader.reload! instead of cleanup + prepare) (called from serve at /usr/lib/ruby/vendor_ruby/spring/application.rb:152)
+DEPRECATION WARNING: prepare! is deprecated and will be removed from Rails 5.1 (use Rails.application.reloader.prepare! instead) (called from serve at /usr/lib/ruby/vendor_ruby/spring/application.rb:153)
+  [1m[36mBattlegroup Load (0.5ms)[0m  [1m[34mSELECT  "battlegroups".* FROM "battlegroups" ORDER BY "battlegroups"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mGroup Load (0.7ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" ORDER BY "groups"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mShip Load (0.6ms)[0m  [1m[34mSELECT  "ships".* FROM "ships" WHERE "ships"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mBattlegroup Load (51.1ms)[0m  [1m[34mSELECT "battlegroups".* FROM "battlegroups" INNER JOIN "groups" ON "groups"."battlegroup_id" = "battlegroups"."id" INNER JOIN "ships" ON "ships"."id" = "groups"."ship_id"[0m
+  [1m[36mBattlegroup Load (1.3ms)[0m  [1m[34mSELECT "ship" FROM "battlegroups" INNER JOIN "groups" ON "groups"."battlegroup_id" = "battlegroups"."id" INNER JOIN "ships" ON "ships"."id" = "groups"."ship_id" WHERE "battlegroups"."tonnage_id" = $1[0m  [["tonnage_id", 1]]
+  [1m[36mBattlegroup Load (1.5ms)[0m  [1m[34mSELECT "battlegroups".* FROM "battlegroups" INNER JOIN "groups" ON "groups"."battlegroup_id" = "battlegroups"."id" INNER JOIN "ships" ON "ships"."id" = "groups"."ship_id"[0m
+  [1m[36mBattlegroup Load (0.8ms)[0m  [1m[34mSELECT "battlegroups".* FROM "battlegroups" INNER JOIN "groups" ON "groups"."battlegroup_id" = "battlegroups"."id" INNER JOIN "ships" ON "ships"."id" = "groups"."ship_id" WHERE "ships"."tonnage_id" = $1[0m  [["tonnage_id", 1]]
+  [1m[36mBattlegroup Load (0.9ms)[0m  [1m[34mSELECT "battlegroups".* FROM "battlegroups" INNER JOIN "groups" ON "groups"."battlegroup_id" = "battlegroups"."id" INNER JOIN "ships" ON "ships"."id" = "groups"."ship_id" WHERE "battlegroups"."id" = $1 AND "ships"."tonnage_id" = $2[0m  [["id", 20], ["tonnage_id", 1]]
+DEPRECATION WARNING: cleanup! is deprecated and will be removed from Rails 5.1 (use Rails.application.reloader.reload! instead of cleanup + prepare) (called from serve at /usr/lib/ruby/vendor_ruby/spring/application.rb:152)
+DEPRECATION WARNING: prepare! is deprecated and will be removed from Rails 5.1 (use Rails.application.reloader.prepare! instead) (called from serve at /usr/lib/ruby/vendor_ruby/spring/application.rb:153)
+  [1m[36mBattlegroup Load (0.9ms)[0m  [1m[34mSELECT  "battlegroups".* FROM "battlegroups" ORDER BY "battlegroups"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."battlegroup_id" = $1 ORDER BY "groups"."id" ASC LIMIT $2[0m  [["battlegroup_id", 20], ["LIMIT", 1]]
+  [1m[36mShip Load (0.8ms)[0m  [1m[34mSELECT  "ships".* FROM "ships" WHERE "ships"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mTonnage Load (26.8ms)[0m  [1m[34mSELECT  "tonnages".* FROM "tonnages" WHERE "tonnages"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mGroup Load (0.6ms)[0m  [1m[34mSELECT "groups".* FROM "groups" INNER JOIN "ships" ON "ships"."id" = "groups"."ship_id" WHERE "groups"."battlegroup_id" = $1 AND "ships"."tonnage_id" = $2[0m  [["battlegroup_id", 20], ["tonnage_id", 1]]
+  [1m[36mGroup Load (0.9ms)[0m  [1m[34mSELECT "groups".* FROM "groups" INNER JOIN "ships" ON "ships"."id" = "groups"."ship_id" WHERE "groups"."battlegroup_id" = $1 AND "ships"."tonnage_id" = $2[0m  [["battlegroup_id", 20], ["tonnage_id", 4]]
+  [1m[36mBattlegroup Load (0.5ms)[0m  [1m[34mSELECT  "battlegroups".* FROM "battlegroups" ORDER BY "battlegroups"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mBattlegroup Load (0.7ms)[0m  [1m[34mSELECT "battlegroups".* FROM "battlegroups"[0m
+  [1m[36mBattlegroup Load (0.5ms)[0m  [1m[34mSELECT "battlegroups".* FROM "battlegroups" WHERE "battlegroups"."cost" = $1[0m  [["cost", 237]]
+  [1m[36mBattlegroup Load (0.8ms)[0m  [1m[34mSELECT  "battlegroups".* FROM "battlegroups" WHERE "battlegroups"."cost" = $1 LIMIT $2[0m  [["cost", 237], ["LIMIT", 1]]
+  [1m[36mGroup Load (1.0ms)[0m  [1m[34mSELECT "groups".* FROM "groups" INNER JOIN "ships" ON "ships"."id" = "groups"."ship_id" WHERE "groups"."battlegroup_id" = $1 AND "ships"."tonnage_id" = $2[0m  [["battlegroup_id", 20], ["tonnage_id", 4]]
+  [1m[36mGroup Load (1.0ms)[0m  [1m[34mSELECT "groups".* FROM "groups" INNER JOIN "ships" ON "ships"."id" = "groups"."ship_id" WHERE "groups"."battlegroup_id" = $1 AND "ships"."tonnage_id" = $2[0m  [["battlegroup_id", 20], ["tonnage_id", 1]]
+  [1m[36mGroup Load (1.1ms)[0m  [1m[34mSELECT "groups".* FROM "groups" INNER JOIN "ships" ON "ships"."id" = "groups"."ship_id" WHERE "groups"."battlegroup_id" = $1 AND "ships"."tonnage_id" = $2[0m  [["battlegroup_id", 20], ["tonnage_id", 2]]
+  [1m[36mGroup Load (0.6ms)[0m  [1m[34mSELECT "groups".* FROM "groups" INNER JOIN "ships" ON "ships"."id" = "groups"."ship_id" WHERE "groups"."battlegroup_id" = $1 AND "ships"."tonnage_id" = $2[0m  [["battlegroup_id", 20], ["tonnage_id", 3]]
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."battlegroup_id" = $1[0m  [["battlegroup_id", 20]]
+  [1m[36mGroup Load (0.6ms)[0m  [1m[34mSELECT "groups".* FROM "groups" INNER JOIN "ships" ON "ships"."id" = "groups"."ship_id" WHERE "groups"."battlegroup_id" = $1 AND "ships"."tonnage_id" = $2[0m  [["battlegroup_id", 20], ["tonnage_id", 1]]
+  [1m[36mGroup Load (0.6ms)[0m  [1m[34mSELECT "groups".* FROM "groups" INNER JOIN "ships" ON "ships"."id" = "groups"."ship_id" WHERE "groups"."battlegroup_id" = $1 AND "ships"."tonnage_id" = $2[0m  [["battlegroup_id", 20], ["tonnage_id", 2]]
+  [1m[36mGroup Load (0.6ms)[0m  [1m[34mSELECT "groups".* FROM "groups" INNER JOIN "ships" ON "ships"."id" = "groups"."ship_id" WHERE "groups"."battlegroup_id" = $1 AND "ships"."tonnage_id" = $2[0m  [["battlegroup_id", 20], ["tonnage_id", 3]]
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups" INNER JOIN "ships" ON "ships"."id" = "groups"."ship_id" WHERE "groups"."battlegroup_id" = $1 AND "ships"."tonnage_id" = $2[0m  [["battlegroup_id", 20], ["tonnage_id", 4]]
+Started GET "/users/1/fleets/8" for 127.0.0.1 at 2017-04-12 09:02:44 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by FleetsController#show as HTML
+  Parameters: {"user_id"=>"1", "id"=>"8"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFleet Load (0.7ms)[0m  [1m[34mSELECT  "fleets".* FROM "fleets" WHERE "fleets"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering fleets/show.html.erb within layouts/application
+  [1m[36mFaction Load (0.6ms)[0m  [1m[34mSELECT  "factions".* FROM "factions" WHERE "factions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBattlegroup Load (0.6ms)[0m  [1m[34mSELECT "battlegroups".* FROM "battlegroups" WHERE "battlegroups"."fleet_id" = $1[0m  [["fleet_id", 8]]
+  [1m[36mBattlegroup Load (0.5ms)[0m  [1m[34mSELECT "battlegroups".* FROM "battlegroups" WHERE "battlegroups"."fleet_id" = $1 AND "battlegroups"."battlegroup_type_id" = 1[0m  [["fleet_id", 8]]
+  [1m[36mBattlegroup Load (0.3ms)[0m  [1m[34mSELECT "battlegroups".* FROM "battlegroups" WHERE "battlegroups"."fleet_id" = $1 AND "battlegroups"."battlegroup_type_id" = 2[0m  [["fleet_id", 8]]
+  [1m[36mBattlegroup Load (0.4ms)[0m  [1m[34mSELECT "battlegroups".* FROM "battlegroups" WHERE "battlegroups"."fleet_id" = $1 AND "battlegroups"."battlegroup_type_id" = 3[0m  [["fleet_id", 8]]
+  [1m[36mBattlegroup Load (0.4ms)[0m  [1m[34mSELECT "battlegroups".* FROM "battlegroups" WHERE "battlegroups"."fleet_id" = $1 AND "battlegroups"."battlegroup_type_id" = 4[0m  [["fleet_id", 8]]
+  [1m[36mBattlegroup Load (0.9ms)[0m  [1m[34mSELECT "battlegroups".* FROM "battlegroups" INNER JOIN "battlegroup_types" ON "battlegroup_types"."id" = "battlegroups"."battlegroup_type_id" WHERE "battlegroups"."fleet_id" = $1 ORDER BY "battlegroup_types"."id" ASC[0m  [["fleet_id", 8]]
+  [1m[36mBattlegroupType Load (0.5ms)[0m  [1m[34mSELECT  "battlegroup_types".* FROM "battlegroup_types" WHERE "battlegroup_types"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mGroup Load (0.6ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."battlegroup_id" = $1[0m  [["battlegroup_id", 39]]
+  [1m[36mShip Load (0.6ms)[0m  [1m[34mSELECT  "ships".* FROM "ships" WHERE "ships"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered groups/_group.html.erb (67.9ms)
+  [1m[36mBattlegroupType Load (0.5ms)[0m  [1m[34mSELECT  "battlegroup_types".* FROM "battlegroup_types" WHERE "battlegroup_types"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mGroup Load (1.1ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."battlegroup_id" = $1[0m  [["battlegroup_id", 20]]
+  [1m[36mShip Load (1.3ms)[0m  [1m[34mSELECT  "ships".* FROM "ships" WHERE "ships"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  Rendered groups/_group.html.erb (7.6ms)
+  [1m[36mShip Load (0.5ms)[0m  [1m[34mSELECT  "ships".* FROM "ships" WHERE "ships"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  Rendered groups/_group.html.erb (3.7ms)
+  [1m[36mBattlegroupType Load (0.5ms)[0m  [1m[34mSELECT  "battlegroup_types".* FROM "battlegroup_types" WHERE "battlegroup_types"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mGroup Load (0.6ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."battlegroup_id" = $1[0m  [["battlegroup_id", 22]]
+  [1m[36mShip Load (0.5ms)[0m  [1m[34mSELECT  "ships".* FROM "ships" WHERE "ships"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  Rendered groups/_group.html.erb (4.2ms)
+  [1m[36mBattlegroupType Load (1.6ms)[0m  [1m[34mSELECT  "battlegroup_types".* FROM "battlegroup_types" WHERE "battlegroup_types"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mGroup Load (1.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."battlegroup_id" = $1[0m  [["battlegroup_id", 21]]
+  [1m[36mShip Load (0.5ms)[0m  [1m[34mSELECT  "ships".* FROM "ships" WHERE "ships"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  Rendered groups/_group.html.erb (4.2ms)
+  [1m[36mShip Load (0.7ms)[0m  [1m[34mSELECT  "ships".* FROM "ships" WHERE "ships"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  Rendered groups/_group.html.erb (5.0ms)
+  [1m[36mShip Load (0.4ms)[0m  [1m[34mSELECT  "ships".* FROM "ships" WHERE "ships"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  Rendered groups/_group.html.erb (4.5ms)
+  Rendered collection of battlegroups/_battlegroup.html.erb [4 times] (242.7ms)
+  Rendered fleets/show.html.erb within layouts/application (352.2ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_flash.html.erb (0.8ms)
+Completed 200 OK in 1164ms (Views: 890.4ms | ActiveRecord: 48.0ms)
+
+
+Started GET "/users/1/fleets/8/battlegroups/21" for 127.0.0.1 at 2017-04-12 09:02:51 -0500
+Processing by BattlegroupsController#show as HTML
+  Parameters: {"user_id"=>"1", "fleet_id"=>"8", "id"=>"21"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFleet Load (1.0ms)[0m  [1m[34mSELECT  "fleets".* FROM "fleets" WHERE "fleets"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mBattlegroup Load (0.6ms)[0m  [1m[34mSELECT  "battlegroups".* FROM "battlegroups" WHERE "battlegroups"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering battlegroups/show.html.erb within layouts/application
+  [1m[36mBattlegroupType Load (0.6ms)[0m  [1m[34mSELECT  "battlegroup_types".* FROM "battlegroup_types" WHERE "battlegroup_types"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."battlegroup_id" = $1[0m  [["battlegroup_id", 21]]
+  Rendered groups/_tonnages.html.erb (5.0ms)
+  [1m[36mShip Load (0.6ms)[0m  [1m[34mSELECT  "ships".* FROM "ships" WHERE "ships"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  Rendered groups/_group.html.erb (4.9ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "ships".* FROM "ships" WHERE "ships"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  Rendered groups/_group.html.erb (2.1ms)
+  [1m[36mShip Load (0.6ms)[0m  [1m[34mSELECT  "ships".* FROM "ships" WHERE "ships"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  Rendered groups/_group.html.erb (2.9ms)
+  Rendered battlegroups/show.html.erb within layouts/application (26.8ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_flash.html.erb (0.7ms)
+Completed 200 OK in 109ms (Views: 83.5ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/users/1/fleets/8/battlegroups/21" for 127.0.0.1 at 2017-04-12 09:05:47 -0500
+Processing by BattlegroupsController#show as HTML
+  Parameters: {"user_id"=>"1", "fleet_id"=>"8", "id"=>"21"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFleet Load (2.4ms)[0m  [1m[34mSELECT  "fleets".* FROM "fleets" WHERE "fleets"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mBattlegroup Load (0.6ms)[0m  [1m[34mSELECT  "battlegroups".* FROM "battlegroups" WHERE "battlegroups"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering battlegroups/show.html.erb within layouts/application
+  [1m[36mBattlegroupType Load (0.4ms)[0m  [1m[34mSELECT  "battlegroup_types".* FROM "battlegroup_types" WHERE "battlegroup_types"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mGroup Load (1.0ms)[0m  [1m[34mSELECT "groups".* FROM "groups" INNER JOIN "ships" ON "ships"."id" = "groups"."ship_id" WHERE "groups"."battlegroup_id" = $1 AND "ships"."tonnage_id" = $2[0m  [["battlegroup_id", 21], ["tonnage_id", 4]]
+  Rendered groups/_tonnages.html.erb (34.1ms)
+  Rendered battlegroups/show.html.erb within layouts/application (39.4ms)
+Completed 500 Internal Server Error in 55ms (ActiveRecord: 5.8ms)
+
+
+  
+ActionView::Template::Error (Can't join 'Battlegroup' to association named 'ship'; perhaps you misspelled it?):
+     8: 		</p>
+     9: 	<% end %>
+    10: 	
+    11: 	<% if can_add_heavy(@battlegroup) %>
+    12: 		<p>
+    13: 		<% if can_add_group(@battlegroup) %>
+    14: 			<%= link_to "+", new_user_fleet_battlegroup_group_path(@user, @fleet, @battlegroup, tonnage: '3') %>
+  
+app/helpers/battlegroups_helper.rb:20:in `can_add_heavy'
+app/views/groups/_tonnages.html.erb:11:in `_app_views_groups__tonnages_html_erb__4220865501728895142_70267074390160'
+app/views/battlegroups/show.html.erb:9:in `_app_views_battlegroups_show_html_erb___2517099319660046691_70267074315340'
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (20.4ms)
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.7ms)
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (15.8ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (76.5ms)
+Started GET "/users/1/fleets/8/battlegroups/21" for 127.0.0.1 at 2017-04-12 09:06:03 -0500
+Processing by BattlegroupsController#show as HTML
+  Parameters: {"user_id"=>"1", "fleet_id"=>"8", "id"=>"21"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFleet Load (0.5ms)[0m  [1m[34mSELECT  "fleets".* FROM "fleets" WHERE "fleets"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mBattlegroup Load (0.4ms)[0m  [1m[34mSELECT  "battlegroups".* FROM "battlegroups" WHERE "battlegroups"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering battlegroups/show.html.erb within layouts/application
+  [1m[36mBattlegroupType Load (0.6ms)[0m  [1m[34mSELECT  "battlegroup_types".* FROM "battlegroup_types" WHERE "battlegroup_types"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mGroup Load (1.0ms)[0m  [1m[34mSELECT "groups".* FROM "groups" INNER JOIN "ships" ON "ships"."id" = "groups"."ship_id" WHERE "groups"."battlegroup_id" = $1 AND "ships"."tonnage_id" = $2[0m  [["battlegroup_id", 21], ["tonnage_id", 4]]
+  [1m[36mGroup Load (1.1ms)[0m  [1m[34mSELECT "groups".* FROM "groups" INNER JOIN "ships" ON "ships"."id" = "groups"."ship_id" WHERE "groups"."id" = $1 AND "ships"."tonnage_id" = $2[0m  [["id", 21], ["tonnage_id", 3]]
+  [1m[36mGroup Load (0.8ms)[0m  [1m[34mSELECT "groups".* FROM "groups" INNER JOIN "ships" ON "ships"."id" = "groups"."ship_id" WHERE "groups"."id" = $1 AND "ships"."tonnage_id" = $2[0m  [["id", 21], ["tonnage_id", 2]]
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."battlegroup_id" = $1[0m  [["battlegroup_id", 21]]
+  [1m[36mGroup Load (0.9ms)[0m  [1m[34mSELECT "groups".* FROM "groups" INNER JOIN "ships" ON "ships"."id" = "groups"."ship_id" WHERE "groups"."battlegroup_id" = $1 AND "ships"."tonnage_id" = $2[0m  [["battlegroup_id", 21], ["tonnage_id", 1]]
+  Rendered groups/_tonnages.html.erb (82.6ms)
+  [1m[36mShip Load (0.5ms)[0m  [1m[34mSELECT  "ships".* FROM "ships" WHERE "ships"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  Rendered groups/_group.html.erb (23.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "ships".* FROM "ships" WHERE "ships"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  Rendered groups/_group.html.erb (3.5ms)
+  [1m[36mShip Load (0.4ms)[0m  [1m[34mSELECT  "ships".* FROM "ships" WHERE "ships"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  Rendered groups/_group.html.erb (3.9ms)
+  Rendered battlegroups/show.html.erb within layouts/application (151.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_flash.html.erb (1.2ms)
+Completed 200 OK in 320ms (Views: 221.6ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/users/1/fleets/8/battlegroups/21" for 127.0.0.1 at 2017-04-12 09:12:54 -0500
+Processing by BattlegroupsController#show as HTML
+  Parameters: {"user_id"=>"1", "fleet_id"=>"8", "id"=>"21"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFleet Load (0.6ms)[0m  [1m[34mSELECT  "fleets".* FROM "fleets" WHERE "fleets"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mBattlegroup Load (0.5ms)[0m  [1m[34mSELECT  "battlegroups".* FROM "battlegroups" WHERE "battlegroups"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering battlegroups/show.html.erb within layouts/application
+  [1m[36mBattlegroupType Load (0.6ms)[0m  [1m[34mSELECT  "battlegroup_types".* FROM "battlegroup_types" WHERE "battlegroup_types"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."battlegroup_id" = $1[0m  [["battlegroup_id", 21]]
+  Rendered groups/_tonnages.html.erb (32.1ms)
+  [1m[36mShip Load (0.4ms)[0m  [1m[34mSELECT  "ships".* FROM "ships" WHERE "ships"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  Rendered groups/_group.html.erb (45.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "ships".* FROM "ships" WHERE "ships"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  Rendered groups/_group.html.erb (3.1ms)
+  [1m[36mShip Load (0.4ms)[0m  [1m[34mSELECT  "ships".* FROM "ships" WHERE "ships"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  Rendered groups/_group.html.erb (3.5ms)
+  Rendered battlegroups/show.html.erb within layouts/application (111.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_flash.html.erb (0.9ms)
+Completed 200 OK in 252ms (Views: 183.6ms | ActiveRecord: 3.5ms)
+
+
+Started DELETE "/users/1/fleets/8/battlegroups/21/groups/37" for 127.0.0.1 at 2017-04-12 09:13:01 -0500
+Processing by GroupsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Sy6tNK5Xro39Myq9b8u445JDba3j77AZsSHol3Zz4BZHZ56bpCPqCTBjdXSn/sYHNwBRaQ3OQW/XSAT3Z17GSQ==", "user_id"=>"1", "fleet_id"=>"8", "battlegroup_id"=>"21", "id"=>"37"}
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT  "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[31mDELETE FROM "groups" WHERE "groups"."id" = $1[0m  [["id", 37]]
+  [1m[35m (41.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFleet Load (0.8ms)[0m  [1m[34mSELECT  "fleets".* FROM "fleets" WHERE "fleets"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mBattlegroup Load (0.6ms)[0m  [1m[34mSELECT  "battlegroups".* FROM "battlegroups" WHERE "battlegroups"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  [1m[36mGroup Load (0.9ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."battlegroup_id" = $1[0m  [["battlegroup_id", 21]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (25.6ms)[0m  [1m[33mUPDATE "battlegroups" SET "cost" = $1, "updated_at" = $2 WHERE "battlegroups"."id" = $3[0m  [["cost", 128], ["updated_at", 2017-04-12 14:13:01 UTC], ["id", 21]]
+  [1m[35m (10.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBattlegroup Load (0.4ms)[0m  [1m[34mSELECT "battlegroups".* FROM "battlegroups" WHERE "battlegroups"."fleet_id" = $1[0m  [["fleet_id", 8]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "fleets" SET "cost" = $1, "updated_at" = $2 WHERE "fleets"."id" = $3[0m  [["cost", 704], ["updated_at", 2017-04-12 14:13:01 UTC], ["id", 8]]
+  [1m[35m (6.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/users/1/fleets/8
+Completed 302 Found in 131ms (ActiveRecord: 91.1ms)
+
+
+Started GET "/users/1/fleets/8" for 127.0.0.1 at 2017-04-12 09:13:01 -0500
+Processing by FleetsController#show as HTML
+  Parameters: {"user_id"=>"1", "id"=>"8"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFleet Load (0.8ms)[0m  [1m[34mSELECT  "fleets".* FROM "fleets" WHERE "fleets"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering fleets/show.html.erb within layouts/application
+  [1m[36mFaction Load (0.4ms)[0m  [1m[34mSELECT  "factions".* FROM "factions" WHERE "factions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBattlegroup Load (1.1ms)[0m  [1m[34mSELECT "battlegroups".* FROM "battlegroups" WHERE "battlegroups"."fleet_id" = $1[0m  [["fleet_id", 8]]
+  [1m[36mBattlegroup Load (0.7ms)[0m  [1m[34mSELECT "battlegroups".* FROM "battlegroups" WHERE "battlegroups"."fleet_id" = $1 AND "battlegroups"."battlegroup_type_id" = 1[0m  [["fleet_id", 8]]
+  [1m[36mBattlegroup Load (0.6ms)[0m  [1m[34mSELECT "battlegroups".* FROM "battlegroups" WHERE "battlegroups"."fleet_id" = $1 AND "battlegroups"."battlegroup_type_id" = 2[0m  [["fleet_id", 8]]
+  [1m[36mBattlegroup Load (0.6ms)[0m  [1m[34mSELECT "battlegroups".* FROM "battlegroups" WHERE "battlegroups"."fleet_id" = $1 AND "battlegroups"."battlegroup_type_id" = 3[0m  [["fleet_id", 8]]
+  [1m[36mBattlegroup Load (1.5ms)[0m  [1m[34mSELECT "battlegroups".* FROM "battlegroups" WHERE "battlegroups"."fleet_id" = $1 AND "battlegroups"."battlegroup_type_id" = 4[0m  [["fleet_id", 8]]
+  [1m[36mBattlegroup Load (1.3ms)[0m  [1m[34mSELECT "battlegroups".* FROM "battlegroups" INNER JOIN "battlegroup_types" ON "battlegroup_types"."id" = "battlegroups"."battlegroup_type_id" WHERE "battlegroups"."fleet_id" = $1 ORDER BY "battlegroup_types"."id" ASC[0m  [["fleet_id", 8]]
+  [1m[36mBattlegroupType Load (0.3ms)[0m  [1m[34mSELECT  "battlegroup_types".* FROM "battlegroup_types" WHERE "battlegroup_types"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."battlegroup_id" = $1[0m  [["battlegroup_id", 39]]
+  [1m[36mShip Load (0.4ms)[0m  [1m[34mSELECT  "ships".* FROM "ships" WHERE "ships"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered groups/_group.html.erb (4.9ms)
+  [1m[36mBattlegroupType Load (0.4ms)[0m  [1m[34mSELECT  "battlegroup_types".* FROM "battlegroup_types" WHERE "battlegroup_types"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."battlegroup_id" = $1[0m  [["battlegroup_id", 20]]
+  [1m[36mShip Load (1.4ms)[0m  [1m[34mSELECT  "ships".* FROM "ships" WHERE "ships"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  Rendered groups/_group.html.erb (8.5ms)
+  [1m[36mShip Load (0.4ms)[0m  [1m[34mSELECT  "ships".* FROM "ships" WHERE "ships"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  Rendered groups/_group.html.erb (3.6ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "battlegroup_types".* FROM "battlegroup_types" WHERE "battlegroup_types"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."battlegroup_id" = $1[0m  [["battlegroup_id", 22]]
+  [1m[36mShip Load (0.4ms)[0m  [1m[34mSELECT  "ships".* FROM "ships" WHERE "ships"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  Rendered groups/_group.html.erb (2.9ms)
+  [1m[36mBattlegroupType Load (0.4ms)[0m  [1m[34mSELECT  "battlegroup_types".* FROM "battlegroup_types" WHERE "battlegroup_types"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."battlegroup_id" = $1[0m  [["battlegroup_id", 21]]
+  [1m[36mShip Load (0.4ms)[0m  [1m[34mSELECT  "ships".* FROM "ships" WHERE "ships"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  Rendered groups/_group.html.erb (4.4ms)
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "ships".* FROM "ships" WHERE "ships"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  Rendered groups/_group.html.erb (4.3ms)
+  Rendered collection of battlegroups/_battlegroup.html.erb [4 times] (64.3ms)
+  Rendered fleets/show.html.erb within layouts/application (109.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_flash.html.erb (1.0ms)
+Completed 200 OK in 193ms (Views: 171.1ms | ActiveRecord: 13.4ms)
+
+
+Started GET "/users/1/fleets/8/battlegroups/21" for 127.0.0.1 at 2017-04-12 09:13:17 -0500
+Processing by BattlegroupsController#show as HTML
+  Parameters: {"user_id"=>"1", "fleet_id"=>"8", "id"=>"21"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFleet Load (0.4ms)[0m  [1m[34mSELECT  "fleets".* FROM "fleets" WHERE "fleets"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mBattlegroup Load (0.4ms)[0m  [1m[34mSELECT  "battlegroups".* FROM "battlegroups" WHERE "battlegroups"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering battlegroups/show.html.erb within layouts/application
+  [1m[36mBattlegroupType Load (0.5ms)[0m  [1m[34mSELECT  "battlegroup_types".* FROM "battlegroup_types" WHERE "battlegroup_types"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mGroup Load (2.4ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."battlegroup_id" = $1[0m  [["battlegroup_id", 21]]
+  [1m[36mGroup Load (1.1ms)[0m  [1m[34mSELECT "groups".* FROM "groups" INNER JOIN "ships" ON "ships"."id" = "groups"."ship_id" WHERE "groups"."id" = $1 AND "ships"."tonnage_id" = $2[0m  [["id", 21], ["tonnage_id", 2]]
+  [1m[36mGroup Load (1.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups" INNER JOIN "ships" ON "ships"."id" = "groups"."ship_id" WHERE "groups"."battlegroup_id" = $1 AND "ships"."tonnage_id" = $2[0m  [["battlegroup_id", 21], ["tonnage_id", 1]]
+  Rendered groups/_tonnages.html.erb (27.1ms)
+  [1m[36mShip Load (0.5ms)[0m  [1m[34mSELECT  "ships".* FROM "ships" WHERE "ships"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  Rendered groups/_group.html.erb (5.8ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "ships".* FROM "ships" WHERE "ships"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  Rendered groups/_group.html.erb (2.1ms)
+  Rendered battlegroups/show.html.erb within layouts/application (44.5ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_flash.html.erb (0.8ms)
+Completed 200 OK in 112ms (Views: 99.0ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/users/1/fleets/8/battlegroups/21/groups/new?tonnage=1" for 127.0.0.1 at 2017-04-12 09:13:21 -0500
+Processing by GroupsController#new as HTML
+  Parameters: {"tonnage"=>"1", "user_id"=>"1", "fleet_id"=>"8", "battlegroup_id"=>"21"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFleet Load (0.5ms)[0m  [1m[34mSELECT  "fleets".* FROM "fleets" WHERE "fleets"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mBattlegroup Load (0.6ms)[0m  [1m[34mSELECT  "battlegroups".* FROM "battlegroups" WHERE "battlegroups"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering groups/new.html.erb within layouts/application
+  [1m[36mFaction Load (0.6ms)[0m  [1m[34mSELECT  "factions".* FROM "factions" WHERE "factions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mShip Load (0.8ms)[0m  [1m[34mSELECT "ships".* FROM "ships" WHERE "ships"."tonnage_id" = $1 AND "ships"."faction_id" = 1[0m  [["tonnage_id", 1]]
+  Rendered groups/_form.html.erb (79.2ms)
+  Rendered groups/new.html.erb within layouts/application (86.5ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_flash.html.erb (0.8ms)
+Completed 200 OK in 170ms (Views: 143.6ms | ActiveRecord: 3.1ms)
+
+
+Started POST "/users/1/fleets/8/battlegroups/21/groups" for 127.0.0.1 at 2017-04-12 09:13:28 -0500
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JUTipkeccdSSXYNacEXVZ9SxLYNYL+5v7eWde5sDy9ApDdEJTeg1UF8N3JO4cKuDcfIRR7YOHxmLjHEbii7tjw==", "group"=>{"ship_id"=>"20", "group_size"=>"2"}, "commit"=>"Add group", "user_id"=>"1", "fleet_id"=>"8", "battlegroup_id"=>"21"}
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFleet Load (0.4ms)[0m  [1m[34mSELECT  "fleets".* FROM "fleets" WHERE "fleets"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mBattlegroup Load (1.7ms)[0m  [1m[34mSELECT  "battlegroups".* FROM "battlegroups" WHERE "battlegroups"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (92.4ms)[0m  [1m[32mINSERT INTO "groups" ("ship_id", "created_at", "updated_at", "group_size", "battlegroup_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["ship_id", 20], ["created_at", 2017-04-12 14:13:28 UTC], ["updated_at", 2017-04-12 14:13:28 UTC], ["group_size", 2], ["battlegroup_id", 21]]
+  [1m[35m (19.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBattlegroup Load (0.4ms)[0m  [1m[34mSELECT  "battlegroups".* FROM "battlegroups" WHERE "battlegroups"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  [1m[36mShip Load (0.4ms)[0m  [1m[34mSELECT  "ships".* FROM "ships" WHERE "ships"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "groups" SET "cost" = $1, "updated_at" = $2 WHERE "groups"."id" = $3[0m  [["cost", 44], ["updated_at", 2017-04-12 14:13:28 UTC], ["id", 44]]
+  [1m[35m (3.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mGroup Load (0.7ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."battlegroup_id" = $1[0m  [["battlegroup_id", 21]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (8.4ms)[0m  [1m[33mUPDATE "battlegroups" SET "cost" = $1, "updated_at" = $2 WHERE "battlegroups"."id" = $3[0m  [["cost", 172], ["updated_at", 2017-04-12 14:13:28 UTC], ["id", 21]]
+  [1m[35m (61.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBattlegroup Load (0.9ms)[0m  [1m[34mSELECT "battlegroups".* FROM "battlegroups" WHERE "battlegroups"."fleet_id" = $1[0m  [["fleet_id", 8]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[33mUPDATE "fleets" SET "cost" = $1, "updated_at" = $2 WHERE "fleets"."id" = $3[0m  [["cost", 748], ["updated_at", 2017-04-12 14:13:28 UTC], ["id", 8]]
+  [1m[35m (45.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/users/1/fleets/8/battlegroups/21
+Completed 302 Found in 295ms (ActiveRecord: 245.4ms)
+
+
+Started GET "/users/1/fleets/8/battlegroups/21" for 127.0.0.1 at 2017-04-12 09:13:28 -0500
+Processing by BattlegroupsController#show as HTML
+  Parameters: {"user_id"=>"1", "fleet_id"=>"8", "id"=>"21"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFleet Load (1.0ms)[0m  [1m[34mSELECT  "fleets".* FROM "fleets" WHERE "fleets"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mBattlegroup Load (0.5ms)[0m  [1m[34mSELECT  "battlegroups".* FROM "battlegroups" WHERE "battlegroups"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering battlegroups/show.html.erb within layouts/application
+  [1m[36mBattlegroupType Load (0.8ms)[0m  [1m[34mSELECT  "battlegroup_types".* FROM "battlegroup_types" WHERE "battlegroup_types"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mGroup Load (1.4ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."battlegroup_id" = $1[0m  [["battlegroup_id", 21]]
+  Rendered groups/_tonnages.html.erb (5.7ms)
+  [1m[36mShip Load (0.5ms)[0m  [1m[34mSELECT  "ships".* FROM "ships" WHERE "ships"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  Rendered groups/_group.html.erb (4.3ms)
+  [1m[36mShip Load (0.4ms)[0m  [1m[34mSELECT  "ships".* FROM "ships" WHERE "ships"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  Rendered groups/_group.html.erb (6.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "ships".* FROM "ships" WHERE "ships"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  Rendered groups/_group.html.erb (3.1ms)
+  Rendered battlegroups/show.html.erb within layouts/application (34.5ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_flash.html.erb (1.0ms)
+Completed 200 OK in 119ms (Views: 104.5ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/users/1/fleets/8" for 127.0.0.1 at 2017-04-12 09:13:38 -0500
+Processing by FleetsController#show as HTML
+  Parameters: {"user_id"=>"1", "id"=>"8"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mFleet Load (0.6ms)[0m  [1m[34mSELECT  "fleets".* FROM "fleets" WHERE "fleets"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering fleets/show.html.erb within layouts/application
+  [1m[36mFaction Load (0.7ms)[0m  [1m[34mSELECT  "factions".* FROM "factions" WHERE "factions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBattlegroup Load (0.4ms)[0m  [1m[34mSELECT "battlegroups".* FROM "battlegroups" WHERE "battlegroups"."fleet_id" = $1[0m  [["fleet_id", 8]]
+  [1m[36mBattlegroup Load (0.7ms)[0m  [1m[34mSELECT "battlegroups".* FROM "battlegroups" WHERE "battlegroups"."fleet_id" = $1 AND "battlegroups"."battlegroup_type_id" = 1[0m  [["fleet_id", 8]]
+  [1m[36mBattlegroup Load (0.5ms)[0m  [1m[34mSELECT "battlegroups".* FROM "battlegroups" WHERE "battlegroups"."fleet_id" = $1 AND "battlegroups"."battlegroup_type_id" = 2[0m  [["fleet_id", 8]]
+  [1m[36mBattlegroup Load (0.7ms)[0m  [1m[34mSELECT "battlegroups".* FROM "battlegroups" WHERE "battlegroups"."fleet_id" = $1 AND "battlegroups"."battlegroup_type_id" = 3[0m  [["fleet_id", 8]]
+  [1m[36mBattlegroup Load (0.8ms)[0m  [1m[34mSELECT "battlegroups".* FROM "battlegroups" WHERE "battlegroups"."fleet_id" = $1 AND "battlegroups"."battlegroup_type_id" = 4[0m  [["fleet_id", 8]]
+  [1m[36mBattlegroup Load (3.1ms)[0m  [1m[34mSELECT "battlegroups".* FROM "battlegroups" INNER JOIN "battlegroup_types" ON "battlegroup_types"."id" = "battlegroups"."battlegroup_type_id" WHERE "battlegroups"."fleet_id" = $1 ORDER BY "battlegroup_types"."id" ASC[0m  [["fleet_id", 8]]
+  [1m[36mBattlegroupType Load (0.5ms)[0m  [1m[34mSELECT  "battlegroup_types".* FROM "battlegroup_types" WHERE "battlegroup_types"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."battlegroup_id" = $1[0m  [["battlegroup_id", 39]]
+  [1m[36mShip Load (0.5ms)[0m  [1m[34mSELECT  "ships".* FROM "ships" WHERE "ships"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendered groups/_group.html.erb (4.0ms)
+  [1m[36mBattlegroupType Load (0.5ms)[0m  [1m[34mSELECT  "battlegroup_types".* FROM "battlegroup_types" WHERE "battlegroup_types"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."battlegroup_id" = $1[0m  [["battlegroup_id", 20]]
+  [1m[36mShip Load (0.6ms)[0m  [1m[34mSELECT  "ships".* FROM "ships" WHERE "ships"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  Rendered groups/_group.html.erb (4.7ms)
+  [1m[36mShip Load (0.4ms)[0m  [1m[34mSELECT  "ships".* FROM "ships" WHERE "ships"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  Rendered groups/_group.html.erb (3.2ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "battlegroup_types".* FROM "battlegroup_types" WHERE "battlegroup_types"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."battlegroup_id" = $1[0m  [["battlegroup_id", 22]]
+  [1m[36mShip Load (0.5ms)[0m  [1m[34mSELECT  "ships".* FROM "ships" WHERE "ships"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  Rendered groups/_group.html.erb (3.4ms)
+  [1m[36mBattlegroupType Load (0.5ms)[0m  [1m[34mSELECT  "battlegroup_types".* FROM "battlegroup_types" WHERE "battlegroup_types"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."battlegroup_id" = $1[0m  [["battlegroup_id", 21]]
+  [1m[36mShip Load (0.4ms)[0m  [1m[34mSELECT  "ships".* FROM "ships" WHERE "ships"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  Rendered groups/_group.html.erb (2.9ms)
+  [1m[36mShip Load (0.8ms)[0m  [1m[34mSELECT  "ships".* FROM "ships" WHERE "ships"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  Rendered groups/_group.html.erb (4.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "ships".* FROM "ships" WHERE "ships"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  Rendered groups/_group.html.erb (3.2ms)
+  Rendered collection of battlegroups/_battlegroup.html.erb [4 times] (60.7ms)
+  Rendered fleets/show.html.erb within layouts/application (91.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_flash.html.erb (1.1ms)
+Completed 200 OK in 163ms (Views: 141.9ms | ActiveRecord: 14.7ms)
+
+
