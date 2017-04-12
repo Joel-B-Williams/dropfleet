@@ -11,34 +11,46 @@
 		Total Battlegroups:
 		<%= show_battlegroup_count(@fleet) %>
 	</p>
-	<p>
-	<% if can_add_battlegroups(@fleet) && can_add_flag(@fleet) %>
-		<%= link_to "+", new_user_fleet_battlegroup_path(@user.id, @fleet.id) %>
+	
+	<% if can_have_flag(@fleet) %>
+		<p>
+		<% if can_add_battlegroups(@fleet) && can_add_flag(@fleet) %>
+			<%= link_to "+", new_user_fleet_battlegroup_path(@user.id, @fleet.id) %>
+		<% end %>
+		Flag Battlegroup
+		<%= show_flag_count(@fleet) %>
+		</p>
 	<% end %>
-	Flag Battlegroup
-	<%= show_flag_count(@fleet) %>
-	</p>
-	<p>
-	<% if can_add_battlegroups(@fleet) && can_add_vanguard(@fleet) %>
-		<%= link_to "+", new_user_fleet_battlegroup_path(@user.id, @fleet.id) %>
+	
+	<% if can_have_vanguard(@fleet) %>
+		<p>
+		<% if can_add_battlegroups(@fleet) && can_add_vanguard(@fleet) %>
+			<%= link_to "+", new_user_fleet_battlegroup_path(@user.id, @fleet.id) %>
+		<% end %>
+		Vanguard Battlegroup
+		<%= show_vanguard_count(@fleet) %>
+		</p>
 	<% end %>
-	Vanguard Battlegroup
-	<%= show_vanguard_count(@fleet) %>
-	</p>
-	<p>
-	<% if can_add_battlegroups(@fleet) && can_add_line(@fleet) %>
-		<%= link_to "+", new_user_fleet_battlegroup_path(@user.id, @fleet.id) %>
+
+	<% if can_have_line(@fleet) %>
+		<p>
+		<% if can_add_battlegroups(@fleet) && can_add_line(@fleet) %>
+			<%= link_to "+", new_user_fleet_battlegroup_path(@user.id, @fleet.id) %>
+		<% end %>
+		Line Battlegroup
+		<%= show_line_count(@fleet) %>
+		</p>
 	<% end %>
-	Line Battlegroup
-	<%= show_line_count(@fleet) %>
-	</p>
-	<p>
-	<% if can_add_battlegroups(@fleet) && can_add_pathfinder(@fleet) %>
-		<%= link_to "+", new_user_fleet_battlegroup_path(@user.id, @fleet.id) %>
+		
+	<% if can_have_pathfinder(@fleet) %>	
+		<p>
+		<% if can_add_battlegroups(@fleet) && can_add_pathfinder(@fleet) %>
+			<%= link_to "+", new_user_fleet_battlegroup_path(@user.id, @fleet.id) %>
+		<% end %>
+		Pathfinder Battlegroup
+		<%= show_pathfinder_count(@fleet) %>
+		</p>
 	<% end %>
-	Pathfinder Battlegroup
-	<%= show_pathfinder_count(@fleet) %>
-	</p>
 </section>
 
 <ul class='battlegroup-list'>

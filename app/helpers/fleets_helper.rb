@@ -52,6 +52,22 @@ module FleetsHelper
 		fleet.battlegroups.where(battlegroup_type: 4).length < fleet.max_pathfinder
 	end
 
+	def can_have_flag(fleet)
+		fleet.max_flag > 0
+	end
+
+	def can_have_vanguard(fleet)
+		fleet.max_vanguard > 0
+	end
+
+	def can_have_line(fleet)
+		fleet.max_line > 0
+	end
+
+	def can_have_pathfinder(fleet)
+		fleet.max_pathfinder > 0
+	end
+
 	# def can_add_battlegroup(fleet, battlegroup_type)
 	# 	fleet.battlegroups.joins(:battlegroup_types).where(name: battlegroup_type).length < fleet.max_battlegroup_type
 	# end
