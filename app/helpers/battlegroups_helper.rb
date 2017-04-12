@@ -44,6 +44,10 @@ module BattlegroupsHelper
 		battlegroup.max_light > 0
 	end
 
+	def show_group_count(battlegroup)
+		"#{battlegroup.groups.length}/#{battlegroup.max_groups}"
+	end
+
 	def show_superheavy_count(battlegroup)
 		"#{battlegroup.groups.joins(:ship).where(ships:{tonnage_id: 4}).length}/#{battlegroup.max_superheavy}"
 	end

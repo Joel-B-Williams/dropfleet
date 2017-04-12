@@ -2,10 +2,11 @@
 
 <%= link_to "Back to Fleet", user_fleet_path(@user, @fleet) %>
 
-<!-- CLEAN IN HELPER -->
 <p> <%= display_battlegroup_name(@battlegroup) %> Battlegroup </p>
+<p>
+	Total Groups: <%= show_group_count(@battlegroup) %>
+</p>
 
-<!-- need methods for each type to check IF ALLOWED and IF MAX -->
 <%= render 'groups/tonnages' %>
 
 <ul class='group-list'>
