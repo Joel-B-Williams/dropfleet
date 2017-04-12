@@ -17,7 +17,6 @@ class BattlegroupsController < ApplicationController
 	end
 
 	def create
-		#need to verify not at limit for X type
 		@user = current_user
 		@fleet = Fleet.find_by(id: params[:fleet_id])
 		@battlegroup = Battlegroup.new(battlegroup_params)

@@ -14,6 +14,8 @@ class Battlegroup < ApplicationRecord
 		end
 	end
 
+	#add validations for each type of group 
+
 	def max_groups
 		if battlegroup_type.name == "Flag"
 			2

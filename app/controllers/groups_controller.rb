@@ -22,7 +22,7 @@ class GroupsController < ApplicationController
 		@fleet = Fleet.find_by(id: params[:fleet_id])
 		@battlegroup = Battlegroup.find_by(id: params[:battlegroup_id])
 		@group = Group.new(group_params)
-		@group.update_attribute(:battlegroup_id, params[:battlegroup_id])
+		@group.update_attributes(battlegroup_id: params[:battlegroup_id], group_size: starting_size(@group))
 		if @group.save
 			update_all_costs(@fleet, @battlegroup, @group)
 			redirect_to user_fleet_battlegroup_path(@user.id, @fleet.id, @battlegroup.id)
@@ -65,7 +65,7 @@ class GroupsController < ApplicationController
 	private
 
 		def group_params
-			params.require(:group).permit(:ship_id, :group_size)
+			params.require(:group).permit(:ship_id)
 		end
 
 		
