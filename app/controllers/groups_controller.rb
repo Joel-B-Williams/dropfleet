@@ -27,8 +27,6 @@ class GroupsController < ApplicationController
 			update_all_costs(@fleet, @battlegroup, @group)
 			redirect_to user_fleet_battlegroup_path(@user.id, @fleet.id, @battlegroup.id)
 		else
-			p "*"*80
-			p params
 			render 'new'
 		end
 	end
