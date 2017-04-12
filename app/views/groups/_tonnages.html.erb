@@ -5,6 +5,7 @@
 			<%= link_to "+", new_user_fleet_battlegroup_group_path(@user, @fleet, @battlegroup, tonnage: '4') %>
 		<% end %>
 		Superheavy
+		<%= show_superheavy_count(@battlegroup) %>
 		</p>
 	<% end %>
 	
@@ -14,6 +15,7 @@
 			<%= link_to "+", new_user_fleet_battlegroup_group_path(@user, @fleet, @battlegroup, tonnage: '3') %>
 		<% end %>
 		Heavy
+		<%= show_heavy_count(@battlegroup) %>
 		</p>
 	<% end %>
 
@@ -23,6 +25,7 @@
 			<%= link_to "+", new_user_fleet_battlegroup_group_path(@user, @fleet, @battlegroup, tonnage: '2') %>
 		<% end %>
 		Medium
+		<%= show_medium_count(@battlegroup) %>
 		</p>
 	<% end %>
 
@@ -32,6 +35,7 @@
 			<%= link_to "+", new_user_fleet_battlegroup_group_path(@user, @fleet, @battlegroup, tonnage: '1') %>
 		<% end %>
 		Light
+		<%= show_light_count(@battlegroup) %>
 		</p>
 	<% end %>
 

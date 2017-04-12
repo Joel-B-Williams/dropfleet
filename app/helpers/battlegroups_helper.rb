@@ -44,5 +44,20 @@ module BattlegroupsHelper
 		battlegroup.max_light > 0
 	end
 
+	def show_superheavy_count(battlegroup)
+		"#{battlegroup.groups.joins(:ship).where(ships:{tonnage_id: 4}).length}/#{battlegroup.max_superheavy}"
+	end
+	
+	def show_heavy_count(battlegroup)
+		"#{battlegroup.groups.joins(:ship).where(ships:{tonnage_id: 3}).length}/#{battlegroup.max_heavy}"
+	end
+	
+	def show_medium_count(battlegroup)
+		"#{battlegroup.groups.joins(:ship).where(ships:{tonnage_id: 2}).length}/#{battlegroup.max_medium}"
+	end
+
+	def show_light_count(battlegroup)
+		"#{battlegroup.groups.joins(:ship).where(ships:{tonnage_id: 1}).length}/#{battlegroup.max_light}"
+	end
 end
 
