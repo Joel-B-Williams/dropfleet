@@ -34925,3 +34925,45 @@ Processing by FleetsController#show as HTML
 Completed 200 OK in 223ms (Views: 199.8ms | ActiveRecord: 14.1ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-04-12 21:40:24 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (26.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (5.3ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_flash.html.erb (1.3ms)
+Completed 200 OK in 1448ms (Views: 1290.2ms | ActiveRecord: 9.8ms)
+
+
+Started GET "/users/1/fleets" for 127.0.0.1 at 2017-04-12 21:41:48 -0500
+Processing by FleetsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering fleets/index.html.erb within layouts/application
+  [1m[36mFleet Load (1.1ms)[0m  [1m[34mSELECT "fleets".* FROM "fleets" WHERE "fleets"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[36mFaction Load (0.9ms)[0m  [1m[34mSELECT  "factions".* FROM "factions" WHERE "factions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mFaction Load (1.2ms)[0m  [1m[34mSELECT  "factions".* FROM "factions" WHERE "factions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mFaction Load (0.4ms)[0m  [1m[34mSELECT  "factions".* FROM "factions" WHERE "factions"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mFaction Load (1.6ms)[0m  [1m[34mSELECT  "factions".* FROM "factions" WHERE "factions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of fleets/_fleet.html.erb [4 times] (150.3ms)
+  Rendered fleets/index.html.erb within layouts/application (198.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_flash.html.erb (1.4ms)
+Completed 200 OK in 451ms (Views: 336.5ms | ActiveRecord: 22.6ms)
+
+
+Started GET "/users/1/fleets/new" for 127.0.0.1 at 2017-04-12 21:48:18 -0500
+Processing by FleetsController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering fleets/new.html.erb within layouts/application
+  Rendered fleets/_errors.html.erb (0.9ms)
+  [1m[36mFaction Load (0.7ms)[0m  [1m[34mSELECT "factions".* FROM "factions"[0m
+  Rendered fleets/_form.html.erb (77.0ms)
+  Rendered fleets/new.html.erb within layouts/application (93.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_flash.html.erb (0.8ms)
+Completed 200 OK in 191ms (Views: 176.9ms | ActiveRecord: 1.1ms)
+
+

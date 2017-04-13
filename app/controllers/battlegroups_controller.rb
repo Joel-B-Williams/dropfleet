@@ -20,14 +20,11 @@ class BattlegroupsController < ApplicationController
 		@user = current_user
 		@fleet = Fleet.find_by(id: params[:fleet_id])
 		@battlegroup = Battlegroup.new(battlegroup_params)
-		@battlegroup.update_attribute(:fleet_id, @fleet.id)
+		@battlegroup.fleet_id = @fleet.id
 		if @battlegroup.save
 			flash[:success] = "Battlegroup added"
 			redirect_to user_fleet_path(@user, @fleet)
 		else
-			# instance is persisted even though invalid/unsaveable - why? Because of .new??  Cleaner way to instantiate???
-			@battlegroup.destroy
-			# flash.now[:notice] = "An error occured, please make your selection"
 			render 'new'
 		end
 	end
@@ -41,8 +38,7 @@ class BattlegroupsController < ApplicationController
 	def destroy
 		user = current_user
 		fleet = Fleet.find_by(id: params[:fleet_id])
-		battlegroup = Battlegroup.find_by(id: params[:id])
-		battlegroup.destroy
+		Battlegroup.find_by(id: params[:id]).destroy
 		flash[:success] = "Battlegroup decomissioned"
 		update_cost(fleet)
 		redirect_to user_fleet_path(user, fleet)
