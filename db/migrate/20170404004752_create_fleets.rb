@@ -4,7 +4,7 @@ class CreateFleets < ActiveRecord::Migration[5.0]
     	t.string :name,	 				 	presence: true
     	t.integer :faction_id, 		presence: true
     	t.integer :points_level,	presence: true
-    	t.integer :cost, 				 	presence: true, default: 0
+    	t.integer :cost, 				 	presence: true
 
       t.timestamps
     end

@@ -21,7 +21,7 @@ class FleetsController < ApplicationController
 		#requires someone be logged in - add verification
 		@user = current_user
 		# cost should be defaulting from migration but isn't - FIX
-		@fleet = Fleet.new( user_id: @user.id, cost: 0 )
+		@fleet = Fleet.new( user_id: @user.id )
 		@fleet.update_attributes(fleet_params)
 
 		if @fleet.save
