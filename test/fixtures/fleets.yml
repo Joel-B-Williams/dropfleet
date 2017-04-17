@@ -7,19 +7,19 @@
 ucm_fleet:
   name: 'Test Fleet UCM'
   points_level: 750
-  faction_id: 1
+  faction_id: nil
   
 
 ucm_1000:
   name: 'UCM 1000'
   points_level: 1000
-  faction_id: 1
+  faction_id: nil
   
 
 ucm_2000:
   name: 'UCM 1000'
   points_level: 2000
-  faction_id: 1
+  faction_id: nil
   
 
 

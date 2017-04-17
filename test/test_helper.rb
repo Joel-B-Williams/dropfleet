@@ -38,8 +38,8 @@ class ActionDispatch::IntegrationTest
 		post login_path, params: { sessions: { username: user.username, password: password } }
 	end
 
-	def create_fleet(user, fleet)
-		post user_fleets_path(user), params: { fleet: { name: fleet.name, points_level: fleet.points_level, faction_id: fleet.faction_id}, cost: 0, user_id: user.id }
+	def create_fleet(user, fleet, faction)
+		post user_fleets_path(user), params: { fleet: { name: fleet.name, points_level: fleet.points_level, faction_id: faction.id} }
 	end
 
 end
