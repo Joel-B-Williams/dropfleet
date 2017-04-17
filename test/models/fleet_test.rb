@@ -94,6 +94,18 @@ class FleetTest < ActiveSupport::TestCase
     @ucm.cost = calc_fleet_cost(@ucm)
     @ucm.save
     assert_equal 105, @ucm.cost 
+    # edit group size & adjust cost
+    @toulons.group_size = 2
+    @toulons.cost = calc_group_cost(@toulons)
+    @toulons.save
+    assert_equal 70, @toulons.cost
+    @line.reload
+    @line.cost = calc_battlegroup_cost(@line)
+    @line.save
+    @ucm.reload
+    @ucm.cost = calc_fleet_cost(@ucm)
+    @ucm.save
+    assert_equal 70, @ucm.cost
   end
 
 
