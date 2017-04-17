@@ -35952,3 +35952,17 @@ Processing by FleetsController#show as HTML
 Completed 200 OK in 114ms (Views: 89.4ms | ActiveRecord: 12.6ms)
 
 
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4139278463259040815);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to ChangeDefaultForFleetsCost (20170414135500)
+  [1m[35m (3.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (22.7ms)[0m  [1m[35mALTER TABLE "fleets" ALTER COLUMN "cost" TYPE integer[0m
+  [1m[35m (1.1ms)[0m  [1m[35mALTER TABLE "fleets" ALTER COLUMN "cost" SET DEFAULT 0[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170414135500"]]
+  [1m[35m (24.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(4139278463259040815)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mShip Load (60.8ms)[0m  [1m[34mSELECT  "ships".* FROM "ships" WHERE "ships"."name" = $1 LIMIT $2[0m  [["name", "Seattle"], ["LIMIT", 1]]

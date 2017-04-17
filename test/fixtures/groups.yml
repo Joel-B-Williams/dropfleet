@@ -4,8 +4,14 @@
 # model remove the '{}' from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
-one: {}
-# column: value
-#
-two: {}
-# column: value
+toulons:
+  ship_id: nil
+  cost: 105
+  group_size: 3
+  battlegroup_id: nil
+
+one_seattle:
+  ship_id: nil
+  cost: 132
+  group_size: 1
+  battlegroup_id: nil

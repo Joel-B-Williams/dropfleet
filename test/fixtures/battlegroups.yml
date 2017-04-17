@@ -9,9 +9,13 @@ flag:
 
 vanguard:
   battlegroup_type_id: 3
+  fleet_id: nil
+  cost: 0
 
 line:
   battlegroup_type_id: 2
+  fleet_id: nil
+  cost: 0
 
 pathfinder:
   battlegroup_type_id: 1

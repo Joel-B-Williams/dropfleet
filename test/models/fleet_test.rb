@@ -9,6 +9,12 @@ class FleetTest < ActiveSupport::TestCase
   	@ucm = fleets(:ucm_fleet)
   	@ucm1000 = fleets(:ucm_1000)
   	@ucm2000 = fleets(:ucm_2000)
+    @line = battlegroups(:line)
+    @vanguard = battlegroups(:vanguard)
+    @toulon = ships(:toulon)
+    @toulons = groups(:toulons)
+    @seattle = ships(:seattle)
+    @seattle_group = groups(:one_seattle)
   end
 
   # test "is valid with name, faction_id, and points_level" do 
@@ -45,6 +51,49 @@ class FleetTest < ActiveSupport::TestCase
   	assert_equal 3, @ucm2000.max_vanguard
   	assert_equal 0, @ucm2000.min_flag
   	assert_equal 2, @ucm2000.max_flag
+  end
+
+  test "fleet costs the sum of its battlegroups" do 
+    # empty fleet = 0 points
+    assert_equal 0, @ucm.cost
+    # add group of toulons to line BG
+    @toulons.ship_id = @toulon.id
+    @toulons.battlegroup_id = @line.id 
+    @toulons.save
+    @line.fleet_id = @ucm.id
+    @line.cost = calc_battlegroup_cost(@line)
+    @line.save
+    # line BG costs 105
+    assert_equal 105, @line.cost
+    # fleet costs 105 (3 toulons)
+    @ucm.cost = calc_fleet_cost(@ucm)
+    @ucm.save
+    assert_equal 105, @ucm.cost
+    # add group of 1 seattle to line
+    @seattle_group.ship_id = @seattle.id
+    @seattle_group.battlegroup_id = @line.id
+    @seattle_group.save 
+    @line.reload
+    @line.cost = calc_battlegroup_cost(@line)
+    @line.save
+    # fleet cost = 237 (3 toulons + 1 seattle)
+    @ucm.reload
+    @ucm.cost = calc_fleet_cost(@ucm)
+    @ucm.save
+    assert_equal 237, @ucm.cost
+    # remove seattle from BG
+    @seattle_group.battlegroup_id = @vanguard.id
+    @seattle_group.save
+    @line.reload
+    @line.cost = calc_battlegroup_cost(@line)
+    @line.save
+    # line costs 105
+    assert_equal 105, @line.cost
+    # fleet costs 105
+    @ucm.reload
+    @ucm.cost = calc_fleet_cost(@ucm)
+    @ucm.save
+    assert_equal 105, @ucm.cost 
   end
 
 

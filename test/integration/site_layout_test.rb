@@ -22,6 +22,8 @@ class SiteLayoutTest < ActionDispatch::IntegrationTest
     assert_select "a[href=?]", login_path, count: 0
   	assert_select "a[href=?]", root_path
     assert_select "a[href=?]", logout_path
+    assert_select "a[href=?]", user_fleets_path(@user)
+    assert_select "a[href=?]", user_path(@user)
   end
 
 end

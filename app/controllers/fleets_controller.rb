@@ -9,7 +9,6 @@ class FleetsController < ApplicationController
 		@user = current_user
 		@fleet = Fleet.find_by(id: params[:id])
 		@battlegroups = @fleet.battlegroups.joins(:battlegroup_type).merge(BattlegroupType.order(:id))
-		# Add groups to show by default under BG type?
 	end
 
 	def new
@@ -20,7 +19,6 @@ class FleetsController < ApplicationController
 	def create
 		#requires someone be logged in - add verification
 		@user = current_user
-		# cost should be defaulting from migration but isn't - FIX
 		@fleet = Fleet.new( user_id: @user.id )
 		@fleet.update_attributes(fleet_params)
 
@@ -49,9 +47,5 @@ class FleetsController < ApplicationController
 		def fleet_params
 			params.require(:fleet).permit(:name, :faction_id, :points_level)
 		end
-
-		# def auto_fleet_params
-		# 	params.permit(:cost, :user_id)
-		# end
-
+		
 end

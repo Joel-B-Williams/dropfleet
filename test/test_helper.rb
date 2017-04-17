@@ -12,6 +12,24 @@ class ActiveSupport::TestCase
   def log_in(user)
   	session[:user_id] = user.id
   end
+
+  # REFACTOR = reduce/sum/etc
+	def calc_fleet_cost(fleet)
+		cost = 0
+		fleet.battlegroups.each do |battlegroup|
+			cost += battlegroup.cost
+		end
+		cost
+	end
+
+	# REFACTOR = reduce/sum/etc
+	def calc_battlegroup_cost(battlegroup)
+		cost = 0
+		battlegroup.groups.each do |group|
+			cost += group.cost
+		end
+		cost
+	end
 end
 
 class ActionDispatch::IntegrationTest

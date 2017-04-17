@@ -4,8 +4,30 @@
 # model remove the '{}' from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
-one: {}
-# column: value
-#
-two: {}
-# column: value
+toulon:
+  name: 'Toulon'
+  scan: '6"'
+  signature: '3"'
+  thrust: '10"'
+  hull: '4'
+  armor: '4+'
+  point_defense: '3'
+  min_group_size: 2
+  max_group_size: 4
+  tonnage_id: 1
+  faction_id: 1
+  cost: 35
+
+seattle:
+  name: 'Seattle'
+  scan: '6"'
+  signature: '6"'
+  thrust: '8"'
+  hull: '10'
+  armor: '3+'
+  point_defense: '5'
+  min_group_size: 1
+  max_group_size: 1
+  tonnage_id: 2
+  faction_id: 1
+  cost: 132
