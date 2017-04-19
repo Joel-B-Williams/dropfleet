@@ -8,14 +8,30 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <header>
-  	<%= link_to "Home", root_path %>
+  	<!-- <%= link_to "Home", root_path %> -->
+    <section id='header-logo'>
+      <p>Dockyard</p>
+      <p>A fleet builder for Dropfleet Commander</p>
+    </section>
+    
+    <section id='header-left'>
     <% if logged_in? %>
-      <%= link_to "Fleets", user_fleets_path(@user) %>
-      <%= link_to "Profile", current_user %>
-      <%= link_to "Logout", logout_path, method: 'delete' %>
-    <% else %> 
+      <%= link_to "Dockyard", user_fleets_path(@user) %>
+    <% else %>
       <%= link_to "Login", login_path %>
+    <% end %>
+    </section>
+    
+    <section id='header-right'>
+    <% if logged_in? %>
+      <%= link_to "Logout", logout_path, method: 'delete' %>
+    <% else %>
       <%= link_to "Sign up", new_user_path %>
+    <% end %>
+    </section>
+    <% if logged_in? %>
+<!--       <%= link_to "Profile", current_user %> -->
+    <% else %> 
     <% end %>
   </header>
 	<%= render 'layouts/flash' %>

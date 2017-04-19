@@ -3,6 +3,9 @@ class FleetsController < ApplicationController
 	def index
 		@user = current_user
 		@fleets = Fleet.where(user_id: @user.id)
+		if request.xhr?
+			render '_form'
+		end
 	end
 
 	def show
@@ -14,6 +17,11 @@ class FleetsController < ApplicationController
 	def new
 		@user = current_user
 		@fleet = Fleet.new( user_id: @user.id )
+		if request.xhr?
+			p "*"*50
+			p "hello"
+			render 'form', layout: false
+		end
 	end
 
 	def create
