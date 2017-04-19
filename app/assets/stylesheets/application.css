@@ -145,21 +145,38 @@ footer {
 
 .fleet-list li > * {
 	display: inline-block;
-	width: 23vw;
-	font-size: 3em;
+	font-size: 1.5em;
 	text-align: center;
+	/*border-bottom: solid black 1px;*/
 }
 
 .fleet-list li a {
 	text-decoration: none;
+	border-bottom: solid black 1px;
 	color: black;
 }
-
+/*name*/
 .fleet-list li a:first-of-type {
-	font-style: italic;
+	font-size: 2em;
+	width: 33vw;
 }
+/*faction*/
+.fleet-list li p:first-of-type {
+	font-style: italic;
+	width: 12vw;
+}
+/*points*/
+.fleet-list li p:last-of-type {
+	width: 25vw;
+}
+/*DELETION OF DESTINY*/
 .fleet-list li a:last-of-type {
-
+	width: 5vw;
+	font-size: 2em;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	border: solid black 3px;
+	background-color: #4a4e54; 
 }
 
 #new-fleet {
@@ -170,9 +187,9 @@ footer {
 	font-weight: bold;
 	border: solid black 5px;
 	border-radius: 10px;
-	padding-left: 12px;
-	padding-right: 12px;
+	padding-left: 13px;
+	padding-right: 13px;
 	margin-top: 3vh;
-	margin-right: 9vw;
+	margin-right: 5vw;
 	background-color: #4a4e54; 
 }
