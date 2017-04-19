@@ -90,9 +90,11 @@ footer {
 	margin-bottom: 0;
 	padding-top: 4px;
 	border-top: solid black 1px;
+	clear: both;
 }
 
 /*FORMS*/
+
 .form {
 	margin-top: 5vh;
 	margin-bottom: 5vh;
@@ -132,4 +134,45 @@ footer {
 	display: block;
 	margin: 0 auto;
 	margin-top: 20px;
+}
+
+/*FLEET INDEX LIST*/
+
+.fleet-list {
+	list-style: none;
+	float: left;
+}
+
+.fleet-list li > * {
+	display: inline-block;
+	width: 23vw;
+	font-size: 3em;
+	text-align: center;
+}
+
+.fleet-list li a {
+	text-decoration: none;
+	color: black;
+}
+
+.fleet-list li a:first-of-type {
+	font-style: italic;
+}
+.fleet-list li a:last-of-type {
+
+}
+
+#new-fleet {
+	float: right;
+	text-decoration: none;
+	color: black;
+	font-size: 3em;
+	font-weight: bold;
+	border: solid black 5px;
+	border-radius: 10px;
+	padding-left: 12px;
+	padding-right: 12px;
+	margin-top: 3vh;
+	margin-right: 9vw;
+	background-color: #4a4e54; 
 }
