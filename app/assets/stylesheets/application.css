@@ -104,10 +104,24 @@ header a:active {
 	font-size: 2em;
 }
 
+.form-field {
+	font-size: 2em;
+}
+
 .form-button {
 	margin-top: 20px;
 	width: 25vw;
 	background-color: #4a4e54;
 	font-size: 1.5em;
 	font-weight: bold;
+}
+
+#fleet_faction_id {
+	width: 15vw;
+	height: 3vh;
+	text-align: center;
+	font-size: 2em;
+	display: block;
+	margin: 0 auto;
+	margin-top: 20px;
 }
