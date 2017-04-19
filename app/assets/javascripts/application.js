@@ -16,22 +16,22 @@
 //= require_tree .
 
 
-$(document).ready(function(){
-	addFleet();
-});
+// $(document).ready(function(){
+// 	addFleet();
+// });
 
-addFleet = function(){
-	$('#new-fleet').on('click', function(e){
-		e.preventDefault();
-// is sending to index wtf mate
-// I'm doing it wrong duh grab the href from the link yoooo
-		var url = "#{new_user_fleet_url}"
-		console.log(url)
-	  $.ajax(url)
-	  .done(function(response){
-	  	console.log(response)
-	  });
-	});
+// addFleet = function(){
+// 	$('#new-fleet').on('click', function(e){
+// 		e.preventDefault();
+// // is sending to index wtf mate
+// // I'm doing it wrong duh grab the href from the link yoooo
+// 		var url = "#{new_user_fleet_url}"
+// 		console.log(url)
+// 	  $.ajax(url)
+// 	  .done(function(response){
+// 	  	console.log(response)
+// 	  });
+// 	});
 
 
-}
+// }
