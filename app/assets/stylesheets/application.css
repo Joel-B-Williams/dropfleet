@@ -195,3 +195,45 @@ footer {
 	margin-right: 5vw;
 	background-color: #4a4e54; 
 }
+
+/*FLEET SHOW DISPLAY*/
+.fleet-info {
+	float: left;
+	margin-top: 2vh;
+	width: 48vw;
+	text-align: center;
+	font-size: 2em;
+}
+
+.fleet-info p {
+	/*display: inline-block;*/
+	/*width: 20vw;*/
+	/*margin-top: 3vh;*/
+}
+
+/* Faction name */
+.fleet-info p:nth-child(2) {
+	font-style: italic;
+}
+
+/*name of fleet*/
+.fleet-info p:first-of-type {
+	/*font-size: 2em;*/
+}
+
+.fleet-info p:last-of-type {
+	/*font-size: 2em;*/
+}
+
+.battlegroup-info {
+	float: right;
+	width: 48vw;
+	text-align: center;
+	font-size: 2em;
+}
+
+.battlegroup-info a {
+	text-decoration: none;
+	font-size: 1.5em;
+	font-weight: bold;
+}
