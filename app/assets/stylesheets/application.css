@@ -19,15 +19,15 @@
 
 header {
 	background-color: #3d3d3f;
+	border-right: solid #3d3d3f 3px;
 	height: 11vh;
 	width: 100vw;
-	/*overflow: auto;*/
 }
 
 header section {
+	position: absolute;
 	display: inline-block;
-	width: 49.5vw;
-	/*border-bottom: solid black 6px;*/
+	width: 50vw;
 }
 
 #header-left {
@@ -44,8 +44,9 @@ header section {
 	border-bottom: solid black 5px;
 	text-align: left;
 	background-color: #4a4e54;
+	margin-left: 50vw;
 	/*width: 50vw;*/
-	float: right;
+	/*float: right;*/
 }
 
 header a {
@@ -63,6 +64,7 @@ header a {
 }
 
 #header-logo {
+	position: static;
 	display: block;
 	width: 100vw;
 }

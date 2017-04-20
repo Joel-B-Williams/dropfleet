@@ -16,7 +16,7 @@
     
     <section id='header-left'>
     <% if logged_in? %>
-      <%= link_to "Dockyard", user_fleets_path(@user) %>
+      <%= link_to "Fleets", user_fleets_path(@user) %>
     <% else %>
       <%= link_to "Login", login_path %>
     <% end %>
