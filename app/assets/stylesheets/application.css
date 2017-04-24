@@ -247,10 +247,6 @@ footer {
 	padding-left: 12px;
 }
 
-/*.battlegroup-info p {
-	margin-bottom: 0;
-}*/
-
 .battlegroup-info p:first-of-type {
 	text-align: center;
 }
@@ -265,4 +261,52 @@ footer {
 	display: block;
 	margin: 0 auto;
 	margin-top: 5vh;
+}
+
+/* BATTLEGROUP LIST -> fleet show */
+.battlegroup-list {
+	margin-top: 5vw;
+	clear: both;
+	width: 90vw;
+}
+
+.battlegroup-list > li {
+	list-style: none;
+	color: black;
+	font-size: 1.5em;
+	padding-left: 5vw;
+}
+
+.battlegroup-list li a {
+	text-decoration: none;
+	color: black;
+}
+
+.battlegroup-display li {
+	display: inline-block;
+	list-style: none;
+	width: 25vw;	
+	margin-bottom: 1vh;
+	text-align: center;
+}
+
+/*BG Type name*/
+.battlegroup-display li:first-child{
+	background-color: #3d3d3f;
+	border-top-right-radius: 50px;
+	border-top-left-radius: 50px; 
+}
+
+/*BG points*/
+.battlegroup-display li:nth-child(2) {
+	text-align: right;
+}
+
+/* BG Delete */
+.battlegroup-display li:last-child{
+	background-color: #4a4e54; 
+	width: 3vw;
+	margin-left: 15vw;
+	border: solid black 3px;
+	font-weight: bold;
 }

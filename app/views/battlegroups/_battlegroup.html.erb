@@ -1,8 +1,17 @@
 
 <li>	
-	<%= link_to display_battlegroup_name(battlegroup), user_fleet_battlegroup_path(@user, @fleet, battlegroup) %>
-	<%= display_battlegroup_cost(battlegroup) %>
-	<%= link_to "-X-", user_fleet_battlegroup_path(@user, @fleet, battlegroup), method: :delete %>
+	<ul class='battlegroup-display'>
+		<li>
+		<%= link_to display_battlegroup_name(battlegroup), user_fleet_battlegroup_path(@user, @fleet, battlegroup) %>	
+		</li>
+		<li>
+		<%= display_battlegroup_cost(battlegroup) %>
+		</li>
+		<li>
+		<%= link_to "X", user_fleet_battlegroup_path(@user, @fleet, battlegroup), method: :delete %>
+		</li>
+	</ul>
+
 	<ul class='group-list'>
 	<% battlegroup.groups.each do |group| %>
 		 <%= render partial: 'groups/group', locals: { user: @user, fleet: @fleet, battlegroup: battlegroup, group: group }  %> 
