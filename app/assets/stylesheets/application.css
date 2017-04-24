@@ -295,6 +295,7 @@ footer {
 	background-color: #3d3d3f;
 	border-top-right-radius: 50px;
 	border-top-left-radius: 50px; 
+	border: solid black 3px;
 }
 
 /*BG points*/
@@ -318,6 +319,7 @@ footer {
 	display: inline-block;
 	font-size: 2em;
 	margin-right: 7vw;
+	margin-top: 5vw;
 }
 
 .battlegroup-show a {
