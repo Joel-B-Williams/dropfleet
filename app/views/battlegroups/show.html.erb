@@ -1,11 +1,10 @@
-<p>battlegroup show!!!</p>
-
-<%= link_to "Back to Fleet", user_fleet_path(@user, @fleet) %>
-
-<p> <%= display_battlegroup_name(@battlegroup) %> Battlegroup </p>
-<p>
-	Total Groups: <%= show_group_count(@battlegroup) %>
-</p>
+<section class='battlegroup-show'>
+	<%= link_to "<<", user_fleet_path(@user, @fleet) %>
+	<p> <%= display_battlegroup_name(@battlegroup) %> Battlegroup </p>
+	<p>
+		Total Groups: <%= show_group_count(@battlegroup) %>
+	</p>
+</section>
 
 <%= render 'groups/tonnages' %>
 
