@@ -36,6 +36,7 @@ header section {
 	border-bottom: solid black 5px;
 	text-align: right;
 	background-color: #4a4e54;
+	/*overflow: auto;*/
 }
 
 #header-right {
@@ -45,6 +46,7 @@ header section {
 	text-align: left;
 	background-color: #4a4e54;
 	margin-left: 50vw;
+	/*overflow: auto;*/
 	/*width: 50vw;*/
 	/*float: right;*/
 }
@@ -228,12 +230,26 @@ footer {
 .battlegroup-info {
 	float: right;
 	width: 48vw;
-	text-align: center;
+	text-align: left;
 	font-size: 2em;
+	/*margin-bottom: 0px;*/
 }
 
 .battlegroup-info a {
 	text-decoration: none;
 	font-size: 1.5em;
 	font-weight: bold;
+	color: black;
+	background-color: #4a4e54; 
+	border: solid black 5px;
+	padding-right: 12px;
+	padding-left: 12px;
+}
+
+.battlegroup-info p {
+	/*margin-bottom: 0;*/
+}
+
+.battlegroup-info p:first-of-type {
+	text-align: center;
 }
