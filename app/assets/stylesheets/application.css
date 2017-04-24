@@ -254,3 +254,15 @@ footer {
 .battlegroup-info p:first-of-type {
 	text-align: center;
 }
+
+/* BATTLEGROUP NEW */
+
+#battlegroup_battlegroup_type_id {
+	width: 20vw;
+	height: 3vh;
+	text-align: center;
+	font-size: 2em;
+	display: block;
+	margin: 0 auto;
+	margin-top: 5vh;
+}

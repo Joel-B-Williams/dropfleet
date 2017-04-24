@@ -2,6 +2,6 @@
  
  	<%= f.collection_select(:battlegroup_type_id, BattlegroupType.all, :id, :name) %>
 
-	<%= f.submit "Create Battlegroup" %>
+	<%= f.submit "Add Battlegroup", class: 'form-item form-button' %>
 <% end %>
 <!-- trade out for individual links -->
