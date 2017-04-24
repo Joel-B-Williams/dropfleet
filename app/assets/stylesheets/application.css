@@ -201,7 +201,7 @@ footer {
 /*FLEET SHOW DISPLAY*/
 .fleet-info {
 	float: left;
-	margin-top: 2vh;
+	margin-top: 4vh;
 	width: 48vw;
 	text-align: center;
 	font-size: 2em;
@@ -220,6 +220,7 @@ footer {
 
 /*name of fleet*/
 .fleet-info p:first-of-type {
+	font-weight: bold;
 	/*font-size: 2em;*/
 }
 
@@ -246,9 +247,9 @@ footer {
 	padding-left: 12px;
 }
 
-.battlegroup-info p {
-	/*margin-bottom: 0;*/
-}
+/*.battlegroup-info p {
+	margin-bottom: 0;
+}*/
 
 .battlegroup-info p:first-of-type {
 	text-align: center;
