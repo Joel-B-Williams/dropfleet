@@ -3,5 +3,5 @@
 <!-- clean up DB call outside of view -->
 	<%= f.collection_select( :ship_id, Ship.where(tonnage_id: params[:tonnage], faction: @fleet.faction), :id, :dropdown_display ) %>
 
-	<%= f.submit "Add group" %>
+	<%= f.submit "Add group", class: 'form-item form-button' %>
 <% end %>

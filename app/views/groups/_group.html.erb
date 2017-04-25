@@ -9,7 +9,7 @@
 	<%= link_to '+', edit_user_fleet_battlegroup_group_path(user, fleet, battlegroup, group) %>
 	<% end %>
 	<%= display_cost(group) %>
-	<%= link_to "-X-", user_fleet_battlegroup_group_path(user, fleet, battlegroup, group), method: :delete %>
+	<%= link_to "X", user_fleet_battlegroup_group_path(user, fleet, battlegroup, group), method: :delete %>
 </li>
 
 <!-- NOTE:  Redirects to fleet show from both fleet & battlegroup show pages -->

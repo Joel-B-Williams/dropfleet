@@ -17,6 +17,6 @@ class Ship < ApplicationRecord
 	end
 	
 	def dropdown_display
-		"#{name}  |  Group: #{group_range}  |  #{cost}"
+		"#{name} || #{cost}"
 	end
 end

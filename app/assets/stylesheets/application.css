@@ -358,6 +358,7 @@ footer {
 .tonnages li {
 	list-style: none;
 }
+
 .tonnages p {
 	display: inline-block;
 	width: 15vw;
@@ -372,4 +373,15 @@ footer {
 	padding-left: 8px;
 	padding-right: 8px;
 	background-color: #4a4e54;
+}
+
+/*GROUP NEW*/
+
+#group_ship_id {
+	display: block;
+	margin: 0 auto;
+	height: 3vh;
+	width: 35vw;
+	font-size: 2em;
+	text-align: center;
 }
