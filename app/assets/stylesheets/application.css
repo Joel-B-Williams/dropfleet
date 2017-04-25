@@ -345,3 +345,31 @@ footer {
 .battlegroup-show p:last-of-type {
 	border-top-right-radius: 50px;
 }
+
+/*BATTLEGROUP TONNAGES*/
+
+.tonnages {
+	text-align: left;
+	margin-right: 6vw;
+	float: right;
+	font-size: 2em;
+}
+
+.tonnages li {
+	list-style: none;
+}
+.tonnages p {
+	display: inline-block;
+	width: 15vw;
+	text-align: center;
+}
+
+.tonnages a {
+	text-decoration: none;
+	color: black;
+	font-weight: bold;
+	border: solid black 3px;
+	padding-left: 8px;
+	padding-right: 8px;
+	background-color: #4a4e54;
+}
