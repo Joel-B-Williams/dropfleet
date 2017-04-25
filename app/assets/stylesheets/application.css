@@ -357,6 +357,7 @@ footer {
 
 .tonnages li {
 	list-style: none;
+	height: 4vh;
 }
 
 .tonnages p {
@@ -384,4 +385,36 @@ footer {
 	width: 35vw;
 	font-size: 2em;
 	text-align: center;
+}
+
+/*GROUP LIST on fleet show*/
+
+.group-list li {
+	list-style: none;
+	height: 3vh;
+	margin-left: 12vw;
+	font-size: 1.5em;
+	width: 45vw;
+}
+
+.group-list a {
+	text-decoration: none;
+	color: black;
+
+}
+
+.group-list p {
+	display: inline-block;
+}
+
+.group-list a:first-of-type {
+	border: solid black 3px;
+	padding-left: 30px;
+	padding-right: 5px;
+	/*width: 33%;*/
+	border-top-left-radius: 50px;
+}
+
+.group-list li a:last-of-type {
+
 }
