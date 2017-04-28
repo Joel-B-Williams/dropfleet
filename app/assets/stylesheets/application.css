@@ -397,24 +397,50 @@ footer {
 	width: 45vw;
 }
 
+.group-list * {
+	width: 5vw;
+}
+
 .group-list a {
 	text-decoration: none;
 	color: black;
-
+	border: solid black 2px;
+	padding-right: .7vw;
+	padding-left: .7vw;
+	/*font-weight: bold;*/
+	/*font-size: 2em;*/
+	text-align: center;
+	background-color: #4a4e54;
 }
 
 .group-list p {
 	display: inline-block;
+	text-align: center;
 }
 
+
+/* Ship name */
 .group-list a:first-of-type {
+	display: inline-block;
+	width: 15vw;
+	text-align: right;
+	/*font-weight: normal;*/
 	border: solid black 3px;
 	padding-left: 30px;
 	padding-right: 5px;
-	/*width: 33%;*/
 	border-top-left-radius: 50px;
+	background-color: #3d3d3f;
 }
 
+/* Group Delete button */
 .group-list li a:last-of-type {
-
+	display: inline-block;
+	position: relative;
+	top: 1vh;
+	width: 3vw;
+	padding: 0;
+	text-align: center;
+	border: solid black 3px;
+	
+	float: right;
 }
