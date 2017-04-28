@@ -2,57 +2,57 @@
 	<ul>
 		<% if can_have_superheavy(@battlegroup) %>	
 		<li>	
-			<% if can_add_group(@battlegroup) && can_add_superheavy(@battlegroup) %>
-			<%= link_to "+", new_user_fleet_battlegroup_group_path(@user, @fleet, @battlegroup, tonnage: '4') %>
-			<% end %>
 			<p> 
 				Superheavy
 			</p>
 			<p>	
 				<%= show_superheavy_count(@battlegroup) %>
 			</p>
+			<% if can_add_group(@battlegroup) && can_add_superheavy(@battlegroup) %>
+			<%= link_to "+", new_user_fleet_battlegroup_group_path(@user, @fleet, @battlegroup, tonnage: '4') %>
+			<% end %>
 		<% end %>
 		</li>
 			
 		<% if can_have_heavy(@battlegroup) %>	
 		<li>	
-			<% if can_add_group(@battlegroup) && can_add_heavy(@battlegroup) %>
-				<%= link_to "+", new_user_fleet_battlegroup_group_path(@user, @fleet, @battlegroup, tonnage: '3') %>
-			<% end %>
 			<p> 
 				Heavy
 			</p>
 			<p>	
 				<%= show_heavy_count(@battlegroup) %>
 			</p>
+			<% if can_add_group(@battlegroup) && can_add_heavy(@battlegroup) %>
+				<%= link_to "+", new_user_fleet_battlegroup_group_path(@user, @fleet, @battlegroup, tonnage: '3') %>
+			<% end %>
 		<% end %>
 		</li>
 
 		<% if can_have_medium(@battlegroup) %>	
 		<li>	
-			<% if can_add_group(@battlegroup) && can_add_medium(@battlegroup) %>
-				<%= link_to "+", new_user_fleet_battlegroup_group_path(@user, @fleet, @battlegroup, tonnage: '2') %>
-			<% end %>
 			<p> 
 				Medium
 			</p>
 			<p>	
 				<%= show_medium_count(@battlegroup) %>
 			</p>
+			<% if can_add_group(@battlegroup) && can_add_medium(@battlegroup) %>
+				<%= link_to "+", new_user_fleet_battlegroup_group_path(@user, @fleet, @battlegroup, tonnage: '2') %>
+			<% end %>
 		<% end %>
 		</li>
 
 		<% if can_have_light(@battlegroup) %>	
 		<li>	
-			<% if can_add_group(@battlegroup) && can_add_light(@battlegroup) %>
-				<%= link_to "+", new_user_fleet_battlegroup_group_path(@user, @fleet, @battlegroup, tonnage: '1') %>
-			<% end %>
 			<p> 
 				Light
 			</p>
 			<p>	
 				<%= show_light_count(@battlegroup) %>
 			</p>
+			<% if can_add_group(@battlegroup) && can_add_light(@battlegroup) %>
+				<%= link_to "+", new_user_fleet_battlegroup_group_path(@user, @fleet, @battlegroup, tonnage: '1') %>
+			<% end %>
 		<% end %>
 		</li>
 
