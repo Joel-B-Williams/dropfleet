@@ -390,7 +390,7 @@ footer {
 
 /*GROUP LIST on fleet show*/
 .group-list {
-	margin-bottom: 10vh;
+	margin-bottom: 3vh;
 
 }
 
@@ -400,6 +400,7 @@ footer {
 	margin-left: 12vw;
 	font-size: 1.5em;
 	width: 45vw;
+	min-width: 550px;
 }
 
 .group-list * {
@@ -428,6 +429,7 @@ footer {
 .group-list a:first-of-type {
 	display: inline-block;
 	width: 15vw;
+	min-width: 225px;
 	text-align: right;
 	/*font-weight: normal;*/
 	border: solid black 3px;
@@ -499,3 +501,10 @@ footer {
 	width: 40px;
 }
 
+/* GROUP EDIT */
+
+#group_group_size {
+	display: block;
+	margin: auto;
+	margin-top: 3vh; 
+}

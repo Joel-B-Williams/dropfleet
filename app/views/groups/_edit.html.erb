@@ -1,6 +1,6 @@
 <%= form_for [@user, @fleet, @battlegroup, @group] do |f| %>
 
 	<%= f.select :group_size, size_range(@group) %>
-	<%= f.submit "Edit group" %>
+	<%= f.submit "Edit group", class: 'form-item form-button' %>
 	
 <% end %>
