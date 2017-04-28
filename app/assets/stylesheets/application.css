@@ -28,6 +28,7 @@ header section {
 	position: absolute;
 	display: inline-block;
 	width: 50vw;
+	color: #d7dae0;
 }
 
 #header-left {
@@ -54,7 +55,7 @@ header section {
 header a {
 	font-size: 3em;
 	text-decoration: none;
-	color: black;
+	color: #d7dae0;
 }
 
 #header-left a {
@@ -126,6 +127,7 @@ footer {
 	margin-top: 20px;
 	width: 25vw;
 	background-color: #4a4e54;
+	color: #d7dae0;
 	font-size: 1.5em;
 	font-weight: bold;
 }
@@ -157,12 +159,13 @@ footer {
 .fleet-list li a {
 	text-decoration: none;
 	border-bottom: solid black 1px;
-	color: black;
+	color: #d7dae0;
 }
 /*name*/
 .fleet-list li a:first-of-type {
 	font-size: 2em;
 	width: 33vw;
+	color: black;
 }
 /*faction*/
 .fleet-list li p:first-of-type {
@@ -195,7 +198,8 @@ footer {
 	padding-right: 13px;
 	margin-top: 3vh;
 	margin-right: 5vw;
-	background-color: #4a4e54; 
+	background-color: #4a4e54;
+	color: #d7dae0; 
 }
 
 /*FLEET SHOW DISPLAY*/
@@ -240,7 +244,7 @@ footer {
 	text-decoration: none;
 	font-size: 1.5em;
 	font-weight: bold;
-	color: black;
+	color: #d7dae0;
 	background-color: #4a4e54; 
 	border: solid black 5px;
 	padding-right: 12px;
@@ -290,6 +294,10 @@ footer {
 	text-align: center;
 }
 
+.battlegroup-display li a {
+	color: #d7dae0;
+}
+
 /*BG Type name*/
 .battlegroup-display li:first-child{
 	background-color: #3d3d3f;
@@ -328,7 +336,7 @@ footer {
 	text-decoration: none;
 	text-align: center;
 	background-color: #4a4e54; 
-	color: black;
+	color: #d7dae0;
 	font-weight: bold;
 	border: solid black 3px;
 	border-top-left-radius: 50px;
@@ -338,6 +346,7 @@ footer {
 
 .battlegroup-show p {
 	background-color: #4a4e54; 
+	color: #d7dae0;
 	border: solid black 3px;
 	padding-left: 3vw;
 	padding-right: 3vw;
@@ -350,9 +359,9 @@ footer {
 /*BATTLEGROUP TONNAGES*/
 
 .tonnages {
-	text-align: left;
-	margin-right: 6vw;
-	float: right;
+	width: 50vw;
+	display: block;
+	margin: auto;
 	font-size: 2em;
 }
 
@@ -369,7 +378,7 @@ footer {
 
 .tonnages a {
 	text-decoration: none;
-	color: black;
+	color: #d7dae0;
 	font-weight: bold;
 	border: solid black 3px;
 	padding-left: 8px;
@@ -404,12 +413,11 @@ footer {
 }
 
 .group-list * {
-	width: 4vw;
+	width: 5vw;
 }
 
-.group-list a {
+.group-list li a {
 	text-decoration: none;
-	color: black;
 	border: solid black 2px;
 	padding-right: .7vw;
 	padding-left: .7vw;
@@ -417,6 +425,7 @@ footer {
 	/*font-size: 2em;*/
 	text-align: center;
 	background-color: #4a4e54;
+	color: #d7dae0;
 }
 
 .group-list p {
@@ -437,7 +446,7 @@ footer {
 	padding-right: 5px;
 	border-top-left-radius: 50px;
 	background-color: #3d3d3f;
-	color: white;
+	/*color: #d7dae0;*/
 }
 
 /* Group Delete button */
@@ -448,6 +457,7 @@ footer {
 	width: 3vw;
 	padding: 0;
 	text-align: center;
+	/*color: #d7dae0;*/
 	border: solid black 3px;
 	/*float: right;*/
 }
@@ -457,6 +467,7 @@ footer {
 .ship-stats {
 	width: 85vw;
 	margin: auto;
+	font-size: 1.75em;
 }
 
 .ship-stats td {
@@ -466,39 +477,41 @@ footer {
 .ship-stats .ship-name {
 	border: solid black 3px;	
 	background-color: #3d3d3f;
-	color: white;
+	color: #d7dae0;
 	/*border-top-left-radius: 50px;*/
 }
 
 .ship-stats .ship-group {
 	border: solid black 3px;	
 	background-color: #3d3d3f;
-	color: white;
+	color: #d7dae0;
 	
 }
 
 .ship-stats .ship-cost {
 	border: solid black 3px;	
 	background-color: #3d3d3f;
-	color: white;
+	color: #d7dae0;
 	border-top-right-radius: 50px;
 }
 
 /*give back-arrow class*/
 .group-show a {
-	/*display: inline-block;*/
+	width: 3vw;
+	height: 2vh;
+	display: inline-block;
 	position: relative;
-	top: 1.4vh;
+	top: 2.5vh;
 	margin-left: 3vw;
 	text-decoration: none;
 	text-align: center;
 	background-color: #4a4e54; 
-	color: black;
+	color: #d7dae0;
 	font-weight: bold;
+	font-size: 1.5em;
 	border: solid black 3px;
 	border-top-left-radius: 50px;
 	border-bottom-left-radius: 50px;
-	width: 40px;
 }
 
 /* GROUP EDIT */
