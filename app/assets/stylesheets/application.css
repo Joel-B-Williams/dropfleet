@@ -91,6 +91,7 @@ header a:active {
 
 footer {
 	text-align: center;
+
 	margin-bottom: 0;
 	padding-top: 4px;
 	border-top: solid black 1px;
@@ -397,8 +398,10 @@ footer {
 .group-list li {
 	list-style: none;
 	height: 3vh;
-	margin-left: 12vw;
-	/*font-size: 1.5em;*/
+	margin-left: 8vw;
+	/*SORT OUT FONT SIZE FOR BG SHOW*/
+	font-size: 1.5em;
+	font-size: inherit; 
 	width: 45vw;
 	min-width: 550px;
 }
