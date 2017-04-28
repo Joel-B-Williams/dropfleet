@@ -5,15 +5,9 @@
 	<%= link_to '-', edit_user_fleet_battlegroup_group_path(user, fleet, battlegroup, group) %>
 	<!-- < end %> -->
 	<p><%= size(group) %></p>
-<<<<<<< HEAD
-	<!--  if not_max_size(group)  -->
-	<%= link_to '+', edit_user_fleet_battlegroup_group_path(user, fleet, battlegroup, group) %>
-	<!--  end  -->
-=======
 	<!-- < if not_max_size(group) %> -->
 	<%= link_to '+', edit_user_fleet_battlegroup_group_path(user, fleet, battlegroup, group) %>
 	<!-- < end %> -->
->>>>>>> styling
 	<p><%= display_cost(group) %></p>
 	<%= link_to "X", user_fleet_battlegroup_group_path(user, fleet, battlegroup, group), method: :delete %>
 </li>
