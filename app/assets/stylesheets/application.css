@@ -428,7 +428,7 @@ footer {
 /* Ship name */
 .group-list a:first-of-type {
 	display: inline-block;
-	width: 15vw;
+	width: 10vw;
 	min-width: 225px;
 	text-align: right;
 	/*font-weight: normal;*/
