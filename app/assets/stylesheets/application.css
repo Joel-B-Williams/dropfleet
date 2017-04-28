@@ -398,7 +398,7 @@ footer {
 	list-style: none;
 	height: 3vh;
 	margin-left: 12vw;
-	font-size: 1.5em;
+	/*font-size: 1.5em;*/
 	width: 45vw;
 	min-width: 550px;
 }
@@ -428,8 +428,8 @@ footer {
 /* Ship name */
 .group-list a:first-of-type {
 	display: inline-block;
-	width: 10vw;
-	min-width: 225px;
+	width: 15vw;
+	/*min-width: 225px;*/
 	text-align: right;
 	/*font-weight: normal;*/
 	border: solid black 3px;
@@ -457,6 +457,7 @@ footer {
 .ship-stats {
 	width: 85vw;
 	margin: auto;
+	font-size: 1.5em;
 }
 
 .ship-stats td {
@@ -488,13 +489,14 @@ footer {
 .group-show a {
 	/*display: inline-block;*/
 	position: relative;
-	top: 1.4vh;
+	top: 2vh;
 	margin-left: 3vw;
 	text-decoration: none;
 	text-align: center;
 	background-color: #4a4e54; 
 	color: black;
 	font-weight: bold;
+	font-size: 1.5em;
 	border: solid black 3px;
 	border-top-left-radius: 50px;
 	border-bottom-left-radius: 50px;

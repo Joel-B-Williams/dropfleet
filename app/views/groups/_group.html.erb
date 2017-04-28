@@ -1,13 +1,13 @@
 
 <li>
 	<%= link_to ship_name(group), user_fleet_battlegroup_group_path(user, fleet, battlegroup, group) %>
-	<% if not_min_size(group) %>
+	<!-- < if not_min_size(group) %> -->
 	<%= link_to '-', edit_user_fleet_battlegroup_group_path(user, fleet, battlegroup, group) %>
-	<% end %>
+	<!-- < end %> -->
 	<p><%= size(group) %></p>
-	<% if not_max_size(group) %>
+	<!--  if not_max_size(group)  -->
 	<%= link_to '+', edit_user_fleet_battlegroup_group_path(user, fleet, battlegroup, group) %>
-	<% end %>
+	<!--  end  -->
 	<p><%= display_cost(group) %></p>
 	<%= link_to "X", user_fleet_battlegroup_group_path(user, fleet, battlegroup, group), method: :delete %>
 </li>
