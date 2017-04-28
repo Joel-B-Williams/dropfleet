@@ -1,32 +1,35 @@
-<p>Oh hallo GROUP SHOW</p>
+<section class='group-show'>
 
-<%= link_to "Back to Fleet", user_fleet_path(@user, @fleet) %>
+	<%= link_to "<<", user_fleet_path(@user, @fleet) %>
 
 
-<table>
-	<tr>
-		<th colspan=4><%= ship_name(@group)%></th>
-		<th colspan=2>Group Size: <%= size(@group)%></th>
-		<th colspan=2>Group Cost: <%= display_cost(@group)%></th>
-	</tr>
-	<tr>
-		<td>Scan</td>
-		<td>Sig</td>
-		<td>Thrust</td>
-		<td>Hull</td>
-		<td>A</td>
-		<td>PD</td>
-		<td>T</td>
-		<td>Special</td>
-	</tr>
-	<tr>
-		<td><%= scan(@group) %></td>
-		<td><%= signature(@group) %></td>
-		<td><%= thrust(@group) %></td>
-		<td><%= hull(@group) %></td>
-		<td><%= armor(@group) %></td>
-		<td><%= point_defense(@group) %></td>
-		<td><%= tonnage(@group) %></td>
-		<td> placeholder for special rules </td>
-	</tr>
-</table>
+	<table class='ship-stats'>
+		<tr>
+			<th class='ship-name' colspan=4><%= ship_name(@group)%></th>
+			<th class='ship-group' colspan=2>Group Size: <%= size(@group)%></th>
+			<th class='ship-cost' colspan=2>Group Cost: <%= display_cost(@group)%></th>
+		</tr>
+		<tr>
+			<td>Scan</td>
+			<td>Sig</td>
+			<td>Thrust</td>
+			<td>Hull</td>
+			<td>A</td>
+			<td>PD</td>
+			<td>T</td>
+			<td>Special</td>
+		</tr>
+		<tr>
+			<td><%= scan(@group) %></td>
+			<td><%= signature(@group) %></td>
+			<td><%= thrust(@group) %></td>
+			<td><%= hull(@group) %></td>
+			<td><%= armor(@group) %></td>
+			<td><%= point_defense(@group) %></td>
+			<td><%= tonnage(@group) %></td>
+			<td> placeholder for special rules </td>
+		</tr>
+	</table>
+
+</section>
+
