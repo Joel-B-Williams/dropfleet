@@ -1,5 +1,5 @@
 
- * This is a manifest file that'll be compiled into application.css, which will include all the files
+/* * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
  *
  * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
@@ -13,6 +13,7 @@
  *= require_tree .
  *= require_self
  */
+
 html {
 	margin: 0;
 }
@@ -575,13 +576,15 @@ footer {
 }
 */
 
+
+
 /* TABLET */
 @media screen and (min-width: 1000px) and (min-height: 768px) {
 
 /*	header {
 		height: 12vh;
 	}*/
-	
+
 	footer {
 		margin-top: 5vh;
 	}
@@ -591,7 +594,7 @@ footer {
 	}
 
 	.flash-section {
-		margin-top: 12vh;
+		margin-top: 15vh;
 	}
 
 	.form {
@@ -609,18 +612,12 @@ footer {
 	/* fleet show */
 
 	.fleet-info {
-		font-size: 1em;
+		font-size: 1.5em;
 	}
 
 	.battlegroup-info {
-		font-size: 1em;
+		font-size: 1.5em;
 	}
-
-	.battlegroup-display {
-		/*display: inline-block;*/
-		/*width: 40vw;*/
-	}
-
 
 	/* battlegroup show */
 
@@ -649,3 +646,4 @@ footer {
 		height: 6vh;
 	}
 }
+
