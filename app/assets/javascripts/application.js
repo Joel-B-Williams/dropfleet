@@ -17,7 +17,6 @@
 
 
 $(document).ready(function(){
-	lockPortrait();
 	// addFleet();
 });
 
@@ -36,4 +35,3 @@ $(document).ready(function(){
 
 
 // }
-lockPortrait = window.screen.lockOrientation('portrait');
