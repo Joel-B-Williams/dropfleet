@@ -16,9 +16,10 @@
 //= require_tree .
 
 
-// $(document).ready(function(){
-// 	addFleet();
-// });
+$(document).ready(function(){
+	lockPortrait();
+	// addFleet();
+});
 
 // addFleet = function(){
 // 	$('#new-fleet').on('click', function(e){
@@ -35,3 +36,4 @@
 
 
 // }
+lockPortrait = window.screen.lockOrientation('portrait');
