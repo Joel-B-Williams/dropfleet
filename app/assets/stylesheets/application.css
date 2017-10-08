@@ -520,10 +520,10 @@ footer {
 /*give back-arrow class*/
 .group-show a {
 	width: 3vw;
-	height: 2vh;
+	height: 3.7vh;
 	display: inline-block;
 	position: relative;
-	top: 2.5vh;
+	top: 4.5vh;
 	margin-left: 3vw;
 	text-decoration: none;
 	text-align: center;
