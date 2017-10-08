@@ -48,9 +48,9 @@ ActiveRecord::Schema.define(version: 20170424211908) do
 
   create_table "groups", force: :cascade do |t|
     t.integer  "ship_id"
-    t.integer  "cost"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.integer  "cost",           default: 0
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
     t.integer  "group_size"
     t.integer  "battlegroup_id"
   end
